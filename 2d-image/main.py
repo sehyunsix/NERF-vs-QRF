@@ -6,6 +6,7 @@ from PIL import Image
 import numpy as np
 import random
 from model import MLPColorPredictor, PositionEncodingMLP
+from q_model import QModel
 import os
 
 def save_weights(model, epoch,image,method, folder='weights'):
@@ -43,19 +44,21 @@ def create_batch(xy_coords, colors, batch_size):
 # 3. Training loop
 def train_model(model, xy_coords, colors, num_epochs=1000, batch_size=1024, lr=1e-4):
     optimizer = optim.Adam(model.parameters(), lr=lr)
-    criterion = nn.MSELoss()  # Mean Squared Error loss for RGB color prediction
+    criterion = nn.MSELoss() # Mean Squared Error loss for RGB color prediction
 
     for epoch in range(num_epochs):
         # Create a random batch
         xy_batch, color_batch = create_batch(xy_coords, colors, batch_size)
-        xy_batch=xy_batch.to('mps')
-        color_batch=color_batch.to('mps')
+        xy_batch=xy_batch # .to('mps')
+        color_batch=color_batch # .to('mps')
         # Forward pass
         optimizer.zero_grad()
         predictions = model(xy_batch)
+        # print("Pred :", predictions.shape)
 
         # Compute loss
-        loss = criterion(predictions, color_batch)
+        loss = criterion(predictions.float(), color_batch.float())
+        # print(loss.dtype)
 
         # Backward pass and optimization
         loss.backward()
@@ -66,14 +69,16 @@ def train_model(model, xy_coords, colors, num_epochs=1000, batch_size=1024, lr=1
 
 # Example usage
 image_path = 'test1.jpg'
-method ='mlp' # Replace with the path to your image
+method = 'quantum' # Replace with the path to your image
 xy_coords, colors = load_image(image_path)
 
 # Initialize model
 if method =="position":
   model = PositionEncodingMLP().to('mps')
+elif method == "quantum":
+  model = QModel() # .to('mps')
 else:
-  model=MLPColorPredictor().to('mps')
+  model = MLPColorPredictor() # .to('mps')
 
 # Train model
 train_model(model, xy_coords, colors, num_epochs=1000, batch_size=128, lr=1e-4,)
