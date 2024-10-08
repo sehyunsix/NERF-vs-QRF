@@ -6,6 +6,7 @@ from PIL import Image
 import numpy as np
 from model import MLPColorPredictor, PositionEncodingMLP
 import os
+from q_model import QModel
 
 # 2. 모델의 가중치를 불러오는 함수
 def load_weights(model, weight_path):
@@ -43,12 +44,14 @@ def save_predicted_image(model, width, height,image,method, output_folder='resul
     img.save(output_path)
     print(f"Predicted image saved to {output_path}")
 
-image='test1.jpg'
-method='mlp'
+image='test2.jpg'
+method='quantum'
 weight_path = 'weights/model_epoch_1000.pth'
 weight_path=f'weights/model_{image}_{method}_1000.pth'
 if method =='mlp':
   model = MLPColorPredictor()
+elif method == 'quantum':
+  model = QModel().to('mps')
 else:
   model=PositionEncodingMLP()
 load_weights(model, weight_path)

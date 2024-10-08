@@ -46,6 +46,8 @@ def train_model(model, xy_coords, colors, num_epochs=1000, batch_size=1024, lr=1
     optimizer = optim.Adam(model.parameters(), lr=lr)
     criterion = nn.MSELoss() # Mean Squared Error loss for RGB color prediction
 
+    num_epochs = 1500
+
     for epoch in range(num_epochs):
         # Create a random batch
         xy_batch, color_batch = create_batch(xy_coords, colors, batch_size)
@@ -68,7 +70,7 @@ def train_model(model, xy_coords, colors, num_epochs=1000, batch_size=1024, lr=1
             print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
 # Example usage
-image_path = 'test1.jpg'
+image_path = 'test2.jpg'
 method = 'quantum' # Replace with the path to your image
 xy_coords, colors = load_image(image_path)
 
@@ -76,7 +78,7 @@ xy_coords, colors = load_image(image_path)
 if method =="position":
   model = PositionEncodingMLP().to('mps')
 elif method == "quantum":
-  model = QModel() # .to('mps')
+  model = QModel().to('mps')
 else:
   model = MLPColorPredictor() # .to('mps')
 
