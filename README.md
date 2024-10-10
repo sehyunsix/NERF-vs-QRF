@@ -21,7 +21,7 @@ To  test model reconsturction 2d image by postion input
 |Original|Mlp|Postion|Quantum|
 |---|---|---|---|
 |![2d](2d-image/test3.jpg)|![2d](2d-image/results/predicted_test3.jpg_mlp.png)|![2d](2d-image/results/predicted_test3.jpg_position.png)|![2d](2d-image/results/predicted_test3.jpg_quantum.png)|
-
+  
 ## Trainig Loss
 
 |Mlp|Postion|Quantum|
