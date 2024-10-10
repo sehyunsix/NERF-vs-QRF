@@ -26,6 +26,6 @@ To  test model reconsturction 2d image by postion input
 
 |Mlp|Postion|Quantum|
 |---|----|---|
-|![2d](/2d-image/loss_result/loss_graph_mlp.png)|![2d](/2d-image/loss_result/loss_graph_position.png)|![2d](/2d-image/loss_result/loss_graph_position.png)|
+|![2d](2d-image/loss_result/loss_graph_mlp.png)|![2d](2d-image/loss_result/loss_graph_position.png)|![2d](2d-image/loss_result/loss_graph_position.png)|
 
 
