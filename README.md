@@ -8,6 +8,8 @@ To  test model reconsturction 2d image by postion input
 
 ```bash
 cd NERF-vs-QRF
+
+#use python 3.12.6 version
 pip install -r requreiment.txt
 cd 2d-image
 
