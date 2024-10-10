@@ -3,6 +3,19 @@
 # Task
 
 To  test model reconsturction 2d image by postion input
+
+# HOW TO
+
+```bash
+cd NERF-vs-QRF
+pip install -r requreiment.txt
+cd 2d-image
+
+#revise config.py for set parameter
+python3 main.py
+```
+
+
 # Result
 ## Test 1
 |Original|Mlp|Postion|Quantum|
