@@ -22,7 +22,7 @@ python3 main.py
 ## Test 1
 |Original|Mlp|Postion|Quantum|
 |---|---|---|---|
-|![2d](2d-image/test2.jpg)|![2d](2d-image/results/predicted_test1.jpg_mlp.png)|![2d](2d-image/results/predicted_test1.jpg_position.png)|![2d](2d-image/results/predicted_test1.jpg_quantum.png)|
+|![2d](2d-image/test1.jpg)|![2d](2d-image/results/predicted_test1.jpg_mlp.png)|![2d](2d-image/results/predicted_test1.jpg_position.png)|![2d](2d-image/results/predicted_test1.jpg_quantum.png)|
 
 
 ## Test 2
