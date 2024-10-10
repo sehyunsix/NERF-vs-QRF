@@ -13,4 +13,8 @@ WIRE = 3
 LAYER = 16
 
 IMAGE_PATH = "test2.jpg"
-METHOD = "quantum"  # Replace with the path to your image
+
+
+# METHOD = "quantum"
+# METHOD = "mlp"
+METHOD = "mlp"  # Replace with the path to your image
