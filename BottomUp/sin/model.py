@@ -41,15 +41,18 @@ class sin_qml(nn.Module):
         self.num_layer = num_layer
 
         self.required_parameters = 2 * self.num_qubit * (num_layer - 1)
-        self.theta = torch.rand(self.required_parameters)
+        # self.theta = torch.rand(self.required_parameters)
+        self.theta = nn.Parameter(torch.rand(self.required_parameters),
+                                  requires_grad=True
+                                  )
 
         self.input_layer = nn.Linear(1, 2 * num_qubit)
 
         self.device = qml.device('default.qubit', wires=num_qubit)
 
-        obs = qml.PauliX(0)
+        obs = qml.PauliZ(0)
         for i in range(1, self.num_qubit):
-            obs = obs @ qml.PauliX(i)
+            obs = obs @ qml.PauliZ(i)
         
         self.obs = obs
 
@@ -61,26 +64,33 @@ class sin_qml(nn.Module):
         for i in range(self.num_qubit - 1):
             qml.CNOT(wires=[i, i + 1])
 
-    def pqc(self, encoding_theta, chk = False):
+    def pqc(self, x, encoding_theta = [], chk = False):
         @qml.qnode(self.device, interface="torch")
         def inner_pqc():
-            self.quantum_circuit(theta=encoding_theta)
+            if encoding_theta != []:
+                self.quantum_circuit(theta=encoding_theta)
+            else:
+                qml.AngleEmbedding(x, wires=range(self.num_qubit))
+                for i in range(self.num_qubit - 1):
+                    qml.CNOT(wires=[i, i + 1])
             for i in range(0, self.required_parameters, 2 * self.num_qubit):
                 self.quantum_circuit(theta=self.theta[i : i + 2 * self.num_qubit])
-            return qml.expval(self.obs)
+            obs = qml.PauliZ(0)
+            for i in range(1, self.num_qubit):
+                obs = obs @ qml.PauliZ(i)
+            
+            return qml.expval(obs)
         if chk:
             qml.draw_mpl(inner_pqc)()
         return inner_pqc()
     
     def forward(self, x):
-        # print('before x reshape :', x.shape)
-        # x = x.reshape(1, -1)
-        # print('after x reshape :', x.shape)
+        encoding_theta = []
         encoding_theta = self.input_layer(x)
         # print('before enc_theta shape :', encoding_theta.shape)
         encoding_theta = encoding_theta.reshape(2 * self.num_qubit , -1)
         # print('after enc_theta shape :', encoding_theta.shape)
-        output = self.pqc(encoding_theta=encoding_theta)
+        output = self.pqc(x, encoding_theta=encoding_theta)
         # print('before output reshape :', output.shape)
         output = output.reshape(-1, 1)
         # print('after output reshape :', output.shape)

@@ -6,6 +6,7 @@ from model import sin_ml
 from torch import optim
 from torch.nn import MSELoss
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 class trainer:
 
@@ -41,7 +42,7 @@ class trainer:
 
     def train(self, epochs = 100, chk = False):
         self.train_loss_list = []
-        for i in range(epochs):
+        for i in tqdm(range(epochs)):
             for idx, (x, y) in enumerate(self.train_loader):
                 self.optimizer.zero_grad()
                 pred = self.model(x)
@@ -49,6 +50,8 @@ class trainer:
                 self.train_loss_list.append(loss.mean())
                 loss.backward()
                 self.optimizer.step()
+            print(f'========== Epoch {i} ==========')
+            print(f"Loss : {loss}, Loss.mean : {self.train_loss_list[-1]}\n")
         if chk:
             self.plot_list(self.train_loss_list)
     
