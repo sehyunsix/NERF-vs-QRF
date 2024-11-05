@@ -9,8 +9,8 @@ import torch.nn as nn
 class sin_ml(nn.Module):
     def __init__(self, hidden_dim, num_layer):
         """
-        hidden_dim(int) : hidden layer의 노드 개수
-        num_layer(int) : 총 layer의 개수 (입력 layer 1개 + hidden_layer 개수 + output layer 1개)
+            hidden_dim(int) : hidden layer의 노드 개수
+            num_layer(int) : 총 layer의 개수 (입력 layer 1개 + hidden_layer 개수 + output layer 1개)
         """
         super(sin_ml, self).__init__()
 
@@ -32,67 +32,74 @@ class sin_ml(nn.Module):
 class sin_qml(nn.Module):
     def __init__(self, num_qubit, num_layer):
         """
-        nun_qubit(int) : 사용할 qubit 개수
-        num_layer(int) : 총 layer의 개수 (quantum layer 개수, input layer 제외)
+            nun_qubit(int) : 사용할 qubit 개수
+            num_layer(int) : 총 layer의 개수 (quantum layer 개수, input layer 제외)
         """
         super(sin_qml, self).__init__()
 
+        ## Instance Initialize ##
         self.num_qubit = num_qubit
         self.num_layer = num_layer
 
+        ## Parameter Generation ##
         self.required_parameters = 2 * self.num_qubit * (num_layer - 1)
-        # self.theta = torch.rand(self.required_parameters)
         self.theta = nn.Parameter(
             torch.rand(self.required_parameters), requires_grad=True
         )
 
-        # self.input_layer = nn.Linear(1, 2 * num_qubit)
-
+        ## Quantum Device Initialize ##
         self.device = qml.device("default.qubit", wires=num_qubit)
-
-        obs = qml.PauliZ(0)
-        for i in range(1, self.num_qubit):
-            obs = obs @ qml.PauliZ(i)
-
-        self.obs = obs
+    
 
     def quantum_circuit(self, theta):
+        '''
+            theta(list or tensor) : 1개의 layer에 대한 (2 * num_qubit)개의 parameter set
+        '''
         for i in range(self.num_qubit):
-            qml.RX(theta[i], wires=i)
-            qml.RY(theta[i + 1], wires=i)
+            qml.RX(theta[2 * i], wires=i)
+            qml.RY(theta[2 * i + 1], wires=i)
 
         for i in range(self.num_qubit - 1):
             qml.CNOT(wires=[i, i + 1])
 
-    def pqc(self, x, encoding_theta=[], chk=False):
+    def pqc(self, x, chk=False):
+        '''
+            TODO 
+                inner_pqc를 통해 self.device에서 quantum circuit을 동작시킴
+                1. AngleEmbedding 메소드를 통해 x에 대한 Embedding
+                2. num_layer만큼의 layer 반복, 이때 self.theta 사용
+                3. (Option) Expectation Value의 대상이 되는 Observable 생성
+                4. Measure (qml.expval)
+            Args
+                x(float32 or tensor(batch, 1)) : sin의 input으로 주어진 값
+                chk(bool) : Quantum Circuit Draw 여부
+        '''
         @qml.qnode(self.device, interface="torch")
         def inner_pqc():
-            if encoding_theta != []:
-                self.quantum_circuit(theta=encoding_theta)
-            else:
-                qml.AngleEmbedding(x, wires=range(self.num_qubit))
-                for i in range(self.num_qubit - 1):
-                    qml.CNOT(wires=[i, i + 1])
+            ## Embedding Section ##
+            qml.AngleEmbedding(x, wires=range(self.num_qubit))
+            for i in range(self.num_qubit - 1):
+                qml.CNOT(wires=[i, i + 1])
+            qml.Barrier()
+            
+            ## Layer Iteration ##
             for i in range(0, self.required_parameters, 2 * self.num_qubit):
                 self.quantum_circuit(theta=self.theta[i : i + 2 * self.num_qubit])
-            # obs = qml.PauliZ(0)
-            # for i in range(1, self.num_qubit):
-            #     obs = obs @ qml.PauliZ(i)
+                qml.Barrier()
+            
+            ## Observable Generation ##
+            obs = qml.PauliZ(0)
+            for i in range(1, self.num_qubit):
+                obs = obs @ qml.PauliZ(i)
 
-            return qml.expval(qml.PauliZ(0))
+            ## Measure ##
+            return qml.expval(obs) # qml.expval(qml.PauliZ(0))
 
         if chk:
             qml.draw_mpl(inner_pqc)()
         return inner_pqc()
 
     def forward(self, x):
-        encoding_theta = []
-        # encoding_theta = self.input_layer(x)
-        # print('before enc_theta shape :', encoding_theta.shape)
-        # encoding_theta = encoding_theta.reshape(2 * self.num_qubit, -1)
-        # print('after enc_theta shape :', encoding_theta.shape)
-        output = self.pqc(x, encoding_theta=encoding_theta)
-        # print('before output reshape :', output.shape)
+        output = self.pqc(x)
         output = output.reshape(-1, 1)
-        # print('after output reshape :', output.shape)
         return output.float()

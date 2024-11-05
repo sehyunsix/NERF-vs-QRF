@@ -24,15 +24,14 @@ class trainer:
         self.test_loss_list = []
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.lr)
 
-    def plot_list(self, data):
+    def plot_list(self, data, title = ''):
         # 텐서 리스트를 numpy 배열로 변환
         loss_values = [e.item() for e in data]
-
         plt.figure(figsize=(10, 6))
-        plt.plot(loss_values, label="Training Loss")
+        plt.plot(loss_values, label="Plotting Data")
         plt.xlabel("Iterations")
         plt.ylabel("Loss")
-        plt.title("Training Loss over Time")
+        plt.title(title)
         plt.legend()
         plt.grid(True)
         plt.show()
@@ -61,13 +60,13 @@ class trainer:
         my_x = np.linspace(0, 2 * np.pi, 100)
         my_x = torch.tensor(my_x.reshape(-1, 1)).to(torch.float32)
         my_y = self.model(my_x)
-        self.plot_list(my_y)
+        self.plot_list(my_y, title='Plotting Data Prediction')
 
     def train(self, epochs=100, chk=False):
-        plt.ion()
+        # plt.ion()
         self.train_loss_list = []
-        fig, ax = plt.subplots()
-        ax.set_title("Real-time Prediction Update")
+        # fig, ax = plt.subplots()
+        # ax.set_title("Real-time Prediction Update")
         for i in tqdm(range(epochs)):
             for idx, (x, y) in enumerate(self.train_loader):
                 self.optimizer.zero_grad()
@@ -76,15 +75,15 @@ class trainer:
                 self.train_loss_list.append(loss.mean())
                 loss.backward()
                 self.optimizer.step()
-                if chk:
-                    plt.draw()
-                    fig.canvas.draw()
-                    display(fig)
-                    self.ax_plot_pred(ax)
-                    clear_output(wait=True)
+                # if chk:
+                #     plt.draw()
+                #     fig.canvas.draw()
+                #     display(fig)
+                #     self.ax_plot_pred(ax)
+                #     clear_output(wait=True)
 
         if chk:
-            self.plot_list(self.train_loss_list)
+            self.plot_list(self.train_loss_list, title='Train Loss')
 
     def test(self, chk=True):
         self.test_loss_list = []
@@ -93,4 +92,4 @@ class trainer:
             loss = self.criterion(pred, y)
             self.test_loss_list.append(loss.mean())
         if chk:
-            self.plot_list(self.test_loss_list)
+            self.plot_list(self.test_loss_list, title='Test Loss')
