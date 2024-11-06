@@ -37,7 +37,7 @@ class trainer:
         plt.grid(True)
         plt.show()
 
-    def ax_plot_pred(self, x, pred, ax):
+    def ax_plot_pred(self, ax):
         """
         Function to plot the predictions in real time.
         x: Input data (could be images or features)

@@ -75,11 +75,11 @@ class sin_qml(nn.Module):
                     qml.CNOT(wires=[i, i + 1])
             for i in range(0, self.required_parameters, 2 * self.num_qubit):
                 self.quantum_circuit(theta=self.theta[i : i + 2 * self.num_qubit])
-            # obs = qml.PauliZ(0)
+            obs = qml.PauliZ(0)
             # for i in range(1, self.num_qubit):
             #     obs = obs @ qml.PauliZ(i)
 
-            return qml.expval(qml.PauliZ(0))
+            return qml.expval(obs)
 
         if chk:
             qml.draw_mpl(inner_pqc)()
@@ -90,6 +90,8 @@ class sin_qml(nn.Module):
         # encoding_theta = self.input_layer(x)
         # print('before enc_theta shape :', encoding_theta.shape)
         # encoding_theta = encoding_theta.reshape(2 * self.num_qubit, -1)
+
+        # encoding_theta = torch.tanh(encoding_theta)
         # print('after enc_theta shape :', encoding_theta.shape)
         output = self.pqc(x, encoding_theta=encoding_theta)
         # print('before output reshape :', output.shape)
