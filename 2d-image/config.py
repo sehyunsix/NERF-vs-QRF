@@ -4,17 +4,17 @@ WIDTH = 1050
 
 
 ###
-EPOCH = 5
+EPOCH = 1
 BATCH_SIZE = 128
 LR = 1e-4
 
 ###
-WIRE = 3
-LAYER = 16
+WIRE = 5
+LAYER = 8
 
-IMAGE_PATH = "test2.jpg"
+IMAGE_PATH = "test3.jpg"
 
 
-# METHOD = "quantum"
+METHOD = "quantum"
 # METHOD = "mlp"
-METHOD = "mlp"  # Replace with the path to your image
+# METHOD = "mlp"  # Replace with the path to your image

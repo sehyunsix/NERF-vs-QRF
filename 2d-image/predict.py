@@ -3,7 +3,7 @@ from PIL import Image
 import numpy as np
 from model import MLPColorPredictor, PositionEncodingMLP
 import os
-from q_model import QModel
+from q_model import sin_qml
 from tqdm import tqdm
 
 
@@ -78,7 +78,7 @@ def save_predicted_image(model, width, height, image, method, output_folder="res
 
 
 if __name__ == "__main__":
-    image = "test2.jpg"
+    image = "test1.jpg"
     method = "quantum"
     weight_path = "weights/model_epoch_1000.pth"
     weight_path = f"weights/model_{image}_{method}_1000.pth"
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     if method == "mlp":
         model = MLPColorPredictor()
     elif method == "quantum":
-        model = QModel(WIRE, LAYER)
+        model = sin_qml(num_qubit=3, num_layer=3, use_qrelu=True)
     else:
         model = PositionEncodingMLP()
     save_predicted_image(model, width=1050, height=1400, image=image, method=method)

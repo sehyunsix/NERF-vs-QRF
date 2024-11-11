@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import math
+from qrelu import QuantumReLU
 
 
 class MLPColorPredictor(nn.Module):

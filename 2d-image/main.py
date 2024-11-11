@@ -8,7 +8,7 @@ import numpy as np
 import random
 from model import MLPColorPredictor, PositionEncodingMLP
 from predict import save_predicted_image, process_in_batches
-from q_model import QModel
+from q_model import sin_qml
 import os
 from tqdm import tqdm
 from config import *
@@ -139,7 +139,7 @@ dataloader = create_dataloader(
 if METHOD == "position":
     model = PositionEncodingMLP()
 elif METHOD == "quantum":
-    model = QModel(WIRE, LAYER)
+    model = sin_qml(WIRE, LAYER, True)
 else:
     model = MLPColorPredictor()
 
