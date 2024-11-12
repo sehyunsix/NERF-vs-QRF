@@ -79,7 +79,8 @@ def train_model(
         for step, batch in enumerate(dataloader):
             # Create a random batch
             xy_batch, color_batch = batch
-
+            xy_batch.to(DEVICE)
+            color_batch.to(DEVICE)
             # Forward pass
             optimizer.zero_grad()
             predictions = model(xy_batch)
@@ -139,7 +140,7 @@ dataloader = create_dataloader(
 if METHOD == "position":
     model = PositionEncodingMLP()
 elif METHOD == "quantum":
-    model = sin_qml(WIRE, LAYER, False)
+    model = sin_qml(WIRE, LAYER, False).to(DEVICE)
 else:
     model = MLPColorPredictor()
 

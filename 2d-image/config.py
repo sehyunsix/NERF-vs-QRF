@@ -11,6 +11,7 @@ LR = 1e-4
 ###
 WIRE = 20
 LAYER = 2
+DEVICE = "cuda"
 
 IMAGE_PATH = "test3.jpg"
 
