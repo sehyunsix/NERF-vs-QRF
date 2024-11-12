@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from qrelu import QuantumReLU
+from config import *
 
 
 class sin_qml(nn.Module):
