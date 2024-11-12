@@ -9,8 +9,8 @@ BATCH_SIZE = 128
 LR = 1e-4
 
 ###
-WIRE = 5
-LAYER = 8
+WIRE = 20
+LAYER = 2
 
 IMAGE_PATH = "test3.jpg"
 

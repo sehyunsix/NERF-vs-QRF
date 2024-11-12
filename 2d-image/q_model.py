@@ -22,6 +22,7 @@ class sin_qml(nn.Module):
         self.theta = nn.Parameter(
             torch.rand(self.required_parameters), requires_grad=True
         )
+        self.init_theta = nn.Parameter(torch.rand(1), requires_grad=True)
 
         # self.input_layer = nn.Linear(1, 2 * num_qubit)
 
@@ -74,7 +75,7 @@ class sin_qml(nn.Module):
 
         # encoding_theta = torch.tanh(encoding_theta)
         # print('after enc_theta shape :', encoding_theta.shape)
-        output = self.pqc(x, encoding_theta=encoding_theta)
+        output = self.pqc((1 / self.init_theta) * x, encoding_theta=encoding_theta)
         # print("shaep output ", len(output))
         output = torch.stack((output))
         if self.use_qrelu:

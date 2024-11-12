@@ -139,7 +139,7 @@ dataloader = create_dataloader(
 if METHOD == "position":
     model = PositionEncodingMLP()
 elif METHOD == "quantum":
-    model = sin_qml(WIRE, LAYER, True)
+    model = sin_qml(WIRE, LAYER, False)
 else:
     model = MLPColorPredictor()
 

@@ -20,7 +20,7 @@ SECOND_COEFFICIENT_M_QRELU_PYTORCH = torch.tensor(SECOND_COEFFICIENT_M_QRELU)
 M_QRELU_NAME = "modified_quantum_relu"
 QRELU_NAME = "quantum_relu"
 
-USE_M_QRELU = False
+USE_M_QRELU = True
 
 
 class QuantumReLU(nn.Module):  # pragma: no cover
