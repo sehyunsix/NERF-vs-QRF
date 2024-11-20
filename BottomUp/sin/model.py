@@ -3,9 +3,6 @@ from pennylane import numpy as np
 import torch
 import torch.nn as nn
 
-# from tqdm import tqdm
-
-
 class sin_ml(nn.Module):
     def __init__(self, hidden_dim, num_layer):
         """
@@ -21,7 +18,7 @@ class sin_ml(nn.Module):
             linear_list.append(nn.Linear(hidden_dim, hidden_dim))
             linear_list.append(nn.ReLU(hidden_dim))
         linear_list.append(nn.Linear(hidden_dim, 1))
-        linear_list.append(nn.Tanh())
+        linear_list.append(nn.Tanh()) # For sin
 
         self.linear = nn.Sequential(*linear_list)
 
@@ -45,12 +42,12 @@ class sin_qml(nn.Module):
         self.required_parameters = 2 * self.num_qubit * (num_layer - 1)
         self.theta = nn.Parameter(
             torch.rand(self.required_parameters), requires_grad=True
-        )
+        ) # parameter 초기화 시 범위(-pi ~ pi?) 고려
 
         ## Quantum Device Initialize ##
         self.device = qml.device("default.qubit", wires=num_qubit)
     
-
+    
     def quantum_circuit(self, theta):
         '''
             theta(list or tensor) : 1개의 layer에 대한 (2 * num_qubit)개의 parameter set
@@ -102,4 +99,4 @@ class sin_qml(nn.Module):
     def forward(self, x):
         output = self.pqc(x)
         output = output.reshape(-1, 1)
-        return output.float()
+        return output.float() # -1 ~ 1까지만의 value 가질 수 있음

@@ -9,9 +9,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 from IPython.display import display, clear_output
 
-
 class trainer:
-
     def __init__(
         self, model, train_loader, test_loader, criterion=nn.MSELoss(), lr=0.001
     ):
@@ -56,17 +54,14 @@ class trainer:
             label="Prediction",
         )
 
-    def plot_pred(self):
-        my_x = np.linspace(0, 2 * np.pi, 100)
+    def plot_pred(self, input_range = 2 * np.pi):
+        my_x = np.linspace(0, input_range, 100)
         my_x = torch.tensor(my_x.reshape(-1, 1)).to(torch.float32)
         my_y = self.model(my_x)
         self.plot_list(my_y, title='Plotting Data Prediction')
 
     def train(self, epochs=100, chk=False):
-        # plt.ion()
         self.train_loss_list = []
-        # fig, ax = plt.subplots()
-        # ax.set_title("Real-time Prediction Update")
         for i in tqdm(range(epochs)):
             for idx, (x, y) in enumerate(self.train_loader):
                 self.optimizer.zero_grad()
@@ -75,12 +70,6 @@ class trainer:
                 self.train_loss_list.append(loss.mean())
                 loss.backward()
                 self.optimizer.step()
-                # if chk:
-                #     plt.draw()
-                #     fig.canvas.draw()
-                #     display(fig)
-                #     self.ax_plot_pred(ax)
-                #     clear_output(wait=True)
 
         if chk:
             self.plot_list(self.train_loss_list, title='Train Loss')
