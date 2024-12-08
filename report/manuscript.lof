@@ -7,7 +7,8 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces RX, RY, and RZ operations on Bloch Sphere}}{13}{figure.caption.10}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Circuit representation of elementary quantum gates}}{17}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Bell State Preparation Circuit}}{17}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces 2-d image quantum circuit 구조}}{23}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces 1-d image quantum circuit 구조}}{24}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 1-d image quantum circuit 구조}}{20}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 2-d image quantum circuit 구조}}{23}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces 1-d function estimation quantum circuit 구조}}{25}{figure.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -31,12 +31,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reference style settings
 % ↓ This is also free to change. Do as you wish...
-\usepackage[
-  round,
-  semicolon,
-  authoryear,
-%  sort
-]{natbib}
+\usepackage[numbers,square]{natbib}
+
 
 %%%%%%%%%%%%%%%%%%%%
 % Page numbering style settings
@@ -81,7 +77,7 @@
 \usepackage{twoopt}
 \usepackage[breaklinks]{hyperref}      %% to avoid \citeads line fills, add "draft"
                                        %% to avoid the PDFTK error (broken links)
-\bibpunct{(}{)}{;}{a}{}{,}             %% natbib format for A&A and ApJ
+% \bibpunct{(}{)}{;}{a}{}{,}             %% natbib format for A&A and ApJ
 \definecolor{cobalt}{rgb}{0.06, 0.2, 0.65}
 \hypersetup{
   colorlinks,
@@ -381,9 +377,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{aa_url}
-\setstretch{1.0}  % ← of course you can change this as you wish, too.
-\bibliography{references.bib}
+% \bibliographystyle{aa_url}
+% \setstretch{1.0}  % ← of course you can change this as you wish, too.
+\bibliographystyle{unsrtnat}
+\bibliography{./references}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\appendix
