@@ -1,0 +1,12 @@
+\addcontentsline {toc}{chapter}{List of Tables}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces The parameter values.}}{5}{table.caption.6}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Symbols frequently used in this paper.}}{7}{table.caption.8}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces MLP와 QML의 비교}}{14}{table.caption.9}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces PSNR comparison between MLP and QML models across different layer configurations}}{15}{table.caption.11}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces MLP와 QML의 비교}}{16}{table.caption.12}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces MSEcomparison between MLP and QML models across different layer configurations}}{16}{table.caption.14}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -1,0 +1,421 @@
+%%%%%%%%%%%%%%%%%%%%%%%[Comments]%%%%%%%%%%%%%%%%%%%%%%%
+
+% ******* If you want the true bare-bone structure, go to ********
+% https://github.com/taehoonlee/snu-dissertation-template
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{report}
+\usepackage[paperwidth=21cm,paperheight=29.7cm,left=2.5cm,right=2.5cm,top=3.5cm,bottom=1.5cm]{geometry}
+% Originally this was
+%\usepackage[paperwidth=19cm,paperheight=26cm,left=3cm,right=3cm,top=3.5cm,bottom=1.5cm]{geometry}
+
+\addtolength{\voffset}{-1.5cm}
+\renewcommand{\baselinestretch}{1.7}
+\renewcommand{\abstractname}{\large Abstract}
+\usepackage{setspace}
+\usepackage[]{enumitem}
+%\usepackage{lmodern}
+%\usepackage{librecaslon}
+\usepackage[T1]{fontenc}
+\usepackage{footnote}
+\usepackage{textcomp}
+\usepackage{kotex}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{graphicx}
+\usepackage{multirow}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reference style settings
+% ↓ This is also free to change. Do as you wish...
+\usepackage[
+  round,
+  semicolon,
+  authoryear,
+%  sort
+]{natbib}
+
+%%%%%%%%%%%%%%%%%%%%
+% Page numbering style settings
+% For proper page numbering at TOC part https://tex.stackexchange.com/questions/235866/page-number-resets-on-table-of-contents
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+    \section*{\abstractname}%
+    \else
+    \small
+    \begin{center}%
+        {\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
+    \end{center}%
+    \quotation
+    \fi}
+{\if@twocolumn\else\endquotation\fi}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%
+
+%↓↓↓↓↓↓↓↓↓↓[Free to change, preamble. START]↓↓↓↓↓↓↓↓↓↓
+% It is your choice to change contents from here to the end of preamble.
+
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{rotating}  % The package to rotate table by sidewaystable
+\usepackage{csquotes}  % for ``displayquote`` environment
+\usepackage[notextcomp]{stix}  % without notextcomp, "Option clash for package textcomp." error pops up...
+%\usepackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
+\usepackage[font=small]{caption}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+%%%%%%%%%%%%%%%%%%%%
+% For URL-ed A&A style bibliography (https://github.com/yangcht/AA-bibstyle-with-hyperlink)
+% IMPORTANT NOTE:
+% As of 2023-05-18, at least PHDTHESIS must have `adsurl={}` and `adsnote={}`, when they are not registered to ADS. If they don't have these fields, """Extra }, or forgotten \endgroup. """ error will appear.
+\usepackage{twoopt}
+\usepackage[breaklinks]{hyperref}      %% to avoid \citeads line fills, add "draft"
+                                       %% to avoid the PDFTK error (broken links)
+\bibpunct{(}{)}{;}{a}{}{,}             %% natbib format for A&A and ApJ
+\definecolor{cobalt}{rgb}{0.06, 0.2, 0.65}
+\hypersetup{
+  colorlinks,
+  citecolor=cobalt,
+  linkcolor=[rgb]{0.8, 0.2, 1.0},
+  urlcolor=cobalt,
+}
+% \makeatletter
+%   \newcommandtwoopt{\citeads}[3][][]{\href{http://adsabs.harvard.edu/abs/#3}%
+%     {\def\hyper@linkstart##1##2{}%
+%      \let\hyper@linkend\@empty\citealp[#1][#2]{#3}}}
+%   \newcommandtwoopt{\citepads}[3][][]{\href{http://adsabs.harvard.edu/abs/#3}%
+%     {\def\hyper@linkstart##1##2{}%
+%      \let\hyper@linkend\@empty\citep[#1][#2]{#3}}}
+%   \newcommandtwoopt{\citetads}[3][][]{\href{http://adsabs.harvard.edu/abs/#3}%
+%     {\def\hyper@linkstart##1##2{}%
+%      \let\hyper@linkend\@empty\citet[#1][#2]{#3}}}
+%   \newcommandtwoopt{\citeyearads}[3][][]%
+%     {\href{http://adsabs.harvard.edu/abs/#3}
+%     {\def\hyper@linkstart##1##2{}%
+%      \let\hyper@linkend\@empty\citeyear[#1][#2]{#3}}}
+% \makeatother
+%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{url}
+%\usepackage{hyperref}
+\usepackage{cleveref}
+
+%\crefname{equation}{equation}{equations}%
+%\crefname{chapter}{chapter}{chapters}%
+%\crefname{section}{section}{sections}%
+%\crefname{appendix}{appendix}{appendices}%
+%\crefname{enumi}{item}{items}%
+%\crefname{footnote}{footnote}{footnotes}%
+%\crefname{figure}{figure}{figures}%
+%\crefname{table}{table}{tables}%
+%\crefname{theorem}{theorem}{theorems}%
+%\crefname{lemma}{lemma}{lemmas}%
+%\crefname{corollary}{corollary}{corollaries}%
+%\crefname{proposition}{proposition}{propositions}%
+%\crefname{definition}{definition}{definitions}%
+%\crefname{result}{result}{results}%
+%\crefname{example}{example}{examples}%
+%\crefname{remark}{remark}{remarks}%
+%\crefname{note}{note}{notes}%
+
+\Crefname{equation}{Eq.}{Eqs.}%
+\Crefname{chapter}{Chap.}{Chaps.}%
+\Crefname{section}{\S}{\S}%
+\Crefname{appendix}{App.}{Apps.}%
+\Crefname{enumi}{item}{items}%
+\Crefname{footnote}{footnote}{footnotes}%
+\Crefname{figure}{Fig.}{Figs.}%
+\Crefname{table}{Tab.}{Tabs.}%
+%\Crefname{theorem}{Thm.}{Thms.}%
+%\Crefname{lemma}{Lem.}{Lems.}%
+%\Crefname{corollary}{Cor.}{Cors.}%
+%\Crefname{proposition}{proposition}{propositions}%
+\Crefname{definition}{Def.}{Defs}%
+%\Crefname{result}{result}{results}%
+%\Crefname{example}{example}{examples}%
+%\Crefname{remark}{remark}{remarks}%
+%\lCrefname{note}{note}{notes}%
+
+\makeatletter
+\renewcommand*{\fps@figure}{tb}
+\renewcommand*{\fps@table}{tb}
+\makeatother
+
+\renewenvironment{abstract}
+ {\small
+  \begin{center}
+  \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+  \end{center}
+  \list{}{%
+    \setlength{\leftmargin}{10mm}% <---------- CHANGE HERE
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \item\relax}
+ {\endlist}
+
+%↑↑↑↑↑↑↑↑↑↑[Free to change, preamble. END]↑↑↑↑↑↑↑↑↑↑
+%↑↑↑↑↑↑↑↑↑↑[여기까지 Setting(왜 필요한지는 모름)]↑↑↑↑↑↑↑↑↑↑
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+% ------------ Title ------------ %
+\begin{titlepage}
+\input{title}
+\end{titlepage}
+
+%↓↓↓↓↓↓↓↓↓↓[Free to change, settings/macro START]↓↓↓↓↓↓↓↓↓↓
+
+\setstretch{1.3}  % 1.3 is good because (1) it is not too large, but (2) large enough that a simple inline fraction ($\frac{num}{den}$) is well displayed.
+\renewcommand*{\bibfont}{\normalfont\small}
+\setlength{\bibsep}{10pt plus 1em}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+
+%%%%%%%%%%%%%%%%%%%%[    MACROS    ]%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thefootnote}{\alph{footnote}}
+\renewcommand{\lg}{\ensuremath{\log_{10}}}
+\newcommand{\thru}{\ensuremath{\text{--}}}
+
+\renewcommand{\pV}{\ensuremath{p_\mathrm{V}}}
+\newcommand{\HV}{\ensuremath{H_\mathrm{V}}}
+\newcommand{\HVa}{\ensuremath{H_\mathrm{V}(\alpha)}}
+\newcommand{\Prot}{\ensuremath{P_\mathrm{rot}}}
+%\newcommand{\earth}{\ensuremath{_\oplus}}
+%\newcommand{\sun}{\ensuremath{_\odot}}
+
+\newcommand{\solarconst}{\ensuremath{\SI{1361.2}{W/m^2}}}
+\newcommand{\SB}{\ensuremath{\sigma_\mathrm{SB}}}
+\newcommand{\kB}{\ensuremath{k_\mathrm{B}}}
+\newcommand{\rhel}{\ensuremath{r_\mathrm{hel}}}
+\newcommand{\robs}{\ensuremath{r_\mathrm{obs}}}
+\newcommand{\sr}{\ensuremath{\,\mathrm{sr}}}
+\newcommand{\fwhm}{\ensuremath{\textsc{FWHM}}}
+\newcommand{\hwhm}{\ensuremath{\textsc{HWHM}}}
+
+\newcommand{\degr}{\ensuremath{^\circ}}
+\renewcommand{\um}{\ensuremath{\,\mathrm{\mu m}}}
+\renewcommand{\nm}{\ensuremath{\,\mathrm{nm}}}
+\renewcommand{\Angstrom}{\ensuremath{\,\text{\r{A}}}}
+\renewcommand{\mm}{\ensuremath{\,\mathrm{mm}}}
+\renewcommand{\cm}{\ensuremath{\,\mathrm{cm}}}
+\renewcommand{\km}{\ensuremath{\,\mathrm{km}}}
+\newcommand{\au}{\ensuremath{\,\mathrm{au}}}
+\newcommand{\mden}{\ensuremath{\,\mathrm{kg\,m^{-3}}}}
+\newcommand{\hr}{\ensuremath{\,\mathrm{hr}}}
+\newcommand{\yr}{\ensuremath{\,\mathrm{yr}}}
+
+\newcommand{\sep}{\quad;\quad}
+\newcommand{\separr}{\quad \rightarrow \quad}
+\newcommand{\simdot}{\mathrel{\dot{\sim}}}
+
+\newcommand{\lineseg}[1]{\ensuremath{\overline{\mathrm{#1}}}}
+\newcommand{\triang}[1]{\ensuremath{\triangle \mathrm{#1}}}
+\newcommand{\rect}[1]{\ensuremath{\Box \mathrm{#1}}}
+\newcommand{\linevec}[1]{\ensuremath{\overrightarrow{\mathrm{#1}}}}
+
+
+\newcommand{\chapquote}[2]{\qquad\textit{#1} \begin{flushright} --- #2\end{flushright} }
+
+%https://tex.stackexchange.com/questions/19605/setting-arbitrary-chapter-values
+\newcommand{\strangechapter}[1]{\renewcommand{\thechapter}{#1}\chapter*}
+
+\newcommand{\kr}[1]{{\scriptsize #1}}  % Just... to reduce font size for Hangeul characters in Acknowledgement.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% for python
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinelanguage{none}{
+  identifierstyle=
+}
+\lstdefinestyle{python}{  % https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+    backgroundcolor=\color{backcolour}, % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+    commentstyle=\color{codegreen},     % comment style
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\scriptsize, % the size of the fonts that are used for the code
+    breakatwhitespace=false,           % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                   % sets automatic line breaking
+%    captionpos=b,                      % sets the caption-position to bottom
+    keepspaces=true,                   % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+%    numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+%    numbersep=5pt,                   % how far the line-numbers are from the code
+%    numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+%    stepnumber=10,                    % the step between two line-numbers. If it's 1, each line will be numbered
+    showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    showstringspaces=false,          % underline spaces within strings only
+    showtabs=false,
+    rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    tabsize=2,                        % sets default tabsize to 2 spaces
+    showtabs=false,                  % show tabs within strings adding particular underscores
+    language=Python,                 % the language of the code
+%    stringstyle=\color{mymauve},     % string literal style
+%    title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+%    deletekeywords={...},            % if you want to delete keywords from the given language
+%    escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+%    extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+%    firstnumber=1000,                % start line enumeration with line 1000
+%    frame=single,	                   % adds a frame around the code
+%    keywordstyle=\color{blue},       % keyword style
+%    morekeywords={*,...},            % if you want to add more keywords to the set
+    upquote=true
+}
+
+\lstset{style=python}
+%↑↑↑↑↑↑↑↑↑↑[Free to change, settings/macros. END]↑↑↑↑↑↑↑↑↑↑
+
+
+% ------------ Abstract ------------ %
+\begin{abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\pagenumbering{roman}
+%\setcounter{page}{4}
+
+\quad 양자 머신러닝은 다양한 양자 알고리즘 연구 분야 중 NISQ(Noisy Intermediate-Scale Quantum) 시대에 그 가능성을 인정받아 최근 가장 활발히 연구가 진행되고 있는 주제이다. 주된 목적으로는, 양자 역학의 여러 원리를 활용하는 양자컴퓨터를 통해 기존의 머신러닝으로 이루어진 시도보다 더 우월한 성능을 내거나, 혹은 비용을 줄이는 등이다. 이를 수학적 이론을 통해 입증하고, 다양한 문제에 적용하는 것 또한 양자머신러닝이 가진 숙제이다. 이렇듯 양자머신러닝은 다양한 분야로의 적용 가능성과 함께 방법론도 활발히 연구되고 있는데, 본 연구에서는 양자 머신러닝의 근간이 되는 양자 알고리즘의 수학적 원리와 양자 머신러닝의 두 가지 대표적인 방법론, 그리고 본질적으로 선형적인 양자컴퓨팅의 연산 방식에 비선형성을 도입하는 방법과 확장 가능성에 대해 논의한다.
+
+\textbf{Keywords}: 양자컴퓨팅, 양자머신러닝, 머신러닝, 활성화함수(Activation Function)
+% ~\\
+% \noindent \textbf{\textit{Student Number}}: 2000-12345
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% For page numbering of Abstract & TOC
+%\newcounter{mypageno}
+%\let\oldtableofcontents\tableofcontents
+%\renewcommand{\tableofcontents}{%
+%  \oldtableofcontents
+%  \cleardoublepage
+%  \setcounter{mypageno}{\value{page}}%
+%  \pagenumbering{roman}%
+%  \setcounter{page}{\value{mypageno}}%
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\setstretch{1.} % 줄 간격 설정
+\setcounter{tocdepth}{2} % Table of Contents, 목차인 듯
+\tableofcontents
+
+\addtocontents{lof}{\protect\addcontentsline{toc}{chapter}{List of Figures}}
+\listoffigures
+
+\addtocontents{lot}{\protect\addcontentsline{toc}{chapter}{List of Tables}}
+\listoftables
+}
+
+
+\chapter*{List of Acronyms}\addcontentsline{toc}{chapter}{List of Acronyms}
+\noindent\textbf{AF}: Activation Function
+\\
+\noindent\textbf{ML}: Machine Learning
+\\
+\noindent\textbf{NISQ}: Noisy Intermediate-Scale Quantum
+\\
+\noindent\textbf{PQC}: Parameterized Quantum Circuit
+\\
+\noindent\textbf{QML}: Quantum Machine Learning
+% \\
+% \noindent\textbf{NIR}: Near-InfraRed
+% \\
+% \noindent\textbf{PCA}: Principal Component Analyses
+% \\
+% \noindent\textbf{PPC}: Polarimetric Phase Curve, $P_\mathrm{r}(\alpha)$
+% \\
+% \noindent\textbf{SSSB}: Small Solar System Bodies
+% \\
+% \noindent\textbf{STM}: Standard Thermal Model
+% \\
+% \noindent\textbf{TPM}: ThermoPhysical Model
+% \\
+% \noindent\textbf{YORP}: Yarkovsky--O'Keefe--Radzievskii--Paddack (effect)
+
+\clearpage
+
+\pagenumbering{arabic}
+\part{Backgrounds}\label{part-bkg}
+
+% ------------ Introduction ------------ %
+\chapter{Introduction}\label{c:intro}
+% \chapquote{Natura non facit saltus.}{Gottfried Leibniz}
+\input{chaps/ch-intro}
+
+% ------------ Figure and Table ------------ %
+\chapter{Figure and Table}
+\chapquote{God does not care about our mathematical difficulties.}{Albert Einstein}
+\input{chaps/ch2-figs} % ch-theo : Figure and Table tex 파일인 듯, 추후 수정 요망
+
+% ------------ Reference and Code ------------ %
+\chapter{Research Flow}
+% \chapquote{He integrates empirically.}{Albert Einstein, {\footnotesize after saying ``God does not care about our mathematical difficulties.''}}
+\input{chaps/ch3-ResearchFlow} % 3장 tex 파일
+
+% ------------ Part 2 표지 ------------ %
+\part{Research and Results}\label{part-conclusion}
+
+% ------------ Chapter 4 시작 ------------ %
+\chapter{Research}\label{c:researsh}
+\input{chaps/ch4-Research} % 4장 tex 파일
+
+% ------------ Chapter 5 시작 ------------ %
+\chapter{Conclusion}\label{c:conclusion}
+\input{chaps/ch5-Conclusion} % 5장 tex 파일
+
+
+
+% 여기부터 참고 문헌
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{aa_url}
+\setstretch{1.0}  % ← of course you can change this as you wish, too.
+\bibliography{references.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\appendix
+%\chapter{Trailed Photometry}
+%\input{chaps/trailed}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 2nd Lang Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setstretch{1.3} % ← of course you can change this as you wish, too.
+% \chapter*{한국어 초록}\addcontentsline{toc}{chapter}{한국어 초록}%\setcounter{page}{3}
+% {\small
+% \quad 본문이 비한국어인 경우 반드시 한국어 초록 첨부. (해당연도의 도서관 규정 필독). 폰트사이즈 일관성을 위해 여기 예시의 한국어초록은 ``$\backslash$\texttt{small}'' 사용.
+
+% ~\\
+% \hangindent=2em
+% \hangafter=2
+% \textbf{주\,요\,어}: 소행성, 열적 모델링, 표토, 복사압, 편광---광학, 편광---적외선
+
+% ~\\
+% \noindent \textbf{학 \quad 번}: 2000-12345
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\chapter*{Acknowledgement}\\
+%\twocolumn
+\strangechapter{Ack}{Acknowledgement}\addcontentsline{toc}{chapter}{Acknowledgement}
+\small
+\footnotesize
+\setstretch{1.1}
+\setlength{\parskip}{0.3em}
+\input{chaps/acknowledgement}
+
+
+
+\end{document}
