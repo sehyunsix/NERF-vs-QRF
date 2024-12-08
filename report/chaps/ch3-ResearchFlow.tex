@@ -26,22 +26,22 @@ QRF는 NeRF에서의 ML 모델을 PQC(Parameterized Quantum Circuit) 모델로 �
 % QML의 연구가치, 적용 가능해 보이는 분야들 -> 진짜 motivation이 될 수 있을 법한 내용들
 
 % 이처럼
-양자 머신러닝은 기존 머신러닝의 한계를 극복하는 데 효용이 있을 것으로 기대되어 활발히 연구 중인 주제이며, ML과 QML의 공통점과 차이점은 다음과 같다.
+양자 머신러닝은 기존 머신러닝의 한계를 극복하는 데 효용이 있을 것으로 기대되어 활발히 연구 중인 주제이며, ML과 QML의 대표적인 공통점과 차이점은 다음과 같다.
 
 공통점으로는, 전체 구조적으로 동일한 양상을 띈다는 것이 있다. ML과 QML 모두 데이터를 Encoding하고, 문제에 맞게 구성된 모델을 통해 output을 내놓는다. 이렇게 얻은 output을 통해 미리 정의된 cost function의 출력값을 계산하고, 계산된 cost 값을 최소화하도록 학습이 진행된다.
 
-ML과 QML의 가장 큰 차이점은, QML 모델은 데이터 인코딩부터의 과정이 양자 컴퓨터 상의 양자 알고리즘으로 이루어진다는 것이다. QML 모델은 후술할 여러 방법들을 통해 가지고 있던 기존의 데이터를 중첩시킨 양자 데이터로 변환하고, 양자 회로로 이루어진 Ansatz를 통해 output을 내놓게 된다. 대부분의 QML에서, 이후의 optimize 과정은 고전 ML과 동일하다.
+ML과 QML의 가장 큰 차이점은, QML 모델은 데이터 인코딩부터 output 값을 생성하는데까지의 과정이 양자 컴퓨터 상의 양자 알고리즘으로 이루어진다는 것이다. QML 모델은 후술할 여러 방법들을 통해 가지고 있던 기존의 데이터를 중첩시킨 양자 데이터로 변환하고, 양자 회로로 이루어진 Ansatz를 통해 output을 내놓게 된다. 대부분의 QML에서, 이후의 optimize 과정은 고전 ML과 동일하다.
 
-QML은 양자 컴퓨터에서 작동하는 양자 알고리즘의 이점을 활용하고자 하며, 다양한 방법을 통해 다양한 분야로 적용하려 하는 시도들이 행해지고 있다. 이에 양자 머신러닝의 근간이 되는 양자컴퓨팅의 수학적 이론부터, 양자 머신러닝의 원리를 이해하고 이를 분석해보았다.
+QML은 양자 컴퓨터에서 작동하는 양자 알고리즘의 이점을 활용하고자 하며, 다양한 방법을 통해 다양한 분야로 적용하려 하는 시도들이 행해지고 있다. 이에 양자 머신러닝의 근간이 되는 양자컴퓨팅의 수학적 이론부터, 양자 머신러닝이 행해지는 방법과 원리를 이해하고 이를 분석해보았다.
 
 \section{Mathematics for Quantum Computing}\label{ss:math for qc}
 % 설명(삭제예정) : qubit, Hilbert space, quantum gates, quantum circuit, depth, measure(expval, observable) 등에 대해 수학적 정의와 특징을 설명하는 장이다.
 
 
 % good
-양자 머신러닝을 포함하여, 양자 알고리즘을 이해하기 위해서는 양자컴퓨팅의 수학적 원리를 이해해야 한다. 이 섹션에서는 qubit부터, quantum gates, quatum circuit 등 다양한 양자컴퓨팅의 개념을 설명한다.
+양자 머신러닝을 포함하여, 양자 알고리즘을 이해하기 위해서는 양자컴퓨팅의 수학적 원리를 이해해야 한다. 이 섹션에서는 qubit부터, quantum gates, quatum circuit 등 필수적인 양자컴퓨팅의 개념을 설명한다.
 
-\subsection{Quantum bit, qubit}
+\subsection{Quantum Bit, Qubit}
 
 
 기존의 컴퓨터가 1 bit에 0 혹은 1의 정보를 저장했던 것과 달리, 양자컴퓨터는 1 qubit에 0과 1이 중첩된 상태(state)를 사용하며, quantum state(qubit state)는 후술할 내용과 같이 벡터로써 정의된다.
@@ -94,9 +94,9 @@ Computational Basis State \( \ket{0}, \ket{1} \)
     \braket{\psi}{\psi} = \begin{pmatrix} \alpha^{*} & \beta^{*} \end{pmatrix} \begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \alpha^{*}\alpha + \beta^{*}\beta = |\alpha|^2 + |\beta|^2 = 1
 \]
 
-\noindent 두 state간의 내적은 추후 qubit state의 상태를 최종적으로 측정(measure)할 때 중요하게 사용된다.
+\noindent 두 state 간의 내적은 추후 qubit state의 상태를 최종적으로 측정(measure)할 때 중요하게 사용된다.
 
-\subsection{Multi-qubit system}
+\subsection{Multi-Qubit System}
 
 위 섹션에서 정의한 qubit state가 이해됐다면 자연스럽게 multi-qubit system에 대해 의문을 가질 수 있다. Multi-qubit system에 대해 이해하기 위해서 complex vector간의 tensor product를 먼저 정의한다.
 
@@ -174,7 +174,7 @@ Tensor product \(\otimes\) between vectors
 \end{definition}
 Separable state에 대한 다음 예시를 살펴보자:
 \begin{example}
-    Separable State
+    Separable State as Product of Two Single Qubit States
 \[
     \ket \psi := {1 \over \sqrt{2}}\ket{00} + {1 \over \sqrt{2}}\ket{10} = \left({1 \over \sqrt{2}}\ket{0} + {1 \over \sqrt{2}}\ket{1}\right) \otimes \ket{0}
 \]
@@ -191,13 +191,14 @@ Separable state에 대한 다음 예시를 살펴보자:
 
 다음 예시를 살펴보자.
 \begin{example}
+    Bell State (the most popular entangled state)
 \[
     \ket \psi := {1 \over \sqrt{2}}\ket{00} + {1 \over \sqrt{2}}\ket{11}
 \]
 위와 같이 정의된 quantum state \( \ket{\psi} \)는 두 single qubit state의 tensor product로 나타나지 않는 Entangled state이다.
 \end{example}
 
-\noindent 결과적으로, 일반적인 multi qubit state는 다음과 같이 정의된다.
+\noindent 마지막으로, 일반적인 multi qubit state는 다음과 같이 정의된다.
 \begin{definition}
 Multi-qubit state
 
@@ -216,7 +217,7 @@ For \(n \in \mathbb{N}\), \(n\)-qubit state \(\ket{\psi}\) is represented by:
 \subsubsection{3.2.3.1 \quad Unitary Matrix}
 양자 게이트(Quantum Gate)는 양자컴퓨팅에서 양자 상태를 변화시키는 기본적인 연산 단위이다. 이는 고전 컴퓨팅에서의 논리 게이트와 유사하나, 양자 상태의 중첩(superposition)이나 얽힘(entanglement)같은 특성을 처리한다는 차이점이 있다.
 
-\noindent 다음과 같은 예시를 살펴보자:
+\noindent [그림 3.1]을 살펴보자:
 
 \begin{figure}[htb!]
     \centering
@@ -225,7 +226,7 @@ For \(n \in \mathbb{N}\), \(n\)-qubit state \(\ket{\psi}\) is represented by:
     \label{fig:NOT-Gates}
 \end{figure}
 
-고전 논리 회로에서 NOT 게이트는, [그림3.1]과 같이 input이 0인 경우 output으로 1을 내놓고, input이 1인 경우 output으로 0을 내놓는 역할을 한다. 이는 \(\mathbb{Z}_2\)에서 \( \text{NOT } A = A + 1\)과 같다.
+고전 논리 회로에서 NOT 게이트는 [그림3.1]과 같이 input이 0인 경우 output으로 1을 내놓고, input이 1인 경우 output으로 0을 내놓는 역할을 한다. 이는 \(\mathbb{Z}_2\)에서 \( \text{NOT } A = A + 1\)과 같다.
 
 양자 논리 회로에서 NOT Gate는 특별하게 Pauli-X Gate라고 불리며, [그림3.1]과 같이 input이 \(\ket 0\)인 경우 output으로 \(\ket 1\)을, input이 \(\ket 1\)인 경우 output으로 \(\ket 0\)을 내놓는 역할을 한다.
 
@@ -291,10 +292,11 @@ For \(n \in \mathbb{N}\), \(n\)-qubit state \(\ket{\psi}\) is represented by:
 \[
     \ket{\psi(\theta, \phi)} = \cos{\left({\theta \over 2}\right)}\ket 0 + \sin{\left({\theta \over 2}\right)}e^{i\phi} \ket 1
 \]
-위와 같이 \textit{global phase를 배제한 }single qubit state를 변수 \(\theta, \phi\)에 대해 매개변수화하면, 구면좌표로 표현된 3차원 공간에서, qubit state와 unit vector간의 연관성을 만들 수 있다. 이 연관성을 통해 single qubit에서의 state 및 operation의 구조와 동작을 이해하는 시각화 도구인 Bloch Sphere([그림 3.2])가 고안되었다.
+% \textit{global phase를 배제한 }
+위와 같이 single qubit state를 변수 \(\theta, \phi\)에 대해 매개변수화하면, 구면좌표로 표현된 3차원 공간에서, qubit state와 unit vector간의 연관성을 만들 수 있다. 이 연관성을 통해 single qubit에서의 state 및 operation의 구조와 동작을 이해하는 시각화 도구인 Bloch Sphere([그림 3.2])가 고안되었다.
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=0.6\linewidth]{figs/bloch_sphere.png}
+    \includegraphics[width=0.5\linewidth]{figs/bloch_sphere.png}
     \caption{Bloch Sphere}
     \label{fig:bloch-sphere}
 \end{figure}
@@ -343,7 +345,7 @@ U(\phi, \theta, \omega) = \left( \begin{matrix}
 \subsubsection{3.2.3.4 \quad Multi Qubit Gate}
 % 여러 qubit에 대한 연산은 두 가지 형태로 표현이 가능하다. 첫 번째 형태는 근본적으로 개별(individual) 큐비트에 대한 단일 큐비트 연산을 수행하는 것처럼 보이지만, 다중 큐비트 시스템에서는 여러 single qubit 연산을 병렬로 적용할 수 있다. 단순히 개별 큐비트 연산의 텐서 곱으로 표현될 수 있기 때문에 이를 분리 가능한 연산(seperable operation)이라고 부른다.
 
-여러 qubit에 대한 연산은, qubit의 개수에 따라 그 크기에 맞는 Unitary Matrix로 이루어진다. 예컨대 2 qubit state의 경우 normalize된 4-dimension complex vector이고, 따라서 Quantum Gate로 \(4 \times 4\) Unitary Matrix를 사용한다. 이를 일반화하면, n qubit state에 대한 Operation은 \(2^n \times 2^n\) Unitary Matrix를 사용함을 알 수 있다.
+여러 qubit에 대한 연산은, qubit의 개수에 따라 그 크기에 맞는 Unitary Matrix로 이루어진다. 예컨대 2 qubit state의 경우 normalize된 4-dimension complex vector이고, 따라서 Quantum Gate로 \(4 \times 4\) Unitary Matrix를 사용한다. 이를 일반화하면, $n$ qubit state에 대한 Operation은 \(2^n \times 2^n\) Unitary Matrix를 사용함을 알 수 있다.
 
 이러한 multi-qubit gate를 두 가지 종류로 분류할 수 있다. 첫 번째는 각각의 qubit에 독립적으로 single-qubit gate가 가해지는 것이고, 두 번째는 여러 qubit이 결부되어 operation이 가해지는 것이다.
 
@@ -498,14 +500,14 @@ Step 1의 결과는 다음과 같다.
     \label{fig:bell state circuit}
 \end{figure}
 
-[그림 3.5]는 Example 3.2.3에서의 연산과정을 양자회로로 표현한 것으로, 첫 번째 qubit에 Hadamard gate를, 이후 CNOT gate를 가동한 것을 행렬식이나 bra-ket notation으로 표현한 것보다 직관적으로 이해할 수 있다.
+[그림 3.5]는 Example 3.2.3에서의 연산과정을 양자회로로 표현한 것으로, 첫 번째 qubit에 Hadamard gate를, 이후 CNOT gate를 가동한 과정을 행렬식이나 bra-ket notation으로 표현한 것보다 직관적으로 이해할 수 있다.
 
 양자 회로는 곧 양자 알고리즘이다. 보편적인 프로그래밍에서 알고리즘과 소프트웨어의 복잡도(complexity) 및 resource requirement를 고려하여 그 효율성을 높이는 것처럼, 양자 회로에 대해서도 동일한 과제가 주어진다. 양자 회로의 효율성을 평가하는 한 가지 중요한 기준은 바로 \textbf{Circuit Depth}이다. 여기서 Depth는, 가능한 한 병렬로 연산이 수행될 경우 회로가 작동하는 데 걸리는 시간 단계를 의미한다. 또는 회로의 layer 수라고 생각할 수 있다. 예컨대, [그림 3.5]에 나타난 회로의 경우 2의 depth를 가진다.
 
 \subsection{Measurement and Expectation Value}
-지금까지 quantum computer의 연산이 어떻게 동작되는지에 대해서 살펴보았다. 하지만 실제 문제를 해결하려고 하면, 일련의 알고리즘을 수행한 이후의 qubit state를 해석하여서 직면한 문제와 다시 연관시킬 수 있는 방법이 필요하다. 이에 전술한 것과 같이, 양자 알고리즘은 다양한 방식으로의 병렬 연산을 수행한 후, 마지막으로 정보를 추출하기 위한 최종 단계를 거친다. 이때 마지막 정보 추출의 과정에 사용되는 연산은 Unitary 연산은 아니다. 따라서, 모든 양자 알고리즘의 최종 단계인 Measurement와 Expectation Value에 대해 살펴보고 3.2장을 마친다.
+지금까지 quantum computer의 연산이 어떻게 동작되는지에 대해서 살펴보았다. 하지만 실제 문제를 해결하려고 하면, 일련의 알고리즘을 수행한 이후의 qubit state를 해석하여서 직면한 문제와 다시 연관시킬 수 있는 방법이 필요하다. 이에 전술한 것과 같이, 모든 양자 알고리즘은 다양한 방식으로의 병렬 연산을 수행한 후, 마지막으로 정보를 추출하기 위한 최종 단계를 거친다. 이때 마지막 정보 추출의 과정에 사용되는 연산은 Unitary 연산은 아니다. 따라서, 양자 알고리즘의 최종 단계인 Measurement와 Expectation Value에 대해 살펴보고 3.2장을 마친다.
 
-\subsubsection{Measurement}
+\subsubsection{3.2.5.1 \quad Measurement}
 다음과 같은 qubit state를 가정하자.
 $$
 |\psi \rangle = \alpha |0\rangle + \beta |1\rangle
@@ -529,9 +531,9 @@ $$
 \end{example}
 이때, 사용되는 measurement 방식을 특별히 projective measurement라고도 한다. 기본적으로, “각 basis state가 주어진 state에 얼마나 기여하는가?”를 묻고 있는 것이다. 이 이름은 두 state vector의 inner product 즉, 선형대수에서의 projection과 같은 연산을 수행하고 있다는 사실에서 기인한다. 그러나 standard linear algebra와 다른 한 가지 단계는, 실제 확률 값을 얻기 위해서는 inner product의 제곱을 취해야 한다는 것이다.
 
-\subsubsection{Expectation Value}
+\subsubsection{3.2.5.2 \quad Expectation Value}
 
-측정 결과로 확률 정보를 얻는 것은 qubit의 state에 따라 유용한 정보를 제공하지만, 종종은 그 state가 갖는 에너지와 같은 물리적인 것에 관심이 있을 때가 있다. 양자역학에는 에너지(energy), 운동량(momentum), 위치(position) 등 Observable이라는 이름의 "관측 가능한" 특성을 가지는 물리량이 존재한다. 이는 수학적으로, 임의의 양자 상태에 대해 Observable Operator의 기댓값(Expectation Value)이 실수값이라는 의미인데, 양자컴퓨팅에서 이는 다음과 같이 계산된다.
+측정 결과로 확률 정보를 얻는 것은 qubit의 state에 따라 유용한 정보를 제공하지만, 종종은 그 state가 갖는 에너지와 같은 물리적인 것에 관심이 있을 때가 있다. 양자역학에는 에너지(energy), 운동량(momentum), 위치(position) 등 Observable이라는 이름의 "관측 가능한" 특성을 가지는 물리량이 존재한다. 이는 수학적으로, 임의의 양자 상태에 대해 Observable Operator의 기댓값(Expectation Value)이 실수값이라는 의미인데, 이는 다음과 같이 계산된다.
 \begin{definition}
     Expectation Value of Observable \(A\) in the state \(\ket \psi\)
     \[
@@ -539,13 +541,33 @@ $$
     \]
 \end{definition}
 
-위 정의와 같이 주어진 Observable \(A\)에 대한 expectation value가 계산되는데, 이때 얻게 되는 값은 행렬 A의 eigenvalue의 linear comination으로 나타난다. 따라서 Observable의 expectation value로 실수값만을 얻게 된다는 것은 Observable Matrix가 real eigenvalue만을 갖는다는 것이고, 이는 선형대수에서의 Hermitian matrix(\(A^\dagger = A\))에 해당한다.
+위 정의와 같이 주어진 Observable \(A\)에 대한 expectation value가 계산되는데, 이때 얻게 되는 값은 행렬 A의 eigenvalue와 각각의 확률에 대한 linear comination으로 나타난다. 따라서 Observable의 expectation value로 실수값만을 얻게 된다는 것은 Observable Matrix가 real eigenvalue만을 갖는다는 것이고, 이는 선형대수에서의 Hermitian matrix(\(A^\dagger = A\))에 해당한다.
 
 \noindent 다음 예시를 살펴보자:
 
-\begin{example}
+\begin{example} Calculating Expectation Value for given Observable
+
+\[
+    \text{For } |\psi\rangle = {4\over 5}|0\rangle - {3 \over 5}e^{i\pi / 3}|1\rangle, 
+\]
+\[
+\text{ suppose we want to measure the obsevable } B = \left( \begin{matrix}
+    1 & -2i \\
+    2i & 2
+    \end{matrix}\right)
+\]
+
+\begin{align*}
+    % & \text{i) eigenvalues of } B : \lambda_1 = 3.56155281 , \lambda_2 = -0.56155281 \\
+    % & \text{ii) }
+    \text{Expectation Value of } B : \langle\psi|B|\psi\rangle = {1 \over 25} \left(\begin{matrix}4 & -3e^{i\pi/3}\end{matrix}\right)\left(\begin{matrix}
+        1 & -2i \\
+        2i & 2
+        \end{matrix}\right)\left(\begin{matrix} 4 \\ -3e^{i\pi /3}\end{matrix}\right) = -0.302769
+\end{align*}
 
 \end{example}
+위 예시로 알아볼 수 있듯, 문제에 맞게 미리 구성한 Observable(Hermitian Matrix)를 이용하여, 보유한 quantum state에서 적절한 실수값을 추출할 수 있다. 이는 양자 머신러닝의 마지막 부분으로서 중요한 역할을 한다.
 
 % \section{Methods for Quantum Machine Learning}
 % 설명(삭제예정) : 양자 머신러닝의 두 가지 방법론(PQC, Q-Perceptron)을 기술하는 장이다. (sin fitting 실험 기술 등), 또한 다양한 Data Encoding 방식, 측정(expval)을 통한 확률(정보) 추출 등\\
@@ -556,12 +578,12 @@ $$
 %##########################################################
 
 \section{Quantum Machine Learning}
- 이 장에서는 우리의 본래 목적인 QRF에서의 사용된 QML과 ML ,두 가지 요소를 구현한 뒤 실제 ML과 QML의 결과값을 비교해보고자 한다. 이를 위해 용어에 대한 정의와 개념을 설명하고 이후 우리의 내용을 말할 것이다.
+ 이 장에서는 우리의 본래 목적인, QRF에서 사용된 QML의 세부 요소를 설명한다. 또한 두 가지 문제에 대해 ML과 QML 모델을 각각 구현하여 실제 ML과 QML의 결과값을 비교 분석해보고자 한다. 이를 위해 용어에 대한 정의와 개념을 명확히 하고, 이후 분석 내용과 결과를 서술한다.
 
- \subsection{Concepts}
-주요 용어와 개념을 정리한다 우리의 작업의 이해를 돕기 위해
+\subsection{Concepts}
+% 주요 용어와 개념을 정리한다 우리의 작업의 이해를 돕기 위해
 \begin{itemize}
-    \item \textbf{머신 러닝(Machine Learning)} ML은 머신러닝의 약어로, 데이터를 기반으로 패턴을 학습하고 예측 또는 의사결정을 내리는 알고리즘 및 통계 모델의 개발을 목표로 한다. 머신러닝 모델은 데이터 인코딩, 모델 구조, 코스트 함수 등의 주요 구성 요소로 이루어져 있으며, 이를 통해 주어진 문제에 최적화된 솔루션을 도출한다.
+    \item \textbf{머신 러닝(Machine Learning)} : 머신러닝은 데이터를 기반으로 패턴을 학습하고 예측 또는 의사결정을 내리는 알고리즘 및 통계 모델의 개발을 목표로 한다. 머신러닝 모델은 데이터 인코딩, 모델 구조, 코스트 함수 등의 주요 구성 요소로 이루어져 있으며, 이를 통해 주어진 문제에 최적화된 솔루션을 도출한다.
 
     \item \textbf{퍼셉트론}
 
@@ -631,7 +653,7 @@ QML은 기존의 머신러닝 모델과 비교하여 더 높은 성능을 보일
 
 \subsection{Comparsion with QML and ML}
 
-이 장은 우리의 본래 목적은 QML과 ML의 차이를 실험적으로, 수학적으로 보이는 장이다. 공평한 비교를 위해 똑같은 데이터를 사용하고, 똑같은 파라미터의 개수를 사용하였을 때, 특정함수를 추정하는 Task에서의 성능차이를 보이고자 하였다. 먼저 QRF논문에서 사용된 2d image를 reconstruction 하는 Task에서 작동방식을 확인하고, 이를 더 확실하게 검증하기 위해 1차원 함수를 추정하는 Task에서 또한 검증을 추가적으로 진행하였다.
+이 장은 우리의 본래 목적인 실험적으로 드러나는 QML과 ML의 차이를 수학적으로 보이는 장이다. 공평한 비교를 위해 똑같은 데이터를 사용하고, 똑같은 파라미터의 개수를 사용하였을 때, 특정함수를 추정하는 Task에서의 성능차이를 보이고자 하였다. 먼저 QRF논문에서 사용된 2d image를 reconstruction 하는 Task에서 작동방식을 확인하고, 이를 더 확실하게 검증하기 위해 1차원 함수를 추정하는 Task에서 또한 검증을 추가적으로 진행하였다.
 \begin{itemize}
     \item \textbf{2d image reconstruction} :
 
