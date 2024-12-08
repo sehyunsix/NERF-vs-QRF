@@ -1,13 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{0}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-
-\bibitem[{{Bach} {et~al.}(2019){Bach}, {Ishiguro}, {Jin}, {Yang}, {Moon}, {Choi}, {JeongAhn}, {Kim}, \& {Kwak}}]{2019JKAS...52...71B}
-{Bach}, Y.~P., {Ishiguro}, M., {Jin}, S., {et~al.} (2019), ``{The Geometric Albedo of (4179) Toutatis Estimated from KMTNet DEEP-South Observations}'', \href{http://dx.doi.org/10.5303/JKAS.2019.52.3.71}{\color{magenta}J. Korean Astron. Soc.}, \href{https://ui.adsabs.harvard.edu/abs/2019JKAS...52...71B}{52, 71}
-
-\bibitem[{{Bach} {et~al.}(2022){Bach}, {Ishiguro}, {Takahashi}, \& {Geem}}]{2022_SAG_NICpolpy}
-{Bach}, Y.~P., {Ishiguro}, M., {Takahashi}, J., \& {Geem}, J. (2022), ``{Data Reduction Process and Pipeline for the NIC Polarimetry Mode in Python, NICpolpy}'', Stars Galaxies (arxiv:2212.14167), \href{https://ui.adsabs.harvard.edu/abs/2022arXiv221214167B}{5, 4}
-
-\bibitem[{{Ishiguro} {et~al.}(2011){Ishiguro}, {Takahashi}, {Zenno}, {Tokimasa}, \& {Kuroda}}]{Ishiguro2011ARNHAO}
-{Ishiguro}, M., {Takahashi}, J., {Zenno}, T., {Tokimasa}, N., \& {Kuroda}, T. (2011), ``{Performance Evaluation of the NHAO Near-Infrared Camera}'', Annu. Rep Nishi-harima Astron Ob, 521, 13
 
 \end{thebibliography}

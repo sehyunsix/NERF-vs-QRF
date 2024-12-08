@@ -1,10 +1,13 @@
 \addcontentsline {toc}{chapter}{List of Figures}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A schematic diagram (This is the title appear in ``List of Figures'')}}{5}{figure.caption.5}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The $ r_1 $ ratio map for J-band with HWP rotator angle $ 0^\circ $ and o-ray region only.}}{6}{figure.caption.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 2-d image quantum circuit 구조}}{15}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 1-d image quantum circuit 구조}}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces NOT Gates in Classical/Quantum Computing}}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Bloch Sphere}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces RX, RY, and RZ operations on Bloch Sphere}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Circuit representation of elementary quantum gates}}{17}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Bell State Preparation Circuit}}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 2-d image quantum circuit 구조}}{23}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 1-d image quantum circuit 구조}}{24}{figure.caption.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
