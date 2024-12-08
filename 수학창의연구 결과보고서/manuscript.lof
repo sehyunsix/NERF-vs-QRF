@@ -1,0 +1,13 @@
+\addcontentsline {toc}{chapter}{List of Figures}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces NOT Gates in Classical/Quantum Computing}}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Bloch Sphere}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces RX, RY, and RZ operations on Bloch Sphere}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Circuit representation of elementary quantum gates}}{17}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Bell State Preparation Circuit}}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 2-d image quantum circuit 구조}}{23}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 1-d image quantum circuit 구조}}{24}{figure.caption.22}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
