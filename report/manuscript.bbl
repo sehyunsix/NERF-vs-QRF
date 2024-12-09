@@ -1,4 +1,53 @@
-\begin{thebibliography}{0}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Schuld et~al.(2015)Schuld, Sinayskiy, and Petruccione]{schuld2015introduction}
+Maria Schuld, Ilya Sinayskiy, and Francesco Petruccione.
+\newblock An introduction to quantum machine learning.
+\newblock \emph{Contemporary Physics}, 56\penalty0 (2):\penalty0 172--185, 2015.
+
+\bibitem[Gardner and Dorling(1998)]{gardner1998artificial}
+Matt~W Gardner and SR~Dorling.
+\newblock Artificial neural networks (the multilayer perceptron)—a review of applications in the atmospheric sciences.
+\newblock \emph{Atmospheric environment}, 32\penalty0 (14-15):\penalty0 2627--2636, 1998.
+
+\bibitem[Krenker et~al.(2011)Krenker, Be{\v{s}}ter, and Kos]{krenker2011introduction}
+Andrej Krenker, Janez Be{\v{s}}ter, and Andrej Kos.
+\newblock Introduction to the artificial neural networks.
+\newblock \emph{Artificial Neural Networks: Methodological Advances and Biomedical Applications. InTech}, pages 1--18, 2011.
+
+\bibitem[Popescu et~al.(2009)Popescu, Balas, Perescu-Popescu, and Mastorakis]{popescu2009multilayer}
+Marius-Constantin Popescu, Valentina~E Balas, Liliana Perescu-Popescu, and Nikos Mastorakis.
+\newblock Multilayer perceptron and neural networks.
+\newblock \emph{WSEAS Transactions on Circuits and Systems}, 8\penalty0 (7):\penalty0 579--588, 2009.
+
+\bibitem[Biamonte et~al.(2017)Biamonte, Wittek, Pancotti, Rebentrost, Wiebe, and Lloyd]{biamonte2017quantum}
+Jacob Biamonte, Peter Wittek, Nicola Pancotti, Patrick Rebentrost, Nathan Wiebe, and Seth Lloyd.
+\newblock Quantum machine learning.
+\newblock \emph{Nature}, 549\penalty0 (7671):\penalty0 195--202, 2017.
+
+\bibitem[Rath and Date(2023)]{rath2023quantum}
+M~Rath and H~Date.
+\newblock Quantum data encoding: A comparative analysis of classical-toquantum mapping techniques and their impact on machine learning accuracy.
+\newblock \emph{arXiv preprint arXiv:2311.10375}, 2023.
+
+\bibitem[Maronese et~al.(2022)Maronese, Destri, and Prati]{maronese2022quantum}
+Marco Maronese, Claudio Destri, and Enrico Prati.
+\newblock Quantum activation functions for quantum neural networks.
+\newblock \emph{Quantum Information Processing}, 21\penalty0 (4):\penalty0 128, 2022.
+
+\bibitem[Mitsuda et~al.(2024)Mitsuda, Ichimura, Nakaji, Suzuki, Tanaka, Raymond, Tezuka, Onodera, and Yamamoto]{mitsuda2024approximate}
+Naoki Mitsuda, Tatsuhiro Ichimura, Kouhei Nakaji, Yohichi Suzuki, Tomoki Tanaka, Rudy Raymond, Hiroyuki Tezuka, Tamiya Onodera, and Naoki Yamamoto.
+\newblock Approximate complex amplitude encoding algorithm and its application to data classification problems.
+\newblock \emph{Physical Review A}, 109\penalty0 (5):\penalty0 052423, 2024.
+
+\bibitem[Yang and Sun(2022)]{yang2022quantum}
+YuanFu Yang and Min Sun.
+\newblock A quantum-powered photorealistic rendering.
+\newblock \emph{arXiv preprint arXiv:2211.03418}, 2022.
 
 \end{thebibliography}

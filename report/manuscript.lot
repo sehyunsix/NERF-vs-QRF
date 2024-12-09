@@ -4,9 +4,9 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Single Qubit Gates : Matrix and Actions}}{12}{table.caption.8}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces Operation of CNOT Gate}}{16}{table.caption.13}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces MLP와 QML의 비교}}{23}{table.caption.18}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces PSNR comparison between MLP and QML models across different layer configurations}}{24}{table.caption.20}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces MLP와 QML의 비교}}{24}{table.caption.21}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces MSEcomparison between MLP and QML models across different layer configurations}}{25}{table.caption.23}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces MLP와 QML의 비교}}{23}{table.caption.21}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces PSNR comparison between MLP and QML models across different layer configurations}}{24}{table.caption.23}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces MLP와 QML의 비교}}{25}{table.caption.24}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces MSEcomparison between MLP and QML models across different layer configurations}}{26}{table.caption.26}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

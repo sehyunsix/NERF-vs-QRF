@@ -1,0 +1,7 @@
+Layers,sin,tanh,x
+MLP (3 layers),0.055,0.0,7.932
+MLP (4 layers),0.012,0.0,7.878
+MLP (5 layers),0.042,0.001,7.649
+PQC (3 layers),0.002,0.04,7.763
+PQC (4 layers),0.001,0.041,8.096
+PQC (5 layers),0.001,0.034,8.031

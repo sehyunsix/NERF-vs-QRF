@@ -550,86 +550,100 @@ $$
 % \section{Methods for Quantum Machine Learning}
 % 설명(삭제예정) : 양자 머신러닝의 두 가지 방법론(PQC, Q-Perceptron)을 기술하는 장이다. (sin fitting 실험 기술 등), 또한 다양한 Data Encoding 방식, 측정(expval)을 통한 확률(정보) 추출 등\\
 % 흠 근데 Q-Perceptron에 대한 설명은 다음 챕처에서 해야 하는데 여기서 실험을 언급하는 게 맞나 싶네
+
+
+
 %#########################################################
+%
 % Author : SEHYUN YUK
-% Last Update: 2024.12.03
+% Last Update: 2024.12.08
+%
 %##########################################################
 
+
+
+%#########################################################
+% 3.3 Quantum Machine Learning
+%
+% Author : SEHYUN YUK
+% Last Update: 2024.12.08
+%
+%##########################################################
 \section{Quantum Machine Learning}
- 이 장에서는 우리의 본래 목적인 QRF에서의 사용된 QML과 ML ,두 가지 요소를 구현한 뒤 실제 ML과 QML의 결과값을 비교해보고자 한다. 이를 위해 용어에 대한 정의와 개념을 설명하고 이후 우리의 내용을 말할 것이다.
+ 이 장에서는 QRF에서의 사용된 QML을 알아보고 이를 ML과 비교하여, 우리의 원래 궁금짐이었던 두 컴포넌트의 성능차이의 원인을 알아보려고 한다. 두 가지 요소를 구현한 뒤 실제 ML과 QML의 결과값을 비교해보고자 한다. 이를 \labelcref{qml:concepts}에서 용어에 대한 정의와 개념을 설명하고 \labelcref{qml:comparision}에서 구현방법과 결과에 대한 논의를 진행할 것이다.
 
- \subsection{Concepts}
-주요 용어와 개념을 정리한다 우리의 작업의 이해를 돕기 위해
-\begin{itemize}
-    \item \textbf{머신 러닝(Machine Learning)} ML은 머신러닝의 약어로, 데이터를 기반으로 패턴을 학습하고 예측 또는 의사결정을 내리는 알고리즘 및 통계 모델의 개발을 목표로 한다. 머신러닝 모델은 데이터 인코딩, 모델 구조, 코스트 함수 등의 주요 구성 요소로 이루어져 있으며, 이를 통해 주어진 문제에 최적화된 솔루션을 도출한다.
+ \subsection{Concepts} \label{qml:concepts}
 
-    \item \textbf{퍼셉트론}
+ 앞으로 사용하게 될 주요한 용어와 정의에 대해서 설명할 것이다.
 
-    \item \textbf{데이터 인코딩 (Data Encoding)}: 고차원의 원본 데이터를 모델에 적합한 형식으로 변환하는 과정이다. 이 단계는 데이터의 특성과 문제의 복잡성에 따라 다양한 기법이 사용될 수 있다.
+      \subsubsection{Classical Machine learning} 1950년대부터, Arthur Samuel은 머신러닝을 '명시적으로 프로그래밍되지 않고 컴퓨터가 학습할 수 있는 능력을 부여하는 연구 분야'로 정의하였다\citep{schuld2015introduction}.즉,머신러닝은 입력과 출력에 대한 관계를 데이터를 통해 발견해내는 알고리즘이라고 볼 수 있다. 이러한 머신러닝 중 \textbf{nerual network} 와 \textbf{back propagation}를 통해 학습하는 방법을 \textbf{deep learning}이라고 부른다.
 
-    \item \textbf{모델 구조 (Model Architecture)}: 데이터에서 패턴을 학습하기 위한 알고리즘 또는 신경망의 구조를 설계하는 단계이다. 모델의 구조는 문제의 특성에 맞추어 선택되며, 다양한 레이어와 활성화 함수가 포함될 수 있다.
+      nerual network 중 대표적으로 언급되는 것은 \textbf{mutil layer perceptron} 이라는 모델이다.이 모델은 연결된 뉴런 또는 노드의 시스템으로 구성된다.\cite{gardner1998artificial} 여기서 하나의 노드는 수학적 함수로 표현이 가능한 모델이다. 이 모델의 출력은 가중치 $w \in \mathbf{R}^n $와의 입력벡터 $x \in \mathbf{R}^n $ 내적과 편향 $b \in \mathbf{R}$의 덧셈이 활성화함수 혹은 비선형함수라고 불리는 함수에 통과하게 되어 형성된다.\cite{krenker2011introduction}
+      이를 표현한 그래프를 보면 쉽게 이해할 수 있다.
 
-    \item \textbf{코스트 함수 (Cost Function)}: 모델의 예측값과 실제값 간의 차이를 측정하는 함수로, 이를 최소화하는 방향으로 모델이 학습된다.
-\end{itemize}
+      \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figs/node.png}\
+        \caption{1-d image quantum circuit 구조}
+        \label{fig:node-image}
+        \end{figure}
 
-머신러닝은 지도학습, 비지도학습, 강화학습 등 다양한 학습 유형을 포함하며, 각 유형은 특정한 문제와 데이터 특성에 따라 적합한 방법론을 제공한다.
+      이러한 노드들이 모이면 하나의 레이어를 형성한다. 이렇게 형성된 레이어 중 입력과 직접적으로 가중치 곱을 수행하는 레이어를 \textbf{입력레이어}라고 하며, 최종적으로 노드의 출력이 마지막이 되는 레이어를 \textbf{출력레이어}라고 한다. 그리고 입력 레이어와 출력레이어 사이에있는 \textbf{히든레이어}라고 부른다.\cite{popescu2009multilayer}이렇게 형성된 레이어는 이전레이어의 노드들과 다음레이어의 노드들과의 가중치 곱을 통해 연결되며, 이러한 가중치들은 이전레이어의 노드 개수 $N$, 다음 레이어의 노드 개수 $M$ 과 함께 $N \times M $ 행렬로 표현된다. 이러한 가중치들은 편향과 함께 Backpropagation을 통해 학습가능하기 때문에 \textbf{학습파라미터}라고 불리기도 한다.
 
-\subsection{Components of QML}
-QML은 양자 컴퓨팅의 잠재력을 활용하여 머신러닝 문제를 해결하는 접근 방식이다. QML 모델은 양자 회로를 사용하여 데이터를 처리하며, 고전적인 머신러닝 모델과는 다른 방식으로 작동한다. QML의 주요 구성 요소는 다음과 같다:
+      이렇게 형성된 multi perceptron layer는 다양한 비선형 함수를 근사할 수 있다는 장점과, 병렬연산이 가능한 행렬연산을 통한 빠른 추론, 입력데이터와 출력데이터를 범용적으로 선택할 수 있다는 장점 덕분에 많은 관심을 받았다.
 
-\begin{itemize} % $n= \lceil log_2N \rceil$개의 / , \ \ket { \psi_\mathbf{x}} \in \mathcal{H}^{\otimes n}
-    \item \textbf{데이터 인코딩 (Data Encoding)}: 고전적인 데이터를 특정 양자 회로의 양자 상태로 변환하는 과정이다. 더 정확히 이 단계를 표현하면, 입력 데이터 $\mathbf{x} \in \mathbb{R}^N $이 주어졌을 때, qubit state \(\ket{\psi_{\mathbf{x}}}\)로 보내는 mapping ${\phi : \mathbf{x}  \mapsto \ket{ \psi_\mathbf{x}}}$을 구현하는 것이다. 이는 양자 회로에서 데이터를 처리할 수 있도록 하는 중요한 단계이다. Data Encoding 방식에는 대표적으로 Angle Encoding과 Amplitude Encoding이 있다.
 
-    \subitem \textbf{Angle Encoding} : % normalize condition 없이
-        Angle Encoding은 회전 게이트(RX, RY, RZ)를 사용하여 실수형 데이터 \( \mathbf{x}_k \in \mathbb{R}^N \)를 Encoding하는 방법이다. 각 qubit마다 회전 각도 \( \theta_k \) ([-\(\pi\), \(\pi\)] 범위 내)로 단일 회전을 적용하여, \( N \)개의 qubit로 \( N \)개의 feature를 Encoding할 수 있다. Angle Encoding은 다음과 같은 변환을 포함한다:
 
+
+
+\subsubsection{Components of Quantum Machine Learning}
+quantum machine learning의 분야는 지난 몇 년 동안 classical machine learning의 모델, 데이터인코딩, 통계학적 방법등을 양자컴퓨터의 알고리즘 및 양자이론을 통해 속도와 성능을 높이려는 노력을 통해 탄생하였다. 따라서 quntum machine learning는 입력데이터와 출력데이터의 관계를 찾아내어 가중치 혹은 파라미터를 학습시키는 양자 정보 처리 방법 중 하나라고 볼 수 있다.\cite{schuld2015introduction}. 여기서 나타나는 입력데이터는 양자 정보 이론을 사용하기 위해 양자 컴퓨터가 처리가능한 데이터로 변환하는 과정이 반드시 수행되어야 한다. 그러나 이를 수행하는 과정을 "input problem"이라고 할 만큼 계산량이 많기 때문에 중요한 과정이며 이를 개선하기 위한 연구들이 많이 진행되어왔다.\cite{biamonte2017quantum}
+
+
+    위에서 언급한 양자컴퓨가 처리가능한 데이터를 양자데이터라고 부르며, qubit들을 통해 처리가능한 정보를 의미하며 양자상태, 양자 레지스터,양자회로 등으로 다양하게 나타날 수 있다.이러한 데이터로 전환하는 과정을 \textbf{qunatum encoding}이라고 하는데 encoding 방식에 따라 \textbf{angle encoding}, \textbf{basis encoding}, \textbf{amplitude encoding}으로 불리우며, quantum autoencoder 와 같이 새로운 방식들이 등장하고 있다.\cite{rath2023quantum}
+
+    \textbf{basis encoding}은 이러한 encoding 방식 중 가장 간단한 방식은  이다. 이 방법은 고전컴퓨터의 bit를 그대로 qubit state의 텐서곱으로 표현하는 것이다. 예를 들어 고전컴퓨터 101이 주어진다면, 이를 다음과 같은 방법으로 매핑된다고 볼 수 있다.
+    \[
+    |101\rangle = |1\rangle \otimes |0\rangle \otimes |1\rangle
+    \]
+    이는 정수형이나 문자열들등 주로 이산적인 데이터를 다룰때 사용하는 방식이다.
+
+    \textbf{Angle Encoding}은 입력데이터를 qubit state의 phase에 encoding 하는 방식 중 하나이며, qubit circuit을 통해 이를 효과적으로 다룰 수 있기 때문에 중요한 방법이다. 또한 이를 활용하여 파라미터를 circuit안에 넣어 학습시킬 수 있는 parameter quantum circuit에 사용되기 때문에 더욱 중요하다. angle encoding은 RX, RY, RZ 통해 qubit 하나당 하나의 angle $\theta$ 값을 encoding한다. encoding 된 state는 다음과 같이 나타난다.
+
+    \[
+    |\psi(\theta)\rangle = R_y(\theta)|0\rangle + e^{i\phi}R_y(\theta)|1\rangle
+    \]
+    여기서 $e^{i\phi}$는 phase factor라고 불리우는 amplitude이며, 여기에 있는 $\phi$는 경우에 따라 사용되거나 무시될수 있다. 이를 qubit이 $n$개, 입력데이터 $\theta$가 n개 주어졌을때를 일반화하면 다음과 같이 표현된다.
+
+    \[
+         |\psi(\theta_1, \ldots, \theta_n)\rangle = \bigotimes_{i=1}^n (R_y(\theta_i)|0\rangle + e^{i\phi_i}R_y(\theta_i)|1\rangle)
+    \]
+
+    \clearpage
+  \textbf{Amplitude Encoding}:
+    Amplitude Encoding은 데이터를 양자 상태의 amplitude에 Encoding하는 방법이다.이러한 방법은 n개의 qubit 으로 qubit들의  basis state의 coefficients $N := 2^n$ 개에 데이터 $N$개를 encoding 한다. 이를  일반화하여 표현하면 다음과 같다\cite{maronese2022quantum}
+
+    \[
+    |\psi_x\rangle = \sum_{i=0}^{N-1} \frac{x_{i}}{\norm{x}} |i\rangle
+    \]
+    여기서 입력데이터 $x$는 N차원의 벡터가 된다. 이러한 encoding 방식은 기하급수적인 encoding 효율덕분에, 많은 양의 데이터를 압축해서 사용할 수 있지만, complex amplitude들을 encoding 할 경우 n개의 qubit을 사용할때 $\mathcal{O}(2^n)$ 의 시간복잡도 걸린다는 단점이 있다.\cite{mitsuda2024approximate}
+
+
+
+  \textbf{Parameterized Quantum Circuit(PQC)}는 이렇게 encoding 된 qunatum data를 통해 최적화 가능한 매개변수를 포함한 양자 회로로, 양자 gate를 통해 이루어진다. PQC는 고전적인 머신러닝 모델과 유사한 방식으로 작동하며, 양자 회로의 매개변수를 조정하여 최적의 결과를 도출한다.이를 n개의 qubit이 주어졌을 떄를 일반화하면 다음과 같이 표현될 수 있다.
         \[
-        S_k |0\rangle = \bigotimes_{k=0}^{N} \left( \cos{\theta_k} |0\rangle + \sin{\theta_k} |1\rangle \right)
+        |\psi\rangle = \prod_{\ell=1}^{m} W_{\ell} u_{\ell}(\theta_{\ell}) |\psi_0\rangle
         \]
+        여기서 \( |\psi_0\rangle \)는 초기 양자 상태를 나타내며, \( m \)은 최대 회로 깊이, \( W_{\ell} \)는 \(\ell\)-번째 레이어에서의 비매개변수화된 양자 게이트, \( U_{\ell}(\theta_{\ell}) \)는 매개변수 \(\{\theta_0, \theta_1, \ldots, \theta_k\}\)를 가지는 \(\ell\)-번째 레이어에서의 매개변수화된 양자 게이트를 나타낸다. 이때, \( u_{\ell}(\theta_{\ell}) \)의 형태는 물리적 제약(예: 물리적 큐비트 간의 연결성 제한)에 따라 달라질 수 있다. 이러한 pqc 회로는 data encoding 과정을 제외하면, mlp와 동일한 구조이지만 더 적은 파라미터와의 연산을 통해 출력이 나오는 구조이기 때문에, mlp를 대체하여 성능을 높이려는 방식으로 연구가 진행되고 있다. 이러한 연구중 하나가 우리에게 동기를 주었던 QRF이며 해당 연구에서 실제로 mlp를 pqc를 전환하였을때, 속도와 성능의 개선되었다는 것을 실험으로 보였다.\cite{yang2022quantum}
 
-        회로는 \( |0\rangle \) 상태에서 시작하여, 주어진 데이터 성분 \( x_k \)를 Encoding 회로 \( S_k \)를 통해 Encoding한다. qubit 수 \( N \)은 Encoding되는 벡터 \( \mathbf{x}_k \)의 차원과 동일하며, Angle Encoding은 일정 수의 병렬 회전을 요구함으로써 Circuit Depth가 1로 운영 효율성이 높다.
-
-    \subitem \textbf{Amplitude Encoding}:
-    Amplitude Encoding은 데이터를 양자 상태의 amplitude에 Encoding하는 방법이다. 이 방법에서는 정규화된 고전적인 \( N \)-차원 데이터 \( \mathbf{x} \)를 \( n \)-qubit state \( |\psi_{\mathbf{x}}\rangle \)의 amplitude로 표현한다. 구체적으로, normalize된 데이터 \( \mathbf{x}_{norm} \)는 다음과 같이 표현된다:
-
-    \[
-    |\psi_{\mathbf{x_{norm}}}\rangle = \frac{1}{\sqrt{31.25}} \left[ |00\rangle - 5.5|10\rangle \right]
-    \]
-
-    Amplitude Encoding을 적용하기 위해서는 전체 입력 데이터 예제들을 하나의 벡터로 결합한 후, 이를 정규화하여 컴퓨팅 기저 상태에 대응시키는 과정이 필요하다. 예를 들어, 데이터셋 \( D \)의 모든 입력 예제 \( \mathbf{x}(m) \)을 하나의 벡터 \( \alpha \)로 결합하면:
-
-    \[
-    \alpha = C_{norm} x^{(1)}_1, \ldots, x^{(1)}_N, x^{(2)}_1, \ldots, x^{(2)}_N, \ldots, x^{(M)}_1, \ldots, x^{(M)}_N
-    \]
-
-    이 벡터는 정규화되어 \( |\alpha|^2 = 1 \)을 만족한다. 이후, 데이터셋은 다음과 같이 표현된다:
-
-    \[
-    |D\rangle = \sum_{i=1}^{2^n} \alpha_i |i\rangle
-    \]
-
-    Amplitude Encoding은 전체 \( N \times M \)개의 진폭을 인코딩해야 하며, 이를 위해서는 최소 \( n \geq \log_2(NM) \) 큐비트가 필요하다. 이 기법은 데이터의 고차원 정보를 양자 상태의 진폭에 효율적으로 매핑함으로써, 양자 머신러닝 알고리즘에서 데이터 처리의 효율성을 높일 수 있다.
-
-    \item \textbf{Parameterized Quantum Circuit, PQC}: 최적화 가능한 매개변수를 포함한 양자 회로로, 주어진 문제를 해결하기 위해 설계된다. PQC는 고전적인 머신러닝 모델과 유사한 방식으로 작동하며, 양자 회로의 매개변수를 조정하여 최적의 결과를 도출한다. 매개변수화된 양자 회로(PQC) \( U(\boldsymbol{\theta}) \)는 매개변수 집합 \( \boldsymbol{\theta} = \{\theta_1, \theta_2, \ldots, \theta_n\} \)에 의존하는 양자 게이트의 조합으로 정의된다. 수학적으로, 이는 다음과 같이 표현할 수 있다:
-    \[
-        U(\boldsymbol{\theta}) = U_L(\theta_L) \otimes U_{L-1}(\theta_{L-1}) \cdots U_1(\theta_1)
-    \]
-    여기서 각 \( U_l(\theta_l) \)는 레이어 \( l \)에서 양자 상태에 작용하는 파라미터화된 게이트를 나타낸다.
-
-    \item \textbf{코스트 함수 (Cost Function)}: 양자 머신러닝에서 코스트 함수는  측정하는 회로 Z와 같은 방법을 통해 양자상태를 측정한 값과 실제 정답 값의 차이를 수학적으로 나타내어 구성한다. 이를 일반적인 방식으로 표현하면 다음과 같이 나타낼수 있다.
-
-    \[
-    C(\boldsymbol{\theta}) = \frac{1}{M} \sum_{i=1}^{M} \left( \langle \psi(\mathbf{x}_i; \boldsymbol{\theta}) | O | \psi(\mathbf{x}_i; \boldsymbol{\theta}) \rangle - y_i \right)^2
-    \]
-
-    여기서 \( M \)은  샘플 수.  \( \psi(\mathbf{x}_i; \boldsymbol{\theta}) \)은 입력 \( \mathbf{x}_i \)와 파라미터 \( \boldsymbol{\theta} \)로 매개변수화된 양자 상태를 나타내고 \( O \) 관측 연산자,그리고
-       \( y_i \)는 \( i \)-번째 샘플의 목표 값을 나타낸다.
-
-\end{itemize}
-
-QML은 기존의 머신러닝 모델과 비교하여 더 높은 성능을 보일 수 있는 잠재력을 가지고 있으며, 특히 복잡한 데이터 구조를 처리하는 데 유리하다. 그러나 QML의 성능을 최적화하기 위해서는 양자 회로 설계와 데이터 인코딩 방법에 대한 깊은 이해가 필요하다.
-
-\subsection{Comparsion with QML and ML}
+%#########################################################
+% 3.3.2 Components of QML
+%
+% Author : SEHYUN YUK
+% Last Update: 2024.12.08
+%
+%##########################################################
+\subsection{Comparsion with QML and ML} \label{qml:comparision}
 
 이 장은 우리의 본래 목적은 QML과 ML의 차이를 실험적으로, 수학적으로 보이는 장이다. 공평한 비교를 위해 똑같은 데이터를 사용하고, 똑같은 파라미터의 개수를 사용하였을 때, 특정함수를 추정하는 Task에서의 성능차이를 보이고자 하였다. 먼저 QRF논문에서 사용된 2d image를 reconstruction 하는 Task에서 작동방식을 확인하고, 이를 더 확실하게 검증하기 위해 1차원 함수를 추정하는 Task에서 또한 검증을 추가적으로 진행하였다.
 \begin{itemize}
@@ -698,13 +712,14 @@ QML은 기존의 머신러닝 모델과 비교하여 더 높은 성능을 보일
                     \cline{2-4}
                     & Image 1 & Image 2 & Image 3 \\
                     \hline
-                    MLP (1 layer) & 24.3 & 23.8 & 24.1 \\
-                    MLP (2 layers) & 25.7 & 25.2 & 25.5 \\
-                    MLP (3 layers) & 26.4 & 26.1 & 26.3 \\
+                    MLP (3 layers) & 15.69 & 16.53 & 15.19 \\
+                    MLP (4 layers) & 15.76 & 16.43 & 15.23 \\
+                    MLP (5 layers) & 15.72 & 16.41 & 15.18 \\
                     \hline
-                    PQC (1 layer) & 25.1 & 24.9 & 25.0 \\
-                    PQC (2 layers) & 26.8 & 26.5 & 26.7 \\
-                    PQC (3 layers) & 27.9 & 27.6 & 27.8 \\
+                    PQC (3 layers) & 4.35 & 6.19 & 7.43 \\
+                    PQC (4 layers) & 14.21 & 16.09 & 15.13 \\
+                    PQC (5 layers) & 14.28 & 15.52 & 15.23 \\
+
                     \Xhline{3\arrayrulewidth}
                     \end{tabular}
                     \caption{PSNR comparison between MLP and QML models across different layer configurations}
@@ -749,7 +764,7 @@ QML은 기존의 머신러닝 모델과 비교하여 더 높은 성능을 보일
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/pqc_1d}\
-\caption{1-d image quantum circuit 구조}
+\caption{1-d function estimation quantum circuit 구조}
 \label{fig:1d-image}
 \end{figure}
 \end{itemize}
@@ -765,13 +780,13 @@ QML은 기존의 머신러닝 모델과 비교하여 더 높은 성능을 보일
     \cline{2-4}
     & $sin(x)$  & $tanh(x)$ & $x$ \\
     \hline
-    MLP (1 layer) & 24.3 & 23.8 & 24.1 \\
-    MLP (2 layers) & 25.7 & 25.2 & 25.5 \\
-    MLP (3 layers) & 26.4 & 26.1 & 26.3 \\
+    MLP (3 layers) & 0.055 & 0.0 & 7.932 \\
+    MLP (4 layers) & 0.012 & 0.0 & 7.878 \\
+    MLP (5 layers) & 0.042 & 0.001 & 7.649 \\
     \hline
-    PQC (1 layer) & 25.1 & 24.9 & 25.0 \\
-    PQC (2 layers) & 26.8 & 26.5 & 26.7 \\
-    PQC (3 layers) & 27.9 & 27.6 & 27.8 \\
+    PQC (3 layers) & 0.002 & 0.04 & 7.763 \\
+    PQC (4 layers) & 0.001 & 0.041 & 8.096 \\
+    PQC (5 layers) & 0.001 & 0.034 & 8.031 \\
     \Xhline{3\arrayrulewidth}
     \end{tabular}
     \caption{MSEcomparison between MLP and QML models across different layer configurations}

@@ -25,18 +25,19 @@
 \contentsline {subsubsection}{Expectation Value}{19}{section*.17}%
 \contentsline {section}{\numberline {3.3}Quantum Machine Learning}{19}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Concepts}{19}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Components of QML}{20}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Comparsion with QML and ML}{22}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Limitations of QML: Constraint of Nonlinearity}{25}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Limitations of QML: Constraint of Nonlinearity}{26}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Impartion and Expansion of Nonlinearity}{26}{section.3.6}%
-\contentsline {part}{II\hspace {1em}Research and Results}{27}{part.2}%
-\contentsline {chapter}{\numberline {4}Research}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Impartion Nonlinearity for Quantum Perceptron}{28}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}subsection}{28}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}우리가 한 거, 창의적인 연구!}{28}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary}{29}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Conclusion}{29}{section.5.2}%
-\contentsline {chapter}{Bibliography}{30}{section.5.2}%
-\contentsline {chapter}{Acknowledgement}{31}{chapter*.25}%
+\contentsline {subsubsection}{Classical Machine learning}{20}{section*.18}%
+\contentsline {subsubsection}{Components of Quantum Machine Learning}{21}{section*.20}%
+\contentsline {subsection}{\numberline {3.3.2}Comparsion with QML and ML}{22}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Limitations of QML: Constraint of Nonlinearity}{26}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Limitations of QML: Constraint of Nonlinearity}{27}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Impartion and Expansion of Nonlinearity}{27}{section.3.6}%
+\contentsline {part}{II\hspace {1em}Research and Results}{28}{part.2}%
+\contentsline {chapter}{\numberline {4}Research}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Impartion Nonlinearity for Quantum Perceptron}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}subsection}{29}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}우리가 한 거, 창의적인 연구!}{29}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{30}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary}{30}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Conclusion}{30}{section.5.2}%
+\contentsline {chapter}{Bibliography}{31}{section.5.2}%
+\contentsline {chapter}{Acknowledgement}{32}{chapter*.28}%

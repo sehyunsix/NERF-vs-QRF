@@ -1,0 +1,7 @@
+Layers,Image 1,Image 2,Image 3
+MLP (3 layers),15.69,16.53,15.19
+MLP (4 layers),15.76,16.43,15.23
+MLP (5 layers),15.72,16.41,15.18
+PQC (3 layers),4.35,6.19,7.43
+PQC (4 layers),14.21,16.09,15.13
+PQC (5 layers),14.28,15.52,15.23

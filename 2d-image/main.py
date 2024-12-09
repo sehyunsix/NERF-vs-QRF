@@ -12,6 +12,8 @@ from q_model import QModel
 import os
 from tqdm import tqdm
 from config import *
+import pandas as pd
+from datetime import datetime
 
 
 def save_weights(model, epoch, image, method, folder="weights"):
@@ -68,9 +70,23 @@ def create_batch(xy_coords, colors, batch_size):
     return xy_batch, color_batch
 
 
+def calculate_psnr(img1, img2):
+    mse = np.abs(np.mean((np.array(img1) / 255.0 - np.array(img2) / 255.0) ** 2))
+    if mse == 0:
+        return float("inf")
+    PIXEL_MAX = 1.0
+    return 20 * np.log10(PIXEL_MAX / np.sqrt(mse))
+
+
 # 3. Training loop
 def train_model(
-    model, dataloader, xy_coords, colors, num_epochs=1000, batch_size=1024, lr=1e-4
+    model,
+    dataloader,
+    xy_coords,
+    colors,
+    num_epochs=1000,
+    batch_size=1024,
+    lr=1e-4,
 ):
     optimizer = optim.Adam(model.parameters(), lr=lr)
     criterion = nn.MSELoss()  # Mean Squared Error loss for RGB color prediction
@@ -124,35 +140,76 @@ def train_model(
     # Convert to image format and save
     predicted_img = (predicted_img * 255).astype(np.uint8)  # Convert to uint8 [0, 255]
     img = Image.fromarray(predicted_img)
-    output_path = os.path.join("results", f"predicted_{IMAGE_PATH}_{METHOD}.png")
-    img.save(output_path)
-    print(f"Predicted image saved to {output_path}")
+    return img
 
 
 # Example usage
 
-xy_coords, colors = load_image(IMAGE_PATH)
-dataloader = create_dataloader(
-    xy_coords=xy_coords, colors=colors, batch_size=BATCH_SIZE, shuffle=True
-)
-# Initialize model
-if METHOD == "position":
-    model = PositionEncodingMLP()
-elif METHOD == "quantum":
-    model = QModel(WIRE, LAYER)
-else:
-    model = MLPColorPredictor()
 
-# Train model
-train_model(
-    model,
-    dataloader,
-    xy_coords,
-    colors,
-    num_epochs=EPOCH,
-    batch_size=BATCH_SIZE,
-    lr=LR,
-)
+results_df = []
+
+
+# Define the layers and methods to test
+layers = [3, 4, 5]
+methods = ["MLP", "PQC"]
+
+# Iterate over methods and layers
+for method in methods:
+    for layer in layers:
+        # Update the model based on the method and layer
+        if method == "MLP":
+            model = MLPColorPredictor(layer)
+        elif method == "PQC":
+            model = QModel(layer)
+
+        # Train the model and get PSNR for each image
+        psnr_list = []
+        for i in range(3):
+            input_img = f"test{i+1}.jpg"
+            xy_coords, colors = load_image(IMAGE_PATH + input_img)
+            dataloader = create_dataloader(
+                xy_coords=xy_coords, colors=colors, batch_size=BATCH_SIZE, shuffle=True
+            )
+            img = train_model(
+                model,
+                dataloader,
+                xy_coords,
+                colors,
+                num_epochs=EPOCH,
+                batch_size=BATCH_SIZE,
+                lr=LR,
+            )
+            img_name = f"{datetime.now()}_{layer}_{method}_test_image{i}"
+            output_path = os.path.join("results/" + IMAGE_PATH, f"{img_name}.png")
+            img.save(output_path)
+            label_img = Image.open(IMAGE_PATH + input_img).convert("RGB")
+            psnr = calculate_psnr(img, label_img)
+            psnr_list.append(psnr)
+
+        # Append the results to the DataFrame
+        results_df.append(
+            {
+                "Layers": f"{method} ({layer} layer{'s' if layer > 1 else ''})",
+                "Image 1": psnr_list[0],
+                "Image 2": psnr_list[1],
+                "Image 3": psnr_list[2],
+            }
+        )
+results_df = pd.DataFrame(results_df)
+
+# Save the DataFrame to a CSV file
+results_df.to_csv("results_psnr.csv", index=False)
+print("Results saved to results_psnr.csv")
+# # Train model
+# train_model(
+#     model,
+#     dataloader,
+#     xy_coords,
+#     colors,
+#     num_epochs=EPOCH,
+#     batch_size=BATCH_SIZE,
+#     lr=LR,
+# )
 
 
 # save_weights(model, epoch=10, image=image_path, method=method)

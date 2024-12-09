@@ -1,20 +1,20 @@
 ###
-HEIGHT = 1400
-WIDTH = 1050
+HEIGHT = 256
+WIDTH = 256
 
 
 ###
-EPOCH = 5
-BATCH_SIZE = 128
+EPOCH = 1
+BATCH_SIZE = 16
 LR = 1e-4
 
 ###
 WIRE = 3
-LAYER = 16
+LAYER = 4
 
-IMAGE_PATH = "test2.jpg"
+IMAGE_PATH = "resize_images/"
 
 
-# METHOD = "quantum"
+METHOD = "quantum"
 # METHOD = "mlp"
-METHOD = "mlp"  # Replace with the path to your image
+# METHOD = "mlp"  # Replace with the path to your image
