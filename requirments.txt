@@ -3,3 +3,4 @@ torchvision
 pennylane
 pillow
 tqdm
+sympy
