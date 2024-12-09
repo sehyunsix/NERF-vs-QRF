@@ -38,8 +38,8 @@
 \contentsline {subsection}{\numberline {4.1.2}Implementation of \(\vec {w}\cdot \vec {x}+b\)}{31}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Implementation of Activation function}{32}{subsection.4.1.3}%
 \contentsline {section}{\numberline {4.2}Implementation of Multiperceptron with Superb Efficiency}{33}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{34}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary}{34}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Conclusion}{34}{section.5.2}%
-\contentsline {chapter}{Bibliography}{35}{section.5.2}%
-\contentsline {chapter}{Acknowledgement}{36}{chapter*.28}%
+\contentsline {chapter}{\numberline {5}Conclusion}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary}{36}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Conclusion}{36}{section.5.2}%
+\contentsline {chapter}{Bibliography}{37}{section.5.2}%
+\contentsline {chapter}{Acknowledgement}{38}{chapter*.28}%

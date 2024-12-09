@@ -139,4 +139,92 @@ a register의 차원 수와 그 양자 회로가 내놓는 f의 taylor expansion
 f의 구현을 위해 \(\theta_k\)를 계산하고, 이를 양자 회로에 제공하여 \(f(\vec{w}\cdot\vec{x}+b)\)의 값을 출력할 수 있도록 하는 양자 회로의 구현을 최종적으로 완료하였다.
 
 \section{Implementation of Multiperceptron with Superb Efficiency}
-Some possible future works. (maybe 0.5\thru3 pages?)
+
+지금까지 살펴본 Quantum Perceptron을 제안한 문헌에서는, Quantum Perceptron의 구현이 "임의의 layer 당 neuron 수"와 "임의의 layer 수"에 대한 Quantum-MLP의 구현 가능을 의미한다고 주장한다. 그러나, 이것이 당연한 것은 아니다. 먼저 하나의 layer에 여러 perceptron이 존재하는 경우, 현재까지 구현된 회로를 perceptron의 개수만큼 복사하여 사용하는 것 외에는 특별히 떠오르는 방안이 없다. 심지어 이 방법은 perceptron의 개수가 증가함에 따라 과하게 qubit이 늘어난다는 단점이 있다. 또한, multi-perceptron의 구현 방법이 명확하지 않으므로 layer가 반복될 때의 양자적인 표현도 당연하지 않다.
+
+따라서, 비선형성을 양자적으로 표현한 Quantum Perceptron을 실제로 사용하기 위해서는, 효율적인 multi-perceptron의 구현을 꾀하는 것이 필수적으로 요구된다. 이에 하나의 layer 당 $n$개의 perceptron을 사용하는 multi-percepton을 구현하기 위해 추가로 $\lceil {\log_2(n)} \rceil$만큼의 qubit을 필요로 하는 획기적인 방법을 고안하였고, 이를 소개한다. 
+% \subsection{Idea}
+
+핵심 아이디어는, 추가 qubit을 사용해서 여러 weight($\mathbf{w}_1, \mathbf{w}_2, \cdots$)에 대한 state \( \ket{\psi}_{f_d(z_1)}, \ket{\psi}_{f_d(z_2)}, \cdots \)가 중첩된 state를 생성하는 것이다.
+
+% W matrix로? {w_i} 이렇게 집합으로?
+\begin{lemma}
+% \[
+%     \text{Given Input vector } \vec{x} \in [-1, 1]^{N_{in}} \text{, and weight matrix } W := \begin{pmatrix}
+%         \vec{w}_0 \\ \vec{w}_1 \\ \vdots \\ \vec{w}_{N_w - 1}
+%     \end{pmatrix}\text{, where } \vec{w}_i \in [-1, 1]^{N_{in}} \text{ for } i = 0, 1, \cdots, N_w - 1
+% \]
+Given Input vector \( \vec{x} \in [-1, 1]^{N_{in}} \), weight matrix \( W:= \begin{pmatrix}
+    \vec{w}_0 \\ \vec{w}_1 \\ \vdots \\ \vec{w}_{N_w - 1}
+\end{pmatrix} \) , bias vector \( \vec{b} \in [-1, 1]^{N_w} \), and given q-registers s, q with p, n qubit respectively, such that \( n = \left\lceil \log_2(N_{in} + 3) \right\rceil, p = \left\lceil \log_2(N_w) \right\rceil \), then, there exists a quantum circuit \( U_{\mathbf z}(\vec{x}, W, \vec{b}) \) such that 
+% \begin{gather*} 
+%     \vspace{-1.0em} % 두 수식 간 간격 조정 (값을 조정 가능)
+%     \text{Given Input vector } \vec{x} \in [-1, 1]^{N_{in}} \text{, weight matrix } W:= \begin{pmatrix}
+%         \vec{w}_0 \\ \vec{w}_1 \\ \vdots \\ \vec{w}_{N_w - 1}
+%     \end{pmatrix}\text{, bias vector } \vec{b} \in [-1, 1]^{N_w,} 
+%     \\ \vspace{-0.5em}
+%     \text{and given q-registers s, q with p, n qubit respectively, such that } n = \left\lceil \log_2(N_{in} + 3) \right\rceil, p = \left\lceil \log_2(N_w) \right\rceil ,
+%     \\ \vspace{-0.5em}
+%     \text{then, there exists a quantum circuit } U_{\mathbf z}(\vec{x}, W, \vec{b}) \text{ such that }
+% \end{gather*}
+\[
+    {}_{s}\langle{i}| {}_{q}\langle N-1|U_{\mathbf z}(\vec{x}, W, \vec{b})\ket{0}_q \ket{0}_s = {\vec{w}_i \cdot {\vec{x} + 1} \over {N_{in} + 1}} \equiv {z_i \over {{2^{p/2}}}} \quad \text{ for } i = 0, 1, \cdots , N_{w} - 1
+\]
+\begin{gather*}
+    \text{where } \ket{0}_q \equiv \ket{0}^{\otimes n}, \ket{0}_s \equiv \ket{0}^{\otimes p}, \ket{N-1}_q \equiv \ket{1}^{\otimes n},\text{ and } \vec{w}_i \in [-1, 1]^{N_{in}} \text{ for } i = 0, 1, \cdots, N_w - 1
+% \vspace{-0.5em} % 두 수식 간 간격 조정 (값을 조정 가능)
+\end{gather*}
+
+\end{lemma}
+
+Lemma 4.2.1은, 보유한 각 \(\vec{w}_i\)에 대한 \(\displaystyle {z}_i\) 값 정보를 담는 모든 \(\ket{\psi_{z_i}}\) state가 동일한 확률 \(\displaystyle {1 \over {2^{p/2}}}\)로 중첩되어 있는 state \(\ket{\psi_{\mathbf z}}\)를 만드는 Unitary가 존재함을 의미한다. 증명은 다음과 같다.
+
+\begin{pf} 
+    Lemma 4.1.1에 의해, 주어진 weight vector $\vec{w} \in \mathbb{R}^{N_{in}}$와 bias 값 b, \(n = \left\lceil \log_2{N_{in}} + 3 \right\rceil\)개의 qubit에 대해 \(\displaystyle \bra{N-1}U_z(\vec{x},\vec{w},b)\ket{0} = \frac{\vec{x}\cdot \vec{w}+b}{N_{in}+1} \equiv z\)를 만족하는 Unitary transformation \(U_{\mathbf z}(\vec{x},\vec{w},b)\)가 존재한다. 따라서, $n$개의 qubit을 갖는 $q$ register에서 하나의 weight vector와 bias b에 대해 동일한 작업이 가능하다.
+
+    $s$ 레지스터는 weight의 개수 \(N_w\)에 대해, \(p = \left\lceil \log_2(N_w) \right\rceil\)만큼의 qubit을 보유하며, 즉 basis state로 \(\ket{0}, \cdots, \ket{P-1}\)를 가진다.
+
+    이에 따라, \(s\) 레지스터의 \(i\)번째 basis state인 \(\ket{i}\)와, \(q\) 레지스터에서 \(i\)번째 weight vector 및 bias 값에 대한 \(U_z(\vec{x}, \vec{w}_i, b_i)\)의 output state \(\ket{\psi_{z_i}}\)의 텐서곱이 중첩된 state를 만드는 양자 회로를 다음과 같이 설계할 수 있다.
+    \[
+        U_{\mathbf z}(\vec{x}, W, \vec{b}) = \left(\prod_{k=0}^{N_w-1}C_{s}^{ctrl : k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\right) H_s^{\otimes p}
+    \]
+    여기에서 \(C_{s}^{ctrl:k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\)는 \(s\) 레지스터의 상태가 \(k\)의 이진 표현과 같은 경우, \(q\) 레지스터에 \(U_{z_k}(\vec{x}, \vec{w}_k, b_k)\) 연산을 작동시키는 Controlled-Gate이다.
+
+    이 회로는 먼저 \(s\) 레지스터의 모든 qubit에 Hadamard 연산을 작동시켜 모든 basis state이 동일한 확률로 중첩된 state \(\displaystyle \sum_{i=0}^{P-1} {1\over {2^{p/2}}}\ket{i}\)를 생성한다. 이렇게 생성된 state의 각 basis state는 \(C_{s}^{ctrl:k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\)에 의해 basis의 이진 표현에 해당하는 $\ket{\psi_k}$와 결부되어, 결과적으로는 다음과 같은 state를 만들게 된다:
+    \[
+        \ket{\psi_{\mathbf{z}}} := \sum_{i=0}^{P-1} {1\over {2^{p/2}}} \ket{\psi_{z_i}}_q \ket{i}_s 
+    \]
+    where \(\ket{\psi_{z_i}}_q = \ket{0}_q \text{ for } i \ge N_w\) \quad $\square$
+\end{pf}
+
+Lemma 4.2.1에 의해, 4.1절에서와 같은 방식으로 중첩된 state \(\ket{\psi_{\mathbf z}}\)를 사용할 수 있다. 이는 Thm 4.1.1에도 동일하게 적용된다. 다음 Thm을 살펴보자.
+
+\begin{theorem}
+    Let \(z_i := \left( \vec{w}_i \cdot \vec{x} + b_i \right) / \left( N_{in} + 1 \right)\) where \(\vec{x}, \vec{w}_i \in [-1, 1]^{N_{in}}\) and \(b_i \in [-1, 1]\) for \(i = 0, \cdots, N_w - 1\). Let $q, a, \text{and} s$ be quantum registers of $n, d, \text{ and } p$ qubits respectively, with \( N = 2^n \ge N_{in} + 3 \) and \( p = \left\lceil N_{w} \right\rceil\). Then there exist a quantum circuit which transforms the three registers from the initial state \(\ket{0}_s \ket{0}_a \ket{0}_q\) to (p+n+d)-qubit entangled state \(\ket{\psi_{\mathbf z}^d}\) of the form 
+    \[
+        \ket{\psi_{\mathbf z}^d} = \ket{\psi_{\mathbf z}^d}_{\perp} + {1 \over {2^{(d + p) / 2}}}\sum_{i=0}^{N_w - 1}\left( \ket{i}_{s} \ket{z_i}_{a}^{\otimes d} \ket{N-1}_q \right)
+    \]
+    where
+    \[
+        \ket{N-1}\bra{N-1}_q \ket{\psi_z^d}_{\perp} = \mathbf{0}
+    \]
+    and
+    \[
+        \ket{z_i} \equiv \ket{0} + z_i\ket{1}
+    \]  
+    The circuit is expressed by $S_V X_q^{\otimes n}$ where X is Pauli-X gate and 
+    \[
+        S_V = V_{d-1} \cdots V_1 V_0
+    \]
+    with
+    \[
+        V_m = C_{a_m}U_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m} \quad \text{ for } m = 0, 1, \dots, d - 1
+    \]  
+\end{theorem}
+
+Thm 4.2.1이 의미하는 바는, 주어진 input vector \(\vec x\) weight matrix \(W\), bias vector \(\vec b\)에 대해, 모든 \(z_i\)의 정보를 담고 있는 entangled state $\ket{\psi_{\mathbf z}^d}$를 생성하는 Unitary가 존재한다는 것이다. 다음 증명을 살펴보자.
+
+\begin{pf}
+
+\end{pf}
+

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1733725078.44275 "manuscript.aux" "manuscript.bbl" "manuscript" 1733725719.31419 0
+["bibtex manuscript"] 1733774331.58998 "manuscript.aux" "manuscript.bbl" "manuscript" 1733774340.97644 0
   "./references.bib" 1733714587.48068 8042 c17d7600270efeabd2b56b1d80baabe8 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1710106625 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "manuscript.aux" 1733725718.58832 13263 19cedbaea13fb4c491855c545f07c7ac "pdflatex"
+  "manuscript.aux" 1733774340.21274 13263 f3fce66b017e2423b2c4e3101c88bade "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1733725717.22912 "/Users/jhan/Desktop/Ajou Univ/Curriculum/2024-2(4-1)/MathmaticalResearch/Codes/NERF-vs-QRF/report/manuscript.tex" "manuscript.pdf" "manuscript" 1733725719.31431 0
+["pdflatex"] 1733774338.80023 "/Users/jhan/Desktop/Ajou Univ/Curriculum/2024-2(4-1)/MathmaticalResearch/Codes/NERF-vs-QRF/report/manuscript.tex" "manuscript.pdf" "manuscript" 1733774340.97656 0
   "/Users/jhan/Desktop/Ajou Univ/Curriculum/2024-2(4-1)/MathmaticalResearch/Codes/NERF-vs-QRF/report/manuscript.tex" 1733724227.76154 16976 ace5562799a84057fbf13fcf8eed1db2 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1710106625 2971 def0b6c1f0b107b3b936def894055589 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc" 1710106625 7013 c55cc8669071ac14036c4a0c96c16202 ""
@@ -402,8 +402,8 @@
   "chaps/acknowledgement.tex" 1733648533.04256 438 7b23ce51c6562cd888ce261460e1e364 ""
   "chaps/ch-intro.tex" 1733648533.04269 4539 90bf70f630c007b0dc572e1c8a9fdb5e ""
   "chaps/ch2-figs.tex" 1733648533.04293 14225 9acff6571df051dc2b9d0aee7473afd1 ""
-  "chaps/ch3-ResearchFlow.tex" 1733716426.48262 59566 0289b6614adef986ecfd531e8183f41a ""
-  "chaps/ch4-Research.tex" 1733725717.06033 15675 22b251103ca8e606069e2244e74fae6c ""
+  "chaps/ch3-ResearchFlow.tex" 1733732677.73333 59566 e8afae48b6a80d0b9679edaaa4866816 ""
+  "chaps/ch4-Research.tex" 1733774338.61834 23375 25964321e90876f78bbba8c72935f6e6 ""
   "chaps/ch5-Conclusion.tex" 1733648533.0433 147 7ab4cf7757da6c97af603d4aa1035732 ""
   "figs/BellStateCircuit.png" 1733648533.04347 10190 d02886f48107600824e621ff4cef288f ""
   "figs/Not Gates.png" 1733648533.04371 60609 c1d1d01b47072440424aa942e983f3cc ""
@@ -413,13 +413,13 @@
   "figs/node.png" 1733714587.47614 286980 5f2d78d354a25cf86e14bdc2d557d774 ""
   "figs/pqc_1d.png" 1733648533.04986 39287 71a1d07bbdcf8e24e179bae9ab70413a ""
   "figs/pqc_2d.png" 1733648533.05005 31677 f8564bb48d0e66e8149b1b15cd5e0c31 ""
-  "manuscript.aux" 1733725718.58832 13263 19cedbaea13fb4c491855c545f07c7ac "pdflatex"
-  "manuscript.bbl" 1733725078.49307 3054 904e0aad05158f8df7a5583f17ad88a2 "bibtex manuscript"
-  "manuscript.lof" 1733725718.58986 1077 35bf7ccabf10397f032bc62485d27235 "pdflatex"
-  "manuscript.lot" 1733725718.58989 886 3b34c1ce888b6677621153c89f06b942 "pdflatex"
-  "manuscript.out" 1733725718.58958 5912 33f0bd8d947a36585dc82a5eeb1fb64f "pdflatex"
+  "manuscript.aux" 1733774340.21274 13263 f3fce66b017e2423b2c4e3101c88bade "pdflatex"
+  "manuscript.bbl" 1733774331.63602 3054 904e0aad05158f8df7a5583f17ad88a2 "bibtex manuscript"
+  "manuscript.lof" 1733774340.21408 1077 35bf7ccabf10397f032bc62485d27235 "pdflatex"
+  "manuscript.lot" 1733774340.21411 886 3b34c1ce888b6677621153c89f06b942 "pdflatex"
+  "manuscript.out" 1733774340.21381 5912 33f0bd8d947a36585dc82a5eeb1fb64f "pdflatex"
   "manuscript.tex" 1733724227.76154 16976 ace5562799a84057fbf13fcf8eed1db2 ""
-  "manuscript.toc" 1733725718.58982 3683 3f119d923d4289aaa2121907c51ca6d7 "pdflatex"
+  "manuscript.toc" 1733774340.21404 3683 06b25aabbd94bea837bb941930e5e769 "pdflatex"
   "title.tex" 1733648533.05732 5281 ebec40d89d2f1dbd1cb239691aba72c8 ""
   (generated)
   "manuscript.aux"
