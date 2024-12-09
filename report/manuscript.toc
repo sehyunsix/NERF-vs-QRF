@@ -25,19 +25,21 @@
 \contentsline {subsubsection}{3.2.5.2 \hskip 1em\relax Expectation Value}{19}{section*.17}%
 \contentsline {section}{\numberline {3.3}Quantum Machine Learning}{20}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Concepts}{20}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Components of QML}{20}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Comparsion with QML and ML}{22}{subsection.3.3.3}%
+\contentsline {subsubsection}{Classical Machine learning}{20}{section*.18}%
+\contentsline {subsubsection}{Components of Quantum Machine Learning}{21}{section*.20}%
+\contentsline {subsection}{\numberline {3.3.2}Comparsion with QML and ML}{23}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Limitations of QML: Constraint of Nonlinearity}{26}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Limitations of QML: Constraint of Nonlinearity}{27}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Impartion and Expansion of Nonlinearity}{27}{section.3.6}%
 \contentsline {part}{II\hspace {1em}Research and Results}{28}{part.2}%
 \contentsline {chapter}{\numberline {4}Research}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Impartion Nonlinearity for Quantum Perceptron}{30}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Implementation of \(\vec {w}\cdot \vec {x}+b\)}{30}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Implementation of \(f(z)\)}{30}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Implementation of Multiperceptron with Superb Efficiency}{31}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{32}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary}{32}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Conclusion}{32}{section.5.2}%
-\contentsline {chapter}{Bibliography}{33}{section.5.2}%
-\contentsline {chapter}{Acknowledgement}{34}{chapter*.25}%
+\contentsline {subsection}{\numberline {4.1.1}Summarization of the Notations}{30}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Implementation of \(\vec {w}\cdot \vec {x}+b\)}{31}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Implementation of Activation function}{32}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Implementation of Multiperceptron with Superb Efficiency}{33}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Conclusion}{34}{section.5.2}%
+\contentsline {chapter}{Bibliography}{35}{section.5.2}%
+\contentsline {chapter}{Acknowledgement}{36}{chapter*.28}%

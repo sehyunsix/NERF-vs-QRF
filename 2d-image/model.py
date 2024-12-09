@@ -4,7 +4,10 @@ import math
 
 
 class MLPColorPredictor(nn.Module):
-    def __init__(self, input_dim=2, hidden_dim=512, output_dim=3, num_layers=4):
+    def __init__(self, num_layers=4):
+        input_dim = 2
+        hidden_dim = 8
+        output_dim = 3
         super(MLPColorPredictor, self).__init__()
         layers = []
         layers.append(nn.Linear(input_dim, hidden_dim))
