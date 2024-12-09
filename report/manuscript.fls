@@ -1,8 +1,8 @@
-PWD /Users/yuksehyun/project/NERF-vs-QRF/report
+PWD /Users/taeberie/Desktop/capstone/NERF-vs-QRF/report
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/yuksehyun/project/NERF-vs-QRF/report/manuscript.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/report/manuscript.tex
 OUTPUT manuscript.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
