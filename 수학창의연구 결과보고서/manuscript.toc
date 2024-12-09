@@ -33,11 +33,12 @@
 \contentsline {part}{II\hspace {1em}Research and Results}{27}{part.2}%
 \contentsline {chapter}{\numberline {4}Research}{28}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Impartion Nonlinearity for Quantum Perceptron}{29}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Implementation of \(\vec {w}\cdot \vec {x}+b\)}{29}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Implementation of \(f(z)\)}{29}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Implementation of Multiperceptron with Superb Efficiency}{30}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Conclusion}{31}{section.5.2}%
-\contentsline {chapter}{Bibliography}{32}{section.5.2}%
-\contentsline {chapter}{Acknowledgement}{33}{chapter*.25}%
+\contentsline {subsection}{\numberline {4.1.1}Summarization of the notations}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Implementation of \(\vec {w}\cdot \vec {x}+b\)}{30}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Implementation of Activation function}{31}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Implementation of Multiperceptron with Superb Efficiency}{32}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Conclusion}{33}{section.5.2}%
+\contentsline {chapter}{Bibliography}{34}{section.5.2}%
+\contentsline {chapter}{Acknowledgement}{35}{chapter*.25}%

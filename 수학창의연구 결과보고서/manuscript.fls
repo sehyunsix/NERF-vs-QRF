@@ -1,9 +1,9 @@
-PWD /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서
+PWD /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.tex
-OUTPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.log
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.tex
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
@@ -23,6 +23,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
@@ -298,10 +300,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/t1stix.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/t1stix.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/t1stix.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.aux
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.aux
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.aux
-OUTPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.aux
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
@@ -322,19 +324,19 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
-OUTPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.pdf
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
-OUTPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/title.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/title.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/title.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/title.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.pdf
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc2.tfm
@@ -413,9 +415,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbb.
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd3.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc0.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb1.tfm
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.toc
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.toc
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.toc
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.toc
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.toc
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.toc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
@@ -487,25 +489,25 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
-OUTPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.toc
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.lof
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.lof
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.lof
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.toc
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lof
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lof
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lof
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmad.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc8.tfm
-OUTPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.lof
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.lot
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.lot
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.lot
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lof
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lot
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lot
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lot
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc6.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbe.tfm
-OUTPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.lot
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch-intro.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch-intro.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch-intro.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch-intro.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch-intro.tex
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lot
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc5.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmce.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd4.tfm
@@ -576,16 +578,16 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobb.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob6.tfm
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch2-figs.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch2-figs.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch2-figs.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch2-figs.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch2-figs.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbc.tfm
@@ -601,21 +603,21 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bo
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob0.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod0.tfm
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/Not Gates.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/Not Gates.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/Not Gates.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/Not Gates.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/Not Gates.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/bloch_sphere.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/bloch_sphere.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/bloch_sphere.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/bloch_sphere.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/bloch_sphere.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/RXRYRZ.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/RXRYRZ.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/RXRYRZ.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/RXRYRZ.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob5.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocc.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocd.tfm
@@ -643,16 +645,16 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob4
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmca.tfm
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/BellStateCircuit.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/BellStateCircuit.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/BellStateCircuit.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/BellStateCircuit.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ts1stix.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ts1stix.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ts1stix.fd
@@ -701,19 +703,19 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit-bol
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt-bold.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt-bold.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt-bold.tfm
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/pqc_2d.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/pqc_2d.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/pqc_2d.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/pqc_2d.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/pqc_1d.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/pqc_1d.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/pqc_1d.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/figs/pqc_1d.png
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch4-Research.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch4-Research.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch4-Research.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch4-Research.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_2d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_2d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_2d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_2d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_1d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_1d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_1d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_1d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbf.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
@@ -758,20 +760,20 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocf.tfm
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.bbl
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.bbl
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.bbl
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.bbl
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.bbl
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.bbl
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/acknowledgement.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/acknowledgement.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/acknowledgement.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/acknowledgement.tex
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -794,9 +796,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd6.
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmae.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb3.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.aux
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
-INPUT /Users/taeberie/Desktop/capstone/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-BoldItalic.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb

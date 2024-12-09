@@ -1,10 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%[Comments]%%%%%%%%%%%%%%%%%%%%%%%
-
-% ******* If you want the true bare-bone structure, go to ********
-% https://github.com/taehoonlee/snu-dissertation-template
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[12pt]{report}
 \usepackage[paperwidth=21cm,paperheight=29.7cm,left=2.5cm,right=2.5cm,top=3.5cm,bottom=1.5cm]{geometry}
 % Originally this was
@@ -15,6 +8,7 @@
 \renewcommand{\abstractname}{\large Abstract}
 \usepackage{setspace}
 \usepackage[]{enumitem}
+\usepackage{amsthm}
 %\usepackage{lmodern}
 %\usepackage{librecaslon}
 \usepackage[T1]{fontenc}
@@ -26,11 +20,13 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{pf}{Proof}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reference style settings
 % ↓ This is also free to change. Do as you wish...
