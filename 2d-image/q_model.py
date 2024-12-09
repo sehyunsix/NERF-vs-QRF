@@ -44,7 +44,7 @@ class QModel(nn.Module):
             for i in range(self.n_wires):
                 qml.RY(theta[layer_count * self.n_wires + i * 2], wires=i)
 
-        ## 여기에서 grad 날라감 ㅅㅂ
+
         return [qml.expval(qml.PauliZ(i)) for i in range(3)]
 
     def forward(self, x):
