@@ -726,13 +726,13 @@ quantum machine learning 분야는 지난 몇 년 동안 classical machine learn
                     \cline{2-4}
                     & Image 1 & Image 2 & Image 3 \\
                     \hline
-                    MLP (3 layers) & 15.69 & 16.53 & 15.19 \\
-                    MLP (4 layers) & 15.76 & 16.43 & 15.23 \\
-                    MLP (5 layers) & 15.72 & 16.41 & 15.18 \\
+                    MLP (3 layers) & 15.826 & 16.913 & 15.884 \\
+                    MLP (4 layers) & 15.816 & 17.049 & 16.328 \\
+                    MLP (5 layers) & 15.811 & 16.606 & 16.306 \\
                     \hline
-                    PQC (3 layers) & 4.35 & 6.19 & 7.43 \\
-                    PQC (4 layers) & 14.21 & 16.09 & 15.13 \\
-                    PQC (5 layers) & 14.28 & 15.52 & 15.23 \\
+                    PQC (3 layers) & 14.503 & 16.269 & 15.470 \\
+                    PQC (4 layers) & 15.624 & 16.464 & 15.471 \\
+                    PQC (5 layers) & 4.484 & 6.912 & 8.786 \\
 
                     \Xhline{3\arrayrulewidth}
                     \end{tabular}
@@ -767,7 +767,7 @@ quantum machine learning 분야는 지난 몇 년 동안 classical machine learn
     Data Encoding & $x \in \mathbb{R}$을 $[-1, 1]$ 사이로 정규화하였다. &
     Angle Encoding을 사용하였다. $x \in \mathbb{R}$을 $[-1, 1]$ 사이로 정규화한 이후, 이 값을 2개의 qubit 중 첫 번째 qubit의 RX gate에 $\theta_x$를 $[-\pi, \pi]$ 값 사이에 위치하도록 정규화하여 Angle encoding 하였다. \\
     \hline
-    Model & MLP 모델을 사용하였으며, 입력 레이어 1개, 히든 레이어 2개, 출력 레이어 1개로 구성하였으며, activation function은 RELU를 사용하였다. &
+    Model & MLP 모델을 사용하였으며, 입력 레이어 1개, 히든 레이어 1개, 출력 레이어 1개로 구성하였으며, activation function은 RELU를 사용하였다. &
     2개의 qubit을 사용하였고, $\prod_{0}^{1} RY_i(\theta)CX_i$의 gate를 3번 반복함으로써 3층의 레이어의 효과가 나타나도록 구현하였다.이를 다음과 같이 시각화하였다.\labelcref{fig:1d-image} \\
     \Xhline{3\arrayrulewidth}
     \end{tabular}
@@ -794,13 +794,13 @@ quantum machine learning 분야는 지난 몇 년 동안 classical machine learn
     \cline{2-4}
     & $sin(x)$  & $tanh(x)$ & $x$ \\
     \hline
-    MLP (3 layers) & 0.055 & 0.0 & 7.932 \\
-    MLP (4 layers) & 0.012 & 0.0 & 7.878 \\
-    MLP (5 layers) & 0.042 & 0.001 & 7.649 \\
+    MLP (3 layers) & 0.0 & 0.0 & 0.0 \\
+    MLP (4 layers) & 0.0 & 0.0 & 0.0 \\
+    MLP (5 layers) & 0.0 & 0.0 & 0.0 \\
     \hline
-    PQC (3 layers) & 0.002 & 0.04 & 7.763 \\
-    PQC (4 layers) & 0.001 & 0.041 & 8.096 \\
-    PQC (5 layers) & 0.001 & 0.034 & 8.031 \\
+    PQC (3 layers) & 0.0 & 0.0 & 0.003 \\
+    PQC (4 layers) & 0.0 & 0.0 & 0.003 \\
+    PQC (5 layers) & 0.0 & 0.0 & 0.003 \\
     \Xhline{3\arrayrulewidth}
     \end{tabular}
     \caption{MSEcomparison between MLP and QML models across different layer configurations}
@@ -812,70 +812,33 @@ quantum machine learning 분야는 지난 몇 년 동안 classical machine learn
 
 \section{Limitations of QML: Constraint of Nonlinearity}
 
-3.3 장에서 살펴본 결과, QML이 2d, 1d에서 잘 작동하지 않는 것을 확인하였다. 이에 대한 이유를 quantum circuit의 비선형성의 부족으로 유추하였다. 이를 수학적으로 분석하기 위해, QML의 circuit 구조에 따라, input에서 output까지 나오게 되는 과정을 수식화하였다.2-qubit 상태일때의 input과 output의 관계를 수식화 하면 다음과 같다.
-먼저, 2-qubit 시스템에서의 초기 상태를 다음과 같이 나타낼 수 있다:
+3.3 장에서 살펴본 결과, QML이 2d, 1d에서 잘 작동하지 않는 것을 확인하였다. 이에 대한 이유를 quantum circuit의 비선형성의 부족으로 유추하였다. 이를 수학적으로 분석하기 위해, QML의 circuit 구조에 따라, 입력에서 출력까지 나오게 되는 과정을 수식화하였다. \labelcref{fig:1d-image} 와 \labelcref{fig:2d-image}들은 3 qubit cricuit 이므로 gate들의 연산을 모두 $8x8$ 행렬로 나타낼 수 있다. 이러한 행렬의 곱셈연산과 마지막 observable 과정 $ \langle \psi | O | \psi \rangle$ 을 거치면, 마지막 출력 값을 입력에 대한 식으로 표현할 수 있다.  sympy 라이브러리를 통해 식 간략화 및 계산 전개등을 수행하였고 최종식을 도출하였다. 이 식이 정당성에 대한 검증은 실제모델의 값과 비교해봄으로써 확인하였다.
 
-\[
-|\psi_0\rangle = |0\rangle \otimes |0\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
-\]
+ \labelcref{fig:1d-image} 의 출력을 행렬연산을 통해 도출한 최종값을 수식으로 표현하면 다음과 같이 표현된다.
 
-이에 \labelcref{fig:2d-image} circuit을 통관 후의 상태를 다음과 같이 나타낼수 있다.
-
-\[
-|\psi_1\rangle = CX \cdot (RY(\theta_2) \otimes RY(\theta_1)) \cdot (RX(x) \otimes I_2) \cdot |\psi_0\rangle
-\]
-
-최종 출력값은 측정 연산자 Z를 통해 얻어지며:
-
-\[
-\text{output} = \langle\psi_1|Z|\psi_1\rangle = \langle\psi_1|\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}|\psi_1\rangle
-\]
-
-이 전체 과정은 입력 x에 대해 선형 변환들의 연속적인 적용으로 이루어지며, 측정 과정에서만 제한된 비선형성이 도입됨을 알 수 있다. 이에 우리는 QRF에 적용된 비선형 Q-RELU를 적용하였으나,이마저 성능이 향상되지 않았다. 이 이유에 대해서는 reference를 참조하여,
-알게되었고, 이에 새로운 형태의 비선형 circuit 이 필요함을 느끼게되었다.
+\begin{equation*}
+    y_1  = c_1\cos{\left(x_{1} \right)} - c_2\cos{\left(x_{2} \right)} - c_3\cos{\left(x_{1} - x_{2} \right)} - c_4\cos{\left(x_{1} + x_{2} \right)}
+\end{equation*}
 
 
-% In this thesis, you can use \texttt{lstlisting} environment:
+\begin{equation*}
+y_2  = - c_4\cos{\left(x_{1} \right)} + c_5\cos{\left(x_{2} \right)} - c_6\cos{\left(x_{1} - x_{2} \right)} - c_7\cos{\left(x_{1} + x_{2} \right)} - c_8
+\end{equation*}
 
-% \begin{lstlisting}
-% # import nicpolpy package
-% import nicpolpy as nic
-
-% # Do not print useless warnings
-% import warnings
-% from astropy.utils.exceptions import AstropyWarning
-% warnings.filterwarnings('ignore',
-%     append=True, category=AstropyWarning)
-
-% # Cell 0: Initialize the reducer
-% npr = nic.NICPolReduc(
-%     name="SP_20190417",
-%     inputs="_original_32bit/190417/raw/*.fits",
-%     mflats="cal-flat_20180507-lv1/*.fits",
-%     imasks="masks/*.fits",
-%     verbose=1
-% )
-% \end{lstlisting}
-
-\section{Limitations of QML: Constraint of Nonlinearity}
-설명(삭제예정) : QML의 비선형성 한계에 대해 기술하는 장이다.
-
-\begin{equation}
-    c_1\cos{\left(x_{1} \right)} - c_2\cos{\left(x_{2} \right)} - c_3\cos{\left(x_{1} - x_{2} \right)} - c_4\cos{\left(x_{1} + x_{2} \right)}
-\end{equation}
+\begin{equation*}
+   y_3 =  -c_9 \cos{\left(x_{1} \right)} + c_{11} \cos{\left(x_{2} \right)} - c_{12} \cos{\left(x_{1} - x_{2} \right)} - c_{13} \cos{\left(x_{1} + x_{2} \right)} - c_{14}
+\end{equation*}
 
 
-\begin{equation}
-- c_4\cos{\left(x_{1} \right)} + c_5\cos{\left(x_{2} \right)} - c_6\cos{\left(x_{1} - x_{2} \right)} - c_7\cos{\left(x_{1} + x_{2} \right)} - c_8
-\end{equation}
+여기서 $ c_i $ 들은 PQC의 파라미터에 따라 변하는 값들이며, 매우 복잡한 파라미터값들의 곱 연산을 통해 계산된다. 그러나 최종적으로 파라미터 값이 결정되면 이 값들은 고정되며, $ y_1 ,y_2 , y_3 $ 값들은  $\cos(x_1)$과 $\cos(x_2)$들과 $c_i$ 값들의 linear combination으로 이루어진다. 이를 통해 출력이 선형적이며, 제한된 표현력을 가지고 있음을 관찰하였다.
 
-\begin{equation}
-    -c_9 \cos{\left(x_{1} \right)} + c_{11} \cos{\left(x_{2} \right)} - c_{12} \cos{\left(x_{1} - x_{2} \right)} - c_{13} \cos{\left(x_{1} + x_{2} \right)} - c_{14}
-\end{equation}
+\clearpage
 
+\labelcref{fig:2d-image}에서 의 출력또한 행렬연산을 통해 최종값을 수식을 도출하였고 이를 수식으로 표현하면 다음과 같다.
 
-\section{Impartion and Expansion of Nonlinearity}
-설명(삭제예정) : QML에 비선형성을 도입하는 것에 대해 소개하는 장이다.
+\begin{equation*}
+ y = - c_1 \sin{\left(x_{1} \right)} - c_2 \cos{\left(x_{1} \right)} + c_3
+\end{equation*}
 
+여기서 또한 $c_i$ 값들이 고정되면  $sin(x)$ 와 $cos(x)$ 형태의 linear combination으로 표현되며, 이러한 식은 삼각함수 근사에서만 높은 성능을 보였던 것을 잘 설명해준다. 이러한 선형성은 $\sin(x)$와 $\cos(x)$ 에 대해서만 표현되는 제한적인 표현력을 보여주며, 다양한 함수를 근사하기 위해서는 반드시 비선형성이 필요하다는 것을 시사한다.
 
-% You may modify the preference settings at the preamble in the ``\texttt{manuscript.tex}'' file.
