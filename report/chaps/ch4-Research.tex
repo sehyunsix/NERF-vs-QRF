@@ -54,7 +54,8 @@ n개의 qubit으로 구성된 register q, d개의 qubit으로 구성된 register
 단일 퍼셉트론의 구현을 위해 n+d개의 qubit이 필요하다. n개의 qubit은 q register에, d개의 qubit은 a register에 들어 있다. input vector \(\vec{x}\)의 크기는 \(N_{in}\)으로 쓴다.
 우선은 각 input값을 scaling하여 각 성분을 -1과 1 사이의 값으로 고정시키는 것으로 시작한다.
 즉, \(\vec{w} \in [-1,1]^{N_{in}}, \vec{x} \in [-1,1]^{N_{in}}, b \in [-1,1]\)이 주어졌을 때, \(\vec{w}\cdot\vec{x}+b\)의 값을 계산하는 양자 회로의 구성 과정을 따라가 보겠다.
-이 장과 그 다음 장은 본질적으로 우리의 논문 탐독 과정을 따라가기 위한 것이기에, 논문의 주요 Theorem을 직접 인용하고, 그 의미와 간단한 증명 방법을 서술하는 것으로 구성하였다.
+이 장과 그 다음 장은 본질적으로 우리의 논문 탐독 과정을 따라가기 위한 것이기에, 논문의 주요 Theorem을 직접 인용하고, 그 의미와 증명의 흐름을 간단하게 서술하는 것으로 구성하였다. 논문 원문에는 증명 전체가 서술되어 있으므로,
+자세한 이해를 원한다면 Reference를 참고할 수 있다.
 
 %\begin{lemma}
 %    \(\vec{x}, \vec{w}, b\) 가 주어졌을 때, \(\displaystyle \bra{N-1}U_z(\vec{x},\vec{w},b)\ket{0} = \frac{\vec{x}\cdot \vec{w}+b}{N_{in}+1} \equiv z\) 를 만족하는 Unitary transformation \(U_z(\vec{x},\vec{w},b)\) 의 역할을 하는 양자 회로를 만들 수 있다.
@@ -90,11 +91,7 @@ Lemma에서 \(\ket{0}, \ket{N-1}\)은 각각 \(\ket{0}^{\otimes n}, \ket{1}^{\ot
 이때 \(\bra{\psi_{w,b}}\ket{\psi_x} = \bra{\psi_{w,b}}U_{w,b}^{\dag} U_{w,b}\ket{\psi_x} = \bra{N-1}U_{w,b}U_x\ket{0}^{\otimes n}\)이 성립하므로, Lemma에서 말하는 \(U_z(\vec{x},\vec{w},b)\)가 \(U_{w,b}U_x = X^{\otimes n}\mathcal{U}^\dag (\vec{v}_{w,b})\mathcal{U}(\vec{v}_x)\)임을 확인할 수 있고, 이것으로 증명이 완료된다.
 \end{pf}
 
-\begin{theorem}
-   \(\vec{x}, \vec{w},b,z, N\) 에 대하여, 초기에 \(\ket{0}, \ket{0}_q\)로 초기화되어 있는 두 state vector를 (n+d) qubit으로 구성된\(\ket{\psi_z^d}_q = \ket{\psi_z^d}_\perp + \frac{1}{2^{d/2}}\ket{z}_a^{\otimes d}\ket{N-1}_q \in \mathcal{H}_a^{\otimes d} \otimes \mathcal{H}_q^{\otimes n} \)로 변환하는 양자 회로를 구성할 수 있다.
-    이때 \(\ket{\psi_z^d}_q\)는 \(\ket{N-1} \bra{N-1}_q\ket{\psi_z^d}_\perp = 0, \ket{z} \equiv \ket{0}+z\ket{1}\)를 만족한다.
-    우리가 원하는 양자 회로는 \(S_VX_q^{\otimes n}\)으로, \(V_m = C_{a_m}U_z(\vec{x},\vec{w},b)_qC_{a_m}X_q^{\otimes n}C_q^nH_{a_m}, S_V=V_{d-1}\dots V_1V_0\)을 각각 의미한다.
-\end{theorem}
+우리가 원하는 양자 회로의 주요 구성 요소 중 하나가 완성되었으므로, 이제 전체 기능을 담당하는 부분을 만들 차례이다. 그것이 가능하다는 것을 다음 Theorem이 말하고 있다.
 
 \begin{theorem}
     
@@ -122,21 +119,22 @@ V_m = C_a^m U_z(\vec{x}, \vec{w}, b)_q C_a^m X_q^{\otimes n} C_q^n H_a^m, \quad 
 \end{theorem}
 
 이 theorem의 존재 가치는 두 register에 동시에 영향을 끼치는 어떠한 회로를 가지고 우리가 원하는 state \(\ket{\psi_z^d}\)를 얻어낼 수 있음을 보이는 것이다.
+theorem에서 나타나는 \(\ket{\psi_z^m}_\perp\)의 경우
+\(\ket{\psi_z^m} \in \mathcal{H}_{a_{m-1}} \otimes \mathcal{H}_{a_{m-2}} \otimes \dots \otimes \mathcal{H}_{a_{0}} \otimes \mathcal{H}_{a}^{\otimes n}\)에 대하여
+\(\ket{N-1}\bra{N-1}_q\ket{\psi_z^m}_\perp = 0\)을 만족하도록 \(\ket{\psi_z^m}\)을 \(\ket{\psi_z^m}_\perp + \ket{\psi_z^m}_{||}\)로 분리하는 것으로 얻어진다.
+이떄 \(\ket{N-1}\bra{N-1}_q\)은 projection 변환으로, Gram-Schmidt Process에 의해 \(\ket{\psi_z^m}_\perp\)의 존재성이 증명되어 있다.
+증명의 대략적인 흐름은 다음과 같다.
 
 \begin{pf}(sketch)
 
-    \(\ket{\psi_z^m} \in \mathcal{H}_{a_{m-1}} \otimes \mathcal{H}_{a_{m-2}} \otimes \dots \otimes \mathcal{H}_{a_{0}} \otimes \mathcal{H}_{a}^{\otimes n}\)이라 하자.
-    projection 변환 \(\ket{N-1}\bra{N-1}_q\)에 대하여 \(\ket{N-1}\bra{N-1}_q\ket{\psi_z^m}_\perp = 0\)을 만족하도록 \(\ket{\psi_z^m}\)을 \(\ket{\psi_z^m}_\perp + \ket{\psi_z^m}_{||}\)로 분리할 수 있다.
     \(V_m = C_{a_m}U_z(\vec{x},\vec{w},b)_qC_{a_m}X_q^{\otimes n}C_q^nH_{a_m}\)으로 잡을 수 있다. 여기서 \(a_m\)에 의해 작동 여부가 결정되는 \(U_z(\vec{x},\vec{w},b)_q\)는 위의 Lemma에서 결정된 그것이다.
     이제, \(\ket{\psi_z^m}_{||} = \frac{1}{2^{d/2}}\ket{z}_a^{\otimes d}\ket{N-1}_q\)라는 사실을 생각하고, \(V_m\)을 state \(\ket{0}_{a_m}\ket{\psi_z^m} = \ket{0}_{a_m}\ket{\psi_z^m}_\perp + \frac{1}{\sqrt(2)}(\ket{0}_{a_m}+\ket{1}_{a_m})\ket{\psi_z^m}_{||}\)에 적용하여
     \(\ket{\psi_z^{m+1}}\)을 얻게 된다. 이제, 이 과정을 각 qubit에 적용하는 것을 반복하는 연산 \(S_V = V_{d-1}\dots V_1V_0\)을 state \(\ket{0}_a^{\otimes d} \ket{N-1}_q\)에 적용하면, 결과물로 \(\ket{\psi_z^d}\)가 나온다.
 
 \end{pf}
 
-
-\begin{corollary}
-    \(\ket{\psi_z^d}\)에는 \(z^k, (k = 0,1,\dots,d)\) 의 값들이 probability amplitude로 저장되어 있다.
-\end{corollary}
+마지막으로 위의 Theorem에서 얻은 state \(\ket{\psi_z^d}\)를 measure하지 않고도 z의 값을 사용할 수 있음을 보여야 한다.
+그것을 위해 아래의 Corollary가 제시된다. 그 내용과 간단한 증명의 흐름은 아래와 같다.
 
 \begin{corollary}
     The state $\ket{\psi_z^d}$ stores as probability amplitudes all the powers $z^k$, for $k = 0, 1, \ldots, d$, up to a trivial factor. Indeed equation in Theorem above implies
@@ -146,13 +144,11 @@ q \bra{N - 1}_a \bra{2^k - 1} \ket{\psi_z^d} = 2^{-d/2} z^k, \quad k = 0, 1, \ld
 \end{corollary}
 
 \begin{pf}(sketch)
-    이상의 Corollary는 위의 Theorem에서 얻은 state \(\ket{\psi_z^d}\)를 measure하지 않고도 z의 값을 사용할 수 있음을 시사한다.
     \(\ket{\psi_z^m}_\perp + \ket{\psi_z^m}_{||}\)라는 사실을 활용하면
     Theorem 1의 식 \(\ket{\psi_z^d}_q = \ket{\psi_z^d}_\perp + \frac{1}{2^{d/2}}\ket{z}_a^{\otimes d}\ket{N-1}_q\)에서 \(_q\bra{N-1}_a\bra{2^k-1}\ket{\psi_z^d} = 2^{-d/2}z^k\) 임을 유도할 수 있다.
 \end{pf}
 
-이상으로 첫 번째 단계에 대한 구현 및 증명이 완료되었다. 정리하자면, 논문에서는 \(\ket{\psi_z^d}\)를 얻을 수 있는 양자 회로 \(S_VX_q^{\otimes n}\)의 구조와 그 존재성, 유효성을 수학적으로 증명하였다.
-이때 \(\ket{\psi_z^d}\)에는 우리가 원하는 값인 z가 측정의 과정을 거치지 않고도, 즉 양자 회로를 종료할 필요 없이 다음 단계에서 그 값을 활용할 수 있는 형태로 저장되어 있다.
+이상으로 첫 번째 단계에 대한 구현과 그 유효성에 대한 증명이 완료되었다.
 
 \subsection{Implementation of Activation function}
 
@@ -161,14 +157,9 @@ q \bra{N - 1}_a \bra{2^k - 1} \ket{\psi_z^d} = 2^{-d/2} z^k, \quad k = 0, 1, \ld
 우선은 양자 회로로 쉽게 구현할 수 있는 형태의 함수를 결정하고,
 어떠한 형태의 함수 f에 대하여, z를 input으로 하면 f(z)의 값을 내놓는 양자 회로를 제시하는 것이다.
 그리고 임의의 d차 테일러 전개가 존재하는 함수(analytic 함수)에 대하여, 그 함수의 d차 테일러 전개 \(f_d\)를 일전에 결정한 형태로 작성할 수 있음을 보인다.
-a register의 차원 수와 그 양자 회로가 내놓는 f의 taylor expansion의 차수가 동일하다는 사실에 주목하자.
+a register의 qubit 수와 그 양자 회로가 내놓는 f의 taylor expansion의 차수가 동일하다는 사실에 주목하자.
 이 과정을 통해 양자 회로로 임의의 analytic 함수의 d차 taylor expansion \(f_d\)에 대하여, \(f_d(z)\)의 값을 양자 회로를 통해 계산할 수 있음을 보이는 방식이다.
 각 과정은 이하의 theroem과 corollary로 선언되고, 그 유효성이 증명되어 있다.
-
-\begin{theorem}
-    \(\theta_{k} \in [-\frac{\pi}{2},\frac{\pi}{2}], k = 0,\dots,d-1,\)인 \(\theta_{k}\)에 대하여, \(k = 1,\dots,d\)에 대하여 재귀적으로 정의된 함수 \(f_k(z): f_0(z) = 1, f_k(z) = f_{k-1}(z)\cos\theta_{k-1} - z^k\sin\theta_{k-1}\)를 생각하자.
-    그러면 \(_a \langle  0|U_k|z \rangle  _a^{\otimes d} = f_k(z)\)를 만족하는 unitary operator \(U_k = C_{a_0}X_{a_k}\bar{C}_{a_k}R_y(-2\theta_{k-1})_{a_0}U_{k-1}, U_0 = \mathbb{1} \) (이 또한 재귀적으로 정의되어 있다)가 존재한다.
-\end{theorem}
 
 \begin{theorem}
     Let $\{f_k, k = 1, \ldots, d\}$ be the family of polynomials in $z$ defined by the following recursive law:
@@ -190,17 +181,14 @@ with $U_0 = \mathbb{1}$.
 
 \end{theorem}
 
-
+theorem에서 제시된 형태로 정의되어 있는 함수 \(f_k\)에 대하여 이전까지의 과정에 이어 \(f(z)\)값을 얻을 수 있음을 말하고 있다.
+2단계의 회로는 \(U_d\)이다. 1단계 과정의 전체 회로를 \(S_VX_q^{\otimes n}\)로 나타내었기 때문에, 표기의 통일성을 위해 전체 회로 그림에서 \(U_d\) 대신 \(S_U\)라는 표기를 사용한다. 둘은 같은 것을 지칭한다.
+간단한 증명의 흐름은 다음과 같다.
 
 \begin{pf}(sketch)
-
-    2단계의 회로는 \(U_d\)이다. 1단계 과정의 전체 회로를 \(S_VX_q^{\otimes n}\)로 나타내었기 때문에, 표기의 통일성을 위해 전체 회로 그림에서 \(U_d\) 대신 \(S_U\)라는 표기를 사용한다. 둘은 같은 것을 지칭한다.
-
+    
+    이부분 그냥 식조작이라 뭐라써야될질 모르겠음ㅠ 좀더 고민해봄
 \end{pf}
-
-\begin{corollary}
-    임의의 콤팩트한 집합 \(I\)에서 정의된 analytic function \(f\)에 대하여, 위에서 정의된 방식으로 정의한 \(f_d\)가 \(\theta_k\)를 잘 선택하면 실수 \(C_d = \frac{1}{k!}f^{(k)}(0)\prod_{j=k}^{d-1}(\cos\theta_j)^{-1}\)에 대하여 \(C_df_d\)가 \(f\)의 d차 테일러 전개와 같아진다.
-\end{corollary}
 
 \begin{corollary}
     
@@ -212,9 +200,14 @@ where $a_k = \frac{1}{k!} f^{(k)}(0)$ is the first non-zero coefficient of the e
 
 \end{corollary}
 
-여기까지 논문에서 제시한 \(f(\vec{w}\cdot\vec{x}+b)\) 계산의 양자 알고리즘 구현 방법이다.
-우리는 이 방법론에 대한 수학적 증명 과정을 상세히 이해하였고, 그것의 유효성을 각 theorem을 코드로 구현해 봄으로서 다시 한 번 확인하였다.
-f의 구현을 위해 \(\theta_k\)를 계산하고, 이를 양자 회로에 제공하여 \(f(\vec{w}\cdot\vec{x}+b)\)의 값을 출력할 수 있도록 하는 양자 회로의 구현을 최종적으로 완료하였다.
+이 corollary는 위의 theorem에서 말하는 형태로 임의의 analytic function의 d차 taylor expansion을 표현할 수 있음을 시사한다.
+이때 analytic function은 테일러 급수가 f로 수렴하는 함수를, 즉 taylor expansion을 통해 \(f(z)\)값을 근사적으로 구할 수 있는 함수를 말한다.
+예를 들어 sigmoid 함수는 analytic이므로, 제시된 방법론에서 Activation function으로 사용할 수 있을 것이다.
+증명에서는 \(\theta_k\)의 값을 결정하는 방법이 서술되어 있다. 우리는 코드를 통해 그 방법이 모든 analytic function에서 유효함을 확인할 수 있었다.
+Theorem과 Corollary를 종합하면, 우리는 Activation function이 analytic일 때, \(f(z)\)값을 taylor expansion을 통해 근사적으로 구할 수 있다는 사실을 알 수 있다.
+
+여기까지가 논문에서 제시한 \(f(\vec{w}\cdot\vec{x}+b)\) 계산의 양자 알고리즘 구현 방법이다.
+우리는 이 방법론에 대한 수학적 증명 과정을 상세히 이해하였고, 그것의 유효성을 각 theorem을 코드로 구현해 봄으로서 다시 한 번 확인하였다. 해당 코드는 이곳에서 확인해 봃 수 있다.
 
 \section{Implementation of Multiperceptron with Superb Efficiency}
 Some possible future works. (maybe 0.5\thru3 pages?)
