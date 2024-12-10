@@ -4,7 +4,7 @@ WIDTH = 256
 
 
 ###
-EPOCH = 1
+EPOCH = 10
 BATCH_SIZE = 16
 LR = 1e-4
 

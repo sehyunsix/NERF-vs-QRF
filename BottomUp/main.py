@@ -23,7 +23,7 @@ def make_data_loader(func):
     batch_size = 128  # 배치 크기
 
     # 입력 데이터 생성 (0부터 2π 사이의 값)
-    x_data = torch.rand(num_data, 1) * 2 * torch.pi  # (20000, 1) shape로 생성
+    x_data = torch.rand(num_data, 1)  # (20000, 1) shape로 생성
     if "sin" == func:
         y_data = torch.sin(x_data)
     elif "tanh" == func:
@@ -65,7 +65,7 @@ for method in method_list:
             trainer1 = trainer(
                 model, train_loader=train_loader, test_loader=test_loader
             )
-            trainer1.train()
+            trainer1.train(epochs=50)
             test_loss_list = trainer1.test()
             mse = np.array(test_loss_list).mean()
             mse_list.append(round(mse, 3))

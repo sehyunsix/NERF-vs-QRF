@@ -35,15 +35,14 @@ class QModel(nn.Module):
             for i in range(self.n_wires - 1):
                 qml.CNOT(wires=[i, i + 1])
 
-            for i in range(self.n_wires):
-                qml.RX(theta[layer_count * self.n_wires + i * 2 + 1], wires=i)
+            # for i in range(self.n_wires):
+            #     qml.RX(theta[layer_count * self.n_wires + i * 2 + 1], wires=i)
 
-            for i in range(self.n_wires - 1):
-                qml.CNOT(wires=[i, i + 1])
+            # for i in range(self.n_wires - 1):
+            #     qml.CNOT(wires=[i, i + 1])
 
             for i in range(self.n_wires):
                 qml.RY(theta[layer_count * self.n_wires + i * 2], wires=i)
-
 
         return [qml.expval(qml.PauliZ(i)) for i in range(3)]
 

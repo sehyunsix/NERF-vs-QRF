@@ -29,8 +29,6 @@
 \contentsline {subsubsection}{Components of Quantum Machine Learning}{21}{section*.20}%
 \contentsline {subsection}{\numberline {3.3.2}Comparsion with QML and ML}{23}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Limitations of QML: Constraint of Nonlinearity}{26}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Limitations of QML: Constraint of Nonlinearity}{27}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Impartion and Expansion of Nonlinearity}{27}{section.3.6}%
 \contentsline {part}{II\hspace {1em}Research and Results}{28}{part.2}%
 \contentsline {chapter}{\numberline {4}Research}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Impartion Nonlinearity for Quantum Perceptron}{30}{section.4.1}%
