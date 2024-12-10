@@ -1,11 +1,11 @@
 \addcontentsline {toc}{chapter}{List of Tables}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces MLP와 QML의 비교}}{9}{table.caption.8}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces PSNR comparison between MLP and QML models across different layer configurations}}{10}{table.caption.10}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces MLP와 QML의 비교}}{11}{table.caption.11}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces MSEcomparison between MLP and QML models across different layer configurations}}{12}{table.caption.13}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces MLP와 QML의 비교}}{6}{table.caption.5}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces PSNR comparison between MLP and QML models across different layer configurations}}{7}{table.caption.7}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces MLP와 QML의 비교}}{8}{table.caption.8}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces MSEcomparison between MLP and QML models across different layer configurations}}{9}{table.caption.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1}{\ignorespaces Single Qubit Gates : Matrix and Actions}}{31}{table.caption.19}%
-\contentsline {table}{\numberline {2}{\ignorespaces Operation of CNOT Gate}}{35}{table.caption.24}%
+\contentsline {table}{\numberline {1}{\ignorespaces Single Qubit Gates : Matrix and Actions}}{28}{table.caption.16}%
+\contentsline {table}{\numberline {2}{\ignorespaces Operation of CNOT Gate}}{32}{table.caption.21}%

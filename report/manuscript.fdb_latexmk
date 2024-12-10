@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex manuscript"] 1733869528.43234 "manuscript.aux" "manuscript.bbl" "manuscript" 1733869611.79417 0
+["bibtex manuscript"] 1733870867.46283 "manuscript.aux" "manuscript.bbl" "manuscript" 1733870869.69258 0
   "./references.bib" 1733714587.48068 8042 c17d7600270efeabd2b56b1d80baabe8 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1710106625 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "manuscript.aux" 1733869611.04433 12728 20f16e8ad59f219c7b081a74f85747ed "pdflatex"
+  "manuscript.aux" 1733870868.96005 12874 2974bb288e09e5ea97c200def09a62ab "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1733869609.62589 "/Users/jhan/Desktop/Ajou Univ/Curriculum/2024-2(4-1)/MathmaticalResearch/Codes/NERF-vs-QRF/report/manuscript.tex" "manuscript.pdf" "manuscript" 1733869611.7943 0
-  "/Users/jhan/Desktop/Ajou Univ/Curriculum/2024-2(4-1)/MathmaticalResearch/Codes/NERF-vs-QRF/report/manuscript.tex" 1733869471.64325 17017 deeef57cddf9991bc44354d1dbe95424 ""
+["pdflatex"] 1733870867.51388 "/Users/jhan/Desktop/Ajou Univ/Curriculum/2024-2(4-1)/MathmaticalResearch/Codes/NERF-vs-QRF/report/manuscript.tex" "manuscript.pdf" "manuscript" 1733870869.69269 0
+  "/Users/jhan/Desktop/Ajou Univ/Curriculum/2024-2(4-1)/MathmaticalResearch/Codes/NERF-vs-QRF/report/manuscript.tex" 1733870631.00718 17014 07d9f0033491f3dae82092ce3cb01501 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1710106625 2971 def0b6c1f0b107b3b936def894055589 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc" 1710106625 7013 c55cc8669071ac14036c4a0c96c16202 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/stix/stix-ts1.enc" 1710106625 2836 154e6b0061f9b8cb549144b55b268339 ""
@@ -399,10 +399,10 @@
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/plain/kotex-plain/kotexutf-core.tex" 1710106625 22796 cdbc6dbba903a5287c558339ae446988 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/web2c/texmf.cnf" 1710106625 41652 e14926ab86fde7902cad99d9eeaa5ca5 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1710106625 8221851 5146b755db1b51297976139fe7739199 ""
-  "chaps/Appendix.tex" 1733869590.81515 33451 a9c64fb62304a17c51d269fdb44de826 ""
+  "chaps/Appendix.tex" 1733870759.87406 42004 53819bda741e17e1dea6dcc75a3fbd79 ""
   "chaps/acknowledgement.tex" 1733648533.04256 438 7b23ce51c6562cd888ce261460e1e364 ""
   "chaps/ch-intro.tex" 1733648533.04269 4539 90bf70f630c007b0dc572e1c8a9fdb5e ""
-  "chaps/ch3-ResearchFlow.tex" 1733869609.42366 26189 ce688c2327d0015f282beffac2b22014 ""
+  "chaps/ch3-ResearchFlow.tex" 1733870865.08549 17553 4edaa960251ca24b85c1661da1d5b191 ""
   "chaps/ch4-Research.tex" 1733867510.38372 26192 def320a779241331f9fe3c2a1f3e9775 ""
   "chaps/ch5-Conclusion.tex" 1733648533.0433 147 7ab4cf7757da6c97af603d4aa1035732 ""
   "figs/BellStateCircuit.png" 1733648533.04347 10190 d02886f48107600824e621ff4cef288f ""
@@ -413,13 +413,13 @@
   "figs/node.png" 1733714587.47614 286980 5f2d78d354a25cf86e14bdc2d557d774 ""
   "figs/pqc_1d.png" 1733648533.04986 39287 71a1d07bbdcf8e24e179bae9ab70413a ""
   "figs/pqc_2d.png" 1733648533.05005 31677 f8564bb48d0e66e8149b1b15cd5e0c31 ""
-  "manuscript.aux" 1733869611.04433 12728 20f16e8ad59f219c7b081a74f85747ed "pdflatex"
-  "manuscript.bbl" 1733869528.4897 3054 904e0aad05158f8df7a5583f17ad88a2 "bibtex manuscript"
-  "manuscript.lof" 1733869611.04577 1045 46204ccd1a62ea8e4ebc91ea26465aae "pdflatex"
-  "manuscript.lot" 1733869611.0458 861 ca90f946dd854c304da4069aff79bb58 "pdflatex"
-  "manuscript.out" 1733869611.04552 5190 af9683c7cd875ce82ca83c6590201fb9 "pdflatex"
-  "manuscript.tex" 1733869471.64325 17017 deeef57cddf9991bc44354d1dbe95424 ""
-  "manuscript.toc" 1733869611.04573 3349 41fd24f71a51846bcba8bd87eb76066a "pdflatex"
+  "manuscript.aux" 1733870868.96005 12874 2974bb288e09e5ea97c200def09a62ab "pdflatex"
+  "manuscript.bbl" 1733870867.5102 3054 904e0aad05158f8df7a5583f17ad88a2 "bibtex manuscript"
+  "manuscript.lof" 1733870868.96216 1043 313e19412e18f5baa6e6c4bc24dd3884 "pdflatex"
+  "manuscript.lot" 1733870868.96222 856 3a2a35fd688489eae6f9dad5039b91d7 "pdflatex"
+  "manuscript.out" 1733870868.96158 5368 652765676cd1062b9f89f2fcb9aabb70 "pdflatex"
+  "manuscript.tex" 1733870631.00718 17014 07d9f0033491f3dae82092ce3cb01501 ""
+  "manuscript.toc" 1733870868.9621 3443 7d4dc852646ecf29a99b119d0b5a82f0 "pdflatex"
   "title.tex" 1733648533.05732 5281 ebec40d89d2f1dbd1cb239691aba72c8 ""
   (generated)
   "manuscript.aux"

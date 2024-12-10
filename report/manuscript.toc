@@ -4,38 +4,39 @@
 \contentsline {chapter}{List of Acronyms}{vi}{chapter*.4}%
 \contentsline {part}{I\hspace {1em}Backgrounds}{1}{part.1}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Research Flow}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Background}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Motivation}{4}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}NeRF and QRF}{4}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}ML and QML}{5}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Quantum Machine Learning}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Concepts}{5}{subsection.2.2.1}%
-\contentsline {subsubsection}{Classical Machine learning}{6}{section*.5}%
-\contentsline {subsubsection}{Components of Quantum Machine Learning}{7}{section*.7}%
-\contentsline {subsection}{\numberline {2.2.2}Comparsion with QML and ML}{8}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Limitations of QML: Constraint of Nonlinearity}{12}{section.2.3}%
-\contentsline {part}{II\hspace {1em}Research and Results}{14}{part.2}%
-\contentsline {chapter}{\numberline {3}Research}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Impartion Nonlinearity for Quantum Perceptron}{16}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Summarization of the Notations}{16}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Implementation of \(\vec {w}\cdot \vec {x}+b\)}{17}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Implementation of Activation function}{18}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Implementation of Multiperceptron with Superb Efficiency}{19}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Summary}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Conclusion}{23}{section.4.2}%
-\contentsline {chapter}{Bibliography}{24}{section.4.2}%
-\contentsline {chapter}{Appendix}{25}{appendix*.15}%
-\contentsline {section}{\numberline {A.1}Mathematics for Quantum Computing}{25}{section.Alph0.1}%
-\contentsline {subsection}{\numberline {A.1.1}Quantum Bit, Qubit}{25}{subsection.Alph0.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Multi-Qubit System}{26}{subsection.Alph0.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Quantum Gate}{29}{subsection.Alph0.1.3}%
-\contentsline {subsubsection}{A.1.3.1 \hskip 1em\relax Unitary Matrix}{29}{section*.16}%
-\contentsline {subsubsection}{A.1.3.2 \hskip 1em\relax Single Qubit Gates}{30}{section*.18}%
-\contentsline {subsubsection}{A.1.3.3 \hskip 1em\relax Universal Gate Set}{32}{section*.22}%
-\contentsline {subsubsection}{A.1.3.4 \hskip 1em\relax Multi Qubit Gate}{33}{section*.23}%
-\contentsline {subsection}{\numberline {A.1.4}Quantum Circuit}{36}{subsection.Alph0.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Measurement and Expectation Value}{37}{subsection.Alph0.1.5}%
-\contentsline {subsubsection}{A.1.5.1 \hskip 1em\relax Measurement}{37}{section*.27}%
-\contentsline {subsubsection}{A.1.5.2 \hskip 1em\relax Expectation Value}{38}{section*.28}%
+\contentsline {subsection}{\numberline {2.2.1}Comparsion with QML and ML}{5}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Limitations of QML: Constraint of Nonlinearity}{9}{section.2.3}%
+\contentsline {part}{II\hspace {1em}Research and Results}{11}{part.2}%
+\contentsline {chapter}{\numberline {3}Research}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Impartion Nonlinearity for Quantum Perceptron}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Summarization of the Notations}{13}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Implementation of \(\vec {w}\cdot \vec {x}+b\)}{14}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Implementation of Activation function}{15}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Implementation of Multiperceptron with Superb Efficiency}{16}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Conclusion}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Summary}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Conclusion}{20}{section.4.2}%
+\contentsline {chapter}{Bibliography}{21}{section.4.2}%
+\contentsline {chapter}{Appendix}{22}{appendix*.12}%
+\contentsline {section}{\numberline {A.1}Mathematics for Quantum Computing}{22}{section.Alph0.1}%
+\contentsline {subsection}{\numberline {A.1.1}Quantum Bit, Qubit}{22}{subsection.Alph0.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Multi-Qubit System}{23}{subsection.Alph0.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Quantum Gate}{26}{subsection.Alph0.1.3}%
+\contentsline {subsubsection}{A.1.3.1 \hskip 1em\relax Unitary Matrix}{26}{section*.13}%
+\contentsline {subsubsection}{A.1.3.2 \hskip 1em\relax Single Qubit Gates}{27}{section*.15}%
+\contentsline {subsubsection}{A.1.3.3 \hskip 1em\relax Universal Gate Set}{29}{section*.19}%
+\contentsline {subsubsection}{A.1.3.4 \hskip 1em\relax Multi Qubit Gate}{30}{section*.20}%
+\contentsline {subsection}{\numberline {A.1.4}Quantum Circuit}{33}{subsection.Alph0.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}Measurement and Expectation Value}{34}{subsection.Alph0.1.5}%
+\contentsline {subsubsection}{A.1.5.1 \hskip 1em\relax Measurement}{34}{section*.24}%
+\contentsline {subsubsection}{A.1.5.2 \hskip 1em\relax Expectation Value}{35}{section*.25}%
+\contentsline {section}{\numberline {A.2}Quantum Machine Learning}{36}{section.Alph0.2}%
+\contentsline {subsection}{\numberline {A.2.1}Concepts}{36}{subsection.Alph0.2.1}%
+\contentsline {subsubsection}{Classical Machine learning}{36}{section*.26}%
+\contentsline {subsubsection}{Components of Quantum Machine Learning}{37}{section*.28}%
 \contentsline {chapter}{Acknowledgement}{39}{appendix*.29}%
