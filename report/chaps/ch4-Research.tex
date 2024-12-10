@@ -225,6 +225,15 @@ Lemma 4.2.1에 의해, 4.1절에서와 같은 방식으로 중첩된 state \(\ke
 Thm 4.2.1이 의미하는 바는, 주어진 input vector \(\vec x\) weight matrix \(W\), bias vector \(\vec b\)에 대해, 모든 \(z_i\)의 정보를 담고 있는 entangled state $\ket{\psi_{\mathbf z}^d}$를 생성하는 Unitary가 존재한다는 것이다. 다음 증명을 살펴보자.
 
 \begin{pf}
+Thm 4.1.1의 증명에 의해, for \(i = 0, \dots, d-1, \quad V_i : \ket{\psi_z^i} \mapsto \ket{\psi_z^{i+1}}\)의 동작을 알 수 있다. 
+
+$V_m$의 동작을 살펴보자. \(V_m = C_{a_m}U_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m}\)으로, 세 개의 step으로 이루어진다.
+
+1. \(C_q^nH_{a_m}\), 즉 q 레지스터의 모든 qubit을 control bit로, \(a_m\) qubit을 target bit로 하는 Controlled-Hadamard 연산을 적용한다.
+
+2. \(C_{a_m}X^{\otimes n}_q\), \(a_m\)의 state가 \(\ket 1\)인 경우에 \(q\) 레지스터의 모든 qubit에 Pauli-X gate를 적용한다.
+
+3. \(C_{a_m}U_{\mathbf{z}}(\vec{x}, W, \vec{b})_q\), \(a_m\)의 state가 \(\ket 1\)인 경우에 \(q\) 레지스터에 대해 \(U_{\mathbf{z}}(\vec{x}, W, \vec{b})_q\)를 적용한다.
 
 \end{pf}
 
