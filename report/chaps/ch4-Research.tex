@@ -186,7 +186,7 @@ Lemma 4.2.1은, 보유한 각 \(\vec{w}_i\)에 대한 \(\displaystyle {z}_i\) �
 
     이에 따라, \(s\) 레지스터의 \(i\)번째 basis state인 \(\ket{i}\)와, \(q\) 레지스터에서 \(i\)번째 weight vector 및 bias 값에 대한 \(U_z(\vec{x}, \vec{w}_i, b_i)\)의 output state \(\ket{\psi_{z_i}}\)의 텐서곱이 중첩된 state를 만드는 양자 회로를 다음과 같이 설계할 수 있다.
     \[
-        U_{\mathbf z}(\vec{x}, W, \vec{b}) = \left(\prod_{k=0}^{N_w-1}C_{s}^{ctrl : k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\right) H_s^{\otimes p}
+        U_{\mathbf z}(\vec{x}, W, \vec{b}) = S_{\mathbf z}(\vec{x}, W, \vec{b}) H_s^{\otimes p} \quad \text{ where } S_{\mathbf z}(\vec{x}, W, \vec{b})= \left(\prod_{k=0}^{N_w-1}C_{s}^{ctrl : k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\right)
     \]
     여기에서 \(C_{s}^{ctrl:k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\)는 \(s\) 레지스터의 상태가 \(k\)의 이진 표현과 같은 경우, \(q\) 레지스터에 \(U_{z_k}(\vec{x}, \vec{w}_k, b_k)\) 연산을 작동시키는 Controlled-Gate이다.
 
@@ -212,28 +212,40 @@ Lemma 4.2.1에 의해, 4.1절에서와 같은 방식으로 중첩된 state \(\ke
     \[
         \ket{z_i} \equiv \ket{0} + z_i\ket{1}
     \]  
-    The circuit is expressed by $S_V X_q^{\otimes n}$ where X is Pauli-X gate and 
+    The circuit is expressed by $S_V X_q^{\otimes n} H_s^{\otimes p}$ where X is Pauli-X, H is Hadamard gate and 
     \[
         S_V = V_{d-1} \cdots V_1 V_0
     \]
     with
     \[
-        V_m = C_{a_m}U_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m} \quad \text{ for } m = 0, 1, \dots, d - 1
+        V_m = C_{a_m}S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m} \quad \text{ for } m = 0, 1, \dots, d - 1
     \]  
 \end{theorem}
 
 Thm 4.2.1이 의미하는 바는, 주어진 input vector \(\vec x\) weight matrix \(W\), bias vector \(\vec b\)에 대해, 모든 \(z_i\)의 정보를 담고 있는 entangled state $\ket{\psi_{\mathbf z}^d}$를 생성하는 Unitary가 존재한다는 것이다. 다음 증명을 살펴보자.
 
 \begin{pf}
-Thm 4.1.1의 증명에 의해, for \(i = 0, \dots, d-1, \quad V_i : \ket{\psi_z^i} \mapsto \ket{\psi_z^{i+1}}\)의 동작을 알 수 있다. 
+% Thm 4.1.1의 증명에 의해, for \(i = 0, \dots, d-1, \quad V_i : \ket{\psi_z^i} \mapsto \ket{\psi_z^{i+1}}\)의 동작을 알 수 있다. 
 
-$V_m$의 동작을 살펴보자. \(V_m = C_{a_m}U_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m}\)으로, 세 개의 step으로 이루어진다.
+Thm 4.2.1에 명시된 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 경우 $V_0$를 시행하기 전에 \(s\) 레지스터의 모든 qubit에 Hadamard를 가하여, \(s\) 레지스터에는 모든 Computational Basis State가 동일한 확률로 중첩된 state가 저장되어 있고, \(q\) 레지스터의 모든 qubit은 Pauli-X gate를 통해 \(\ket 0\)에서 \(\ket 1\)로 변환한다. 이후 \(V_0, V_1, \cdots, V_{d-1}\)이 실행되는데, $V_m$의 동작은 \(V_m = C_{a_m}S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m}\)으로, 세 개의 step으로 이루어진다.
 
-1. \(C_q^nH_{a_m}\), 즉 q 레지스터의 모든 qubit을 control bit로, \(a_m\) qubit을 target bit로 하는 Controlled-Hadamard 연산을 적용한다.
+1. \(C_q^nH_{a_m}\) : 즉 q 레지스터의 모든 qubit을 control bit로, \(a_m\) qubit을 target bit로 하는 Controlled-Hadamard 연산을 적용한다.
 
-2. \(C_{a_m}X^{\otimes n}_q\), \(a_m\)의 state가 \(\ket 1\)인 경우에 \(q\) 레지스터의 모든 qubit에 Pauli-X gate를 적용한다.
+2. \(C_{a_m}X^{\otimes n}_q\) : \(a_m\)의 state가 \(\ket 1\)인 경우에 \(q\) 레지스터의 모든 qubit에 Pauli-X gate를 적용한다.
 
-3. \(C_{a_m}U_{\mathbf{z}}(\vec{x}, W, \vec{b})_q\), \(a_m\)의 state가 \(\ket 1\)인 경우에 \(q\) 레지스터에 대해 \(U_{\mathbf{z}}(\vec{x}, W, \vec{b})_q\)를 적용한다.
+3. \(C_{a_m}S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q\) : \(a_m\)의 state가 \(\ket 1\)인 경우에 \(q\) 레지스터에 대해 \(S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q\)를 적용한다.
 
+1번째와 2번째 step의 경우 Thm 4.1.2와 동일하다. 3번째 step의 동작을 살펴보면, \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 첫 동작인 \(H_s^{\otimes p}\)에 의해 \(s\) 레지스터에 동일한 확률 \(1 \over {2^{p/2}}\)로 중첩되어 있는 Basis State와 \(S_{\mathbf z}(\vec{x}, W, \vec{b})= \left(\prod_{k=0}^{N_w-1}C_{s}^{ctrl : k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\right)\)의 작동으로, Thm 4.1.2에서의 \(\ket{z}\)를 \({1\over {2^{p/2}}}\sum_{i=0}^{P-1} \ket{z_i}\)로 대체한 결과를 낸다.
+
+따라서 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 결과로, 다음 state가 완성된다.
+\[
+    \ket{\psi_{\mathbf z}^d} = \ket{\psi_{\mathbf z}^d}_{\perp} + {1 \over {2^{(d + p) / 2}}}\sum_{i=0}^{N_w - 1}\left( \ket{i}_{s} \ket{z_i}_{a}^{\otimes d} \ket{N-1}_q \right) \quad \square
+\]
 \end{pf}
 
+마지막으로, Thm 4.1.2의 $U_d$는 \(s\) 레지스터와 \(q\) 레지스터와 무관하므로, 동일한 작동을 하여 다음 state를 생성한다.
+\[
+    U_d \ket{\psi_{\mathbf z}^d} = \ket{\psi_{f(\mathbf z)}^d}
+\]
+
+결과적으로, 양자 회로 \(X_q^{\otimes n} U_d S_V X_q^{\otimes n} H_s^{\otimes p}\)는 4.1절에서 구현한 quantum perceptron\(\left(\ket{0} \rightarrow \ket{\psi_{ f(z)}^d}\right)\)을 매우 적은 추가 qubit을 사용하여 임의의 neuron 수에 대한 quantum multi-perceptron\(\left(\ket{0} \rightarrow \ket{\psi_{f(\mathbf z)}^d}\right)\)으로 사용할 수 있도록 한다.

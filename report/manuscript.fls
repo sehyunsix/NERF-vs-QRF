@@ -575,11 +575,6 @@ INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/public/
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobb.tfm
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob8.tfm
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob6.tfm
-INPUT ./chaps/ch2-figs.tex
-INPUT ./chaps/ch2-figs.tex
-INPUT ./chaps/ch2-figs.tex
-INPUT ./chaps/ch2-figs.tex
-INPUT chaps/ch2-figs.tex
 INPUT ./chaps/ch3-ResearchFlow.tex
 INPUT ./chaps/ch3-ResearchFlow.tex
 INPUT ./chaps/ch3-ResearchFlow.tex

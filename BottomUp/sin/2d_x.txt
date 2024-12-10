@@ -1,0 +1,5 @@
+- c_1 \sin{\left(x_{1} \right)} + c_2 \sin{\left(x_{2} \right)} - c_3 \sin{\left(x_{1} - x_{2} \right)} - c_4 \sin{\left(x_{1} + x_{2} \right)} + c_5 \cos{\left(x_{1} \right)} + c_6 \cos{\left(x_{2} \right)} - c_7 \cos{\left(x_{1} - x_{2} \right)} - c_8 \cos{\left(x_{1} + x_{2} \right)} + c_9
+
+- c_{10} \sin{\left(x_{1} \right)} - c_{11} \sin{\left(x_{2} \right)} - c_{12} \sin{\left(x_{1} - x_{2} \right)} + c_{13} \sin{\left(x_{1} + x_{2} \right)} - c_{14} \cos{\left(x_{1} \right)} + c_{15} \cos{\left(x_{2} \right)} + c_{16} \cos{\left(x_{1} - x_{2} \right)} - c_{17} \cos{\left(x_{1} + x_{2} \right)} + c_{18}
+
+- c_{19} \sin{\left(x_{1} \right)} - c_{20} \sin{\left(x_{2} \right)} + c_{21} \sin{\left(x_{1} - x_{2} \right)} + c_{22} \sin{\left(x_{1} + x_{2} \right)} - c_{23} \cos{\left(x_{1} \right)} - c_{24} \cos{\left(x_{2} \right)} - c_{25} \cos{\left(x_{1} - x_{2} \right)} - c_{26} \cos{\left(x_{1} + x_{2} \right)} - c_{27}
