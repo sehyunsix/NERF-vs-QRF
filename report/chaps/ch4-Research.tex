@@ -293,3 +293,24 @@ Thm 3.2.1에 명시된 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 경우 $V_0$�
 \]
 
 결과적으로, 양자 회로 \(X_q^{\otimes n} U_d S_V X_q^{\otimes n} H_s^{\otimes p}\)는 4.1절에서 구현한 quantum perceptron\(\left(\ket{0} \rightarrow \ket{\psi_{ f(z)}^d}\right)\)을 매우 적은 추가 qubit을 사용하여 임의의 neuron 수에 대한 quantum multi-perceptron\(\left(\ket{0} \rightarrow \ket{\psi_{f(\mathbf z)}^d}\right)\)으로 사용할 수 있도록 한다.
+
+
+\section{Experiment}
+
+ 우리가 직접 설계한 Theroem2의 양자회로가 잘 작동하는지 확인하기 위해 실제 $sin(w*x+b)$ 형태로 동작하는 multi perceptron 레이어와 똑같이 동작하는 양자회로를 pennylane으로 직접 구현하였다. multi perceptron layer는 가중치의 행렬이 4 x2 크기를 가지도록 설계하였으며,양자회로는 총 8개의 qubit을 사용하였다. 이 회로를 시각화하면 다음과 같이 나타난다.\labelcref{fig:Theroem2-cricuit}
+
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.5, width=0.8\textwidth]{figs/theorem2_circuit_12110900.png}\
+\caption{Theroem2의 quantum circuit 구조}
+\label{fig:Theroem2-cricuit}
+\end{figure}
+
+이러한 회로와 MLP의 출력을 같은 $w , x, b$이 주어졌을 떄 동일한 결과를 나타내는지 확인하였다. 이때 output이 2차원이므로 이를 x,y평면에서 그래프로 나타내었으며 다음그래프를 보면 테일러 급수 d 차수가 늘어날 수록 비슷한 그래프가 되는 것을 볼 수 있다.
+
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.5, width=0.8\textwidth]{figs/output_theorem2_1211.png}\
+\caption{sin(wx+b)를 ml과 qml로 나타낸 그래프이다.}
+\label{fig:Theroem2-Experiment}
+\end{figure}

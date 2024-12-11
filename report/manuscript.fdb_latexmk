@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex manuscript"] 1733881797.19168 "manuscript.aux" "manuscript.bbl" "manuscript" 1733883771.45016 0
-  "./references.bib" 1733751238.83691 8042 c17d7600270efeabd2b56b1d80baabe8 ""
+["bibtex manuscript"] 1733932914.7947 "manuscript.aux" "manuscript.bbl" "manuscript" 1733932918.05819 0
+  "./references.bib" 1733932911.24322 8047 1fe6594d180307b1031420d15983a4cb ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "manuscript.aux" 1733883770.28157 11368 e8743ed0012b1900d454baf2039d0018 "pdflatex"
+  "manuscript.aux" 1733932917.06226 12208 22eb1b271ccb1af177e34443dca7314d "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1733883768.26341 "/Users/yuksehyun/project/NERF-vs-QRF/report/manuscript.tex" "manuscript.pdf" "manuscript" 1733883771.45031 0
-  "/Users/yuksehyun/project/NERF-vs-QRF/report/manuscript.tex" 1733880883.54507 16731 ea80713e62a3e48f004727cbef45a1b2 ""
+["pdflatex"] 1733932914.88911 "/Users/yuksehyun/project/NERF-vs-QRF/report/manuscript.tex" "manuscript.pdf" "manuscript" 1733932918.05832 0
+  "/Users/yuksehyun/project/NERF-vs-QRF/report/manuscript.tex" 1733930275.51027 16732 1b866532787f8b906bb764e76ab56f2f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc" 1388795362 7013 c55cc8669071ac14036c4a0c96c16202 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix/stix-ts1.enc" 1388795362 2836 154e6b0061f9b8cb549144b55b268339 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -397,9 +397,9 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1714667838 8221450 3fbc4d24636642f97a5c39ba1547c97c ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "chaps/Appendix.tex" 1733877146.08053 42004 53819bda741e17e1dea6dcc75a3fbd79 ""
-  "chaps/ch-intro.tex" 1733615810 4539 90bf70f630c007b0dc572e1c8a9fdb5e ""
+  "chaps/ch-intro.tex" 1733931835.18392 4568 2682a3b12607c01375a700c7d2415db8 ""
   "chaps/ch3-ResearchFlow.tex" 1733880883.51921 17534 d87ff02dcce26591658b023040fba37f ""
-  "chaps/ch4-Research.tex" 1733883768.00326 28155 da3fa5568b24a4ed77c8a6a45f6fcbe9 ""
+  "chaps/ch4-Research.tex" 1733918553.04743 29459 0efd6a3221713ac23e4e5c9a895b019b ""
   "chaps/ch5-Conclusion.tex" 1733615810 147 7ab4cf7757da6c97af603d4aa1035732 ""
   "figs/BellStateCircuit.png" 1733615812 10190 d02886f48107600824e621ff4cef288f ""
   "figs/Not Gates.png" 1733615810 60609 c1d1d01b47072440424aa942e983f3cc ""
@@ -407,13 +407,15 @@
   "figs/RXRYRZ.png" 1733615810 78165 f7916a56f42051e6ce14c46a5dcd0c01 ""
   "figs/bloch_sphere.png" 1733615810 22432 765d81ffcfd06fc1b2162ed418dc5fc3 ""
   "figs/node.png" 1733751238.81611 286980 5f2d78d354a25cf86e14bdc2d557d774 ""
+  "figs/output_theorem2_1211.png" 1733918196.89031 65387 c1992fbf5683e6a15ee18e4cc2ec6d1e ""
   "figs/pqc_1d.png" 1733615812 39287 71a1d07bbdcf8e24e179bae9ab70413a ""
   "figs/pqc_2d.png" 1733615812 31677 f8564bb48d0e66e8149b1b15cd5e0c31 ""
-  "manuscript.aux" 1733883770.28157 11368 e8743ed0012b1900d454baf2039d0018 "pdflatex"
-  "manuscript.bbl" 1733881797.30764 3054 904e0aad05158f8df7a5583f17ad88a2 "bibtex manuscript"
-  "manuscript.out" 1733883770.28277 4148 00b623f10938f3cbc4c5dca94318289a "pdflatex"
-  "manuscript.tex" 1733880883.54507 16731 ea80713e62a3e48f004727cbef45a1b2 ""
-  "manuscript.toc" 1733883770.28302 2828 3768d7dc70e37ff6bbfab058a293ee0f "pdflatex"
+  "figs/theorem2_circuit_12110900.png" 1733918520.97565 73054 e11d4047e21e588f464c763492c50a23 ""
+  "manuscript.aux" 1733932917.06226 12208 22eb1b271ccb1af177e34443dca7314d "pdflatex"
+  "manuscript.bbl" 1733932914.88476 3054 904e0aad05158f8df7a5583f17ad88a2 "bibtex manuscript"
+  "manuscript.out" 1733932917.06358 4256 949b5638610b5f4af6a2ea6000cf47d3 "pdflatex"
+  "manuscript.tex" 1733930275.51027 16732 1b866532787f8b906bb764e76ab56f2f ""
+  "manuscript.toc" 1733932917.06392 2900 f36cb1adb403267e1926e395eda0e672 "pdflatex"
   "title.tex" 1733615810 5281 ebec40d89d2f1dbd1cb239691aba72c8 ""
   (generated)
   "manuscript.aux"

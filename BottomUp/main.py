@@ -65,7 +65,7 @@ for method in method_list:
             trainer1 = trainer(
                 model, train_loader=train_loader, test_loader=test_loader
             )
-            trainer1.train(epochs=50)
+            trainer1.train(epochs=1)
             test_loss_list = trainer1.test()
             mse = np.array(test_loss_list).mean()
             mse_list.append(round(mse, 3))
@@ -77,6 +77,8 @@ for method in method_list:
                 "x": mse_list[2],
             }
         )
+        
+
 results_df = pd.DataFrame(results_df)
 
 # Save the DataFrame to a CSV file

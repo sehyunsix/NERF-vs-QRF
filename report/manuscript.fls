@@ -650,6 +650,17 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob0.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocc.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocf.tfm
+INPUT ./figs/theorem2_circuit_12110900.png
+INPUT ./figs/theorem2_circuit_12110900.png
+INPUT ./figs/theorem2_circuit_12110900.png
+INPUT ./figs/theorem2_circuit_12110900.png
+INPUT ./figs/theorem2_circuit_12110900.png
+INPUT ./figs/output_theorem2_1211.png
+INPUT ./figs/output_theorem2_1211.png
+INPUT ./figs/output_theorem2_1211.png
+INPUT ./figs/output_theorem2_1211.png
+INPUT ./figs/output_theorem2_1211.png
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd0.tfm
 INPUT ./chaps/ch5-Conclusion.tex
 INPUT ./chaps/ch5-Conclusion.tex
 INPUT ./chaps/ch5-Conclusion.tex

@@ -1,7 +1,0 @@
-Layers,sin,tanh,x
-MLP (3 layers),0.0,0.0,0.0
-MLP (4 layers),0.0,0.0,0.0
-MLP (5 layers),0.0,0.0,0.0
-PQC (3 layers),0.0,0.0,0.003
-PQC (4 layers),0.0,0.0,0.003
-PQC (5 layers),0.0,0.0,0.003
