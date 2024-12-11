@@ -7,7 +7,6 @@ from PIL import Image
 import numpy as np
 import random
 from model import MLPColorPredictor, PositionEncodingMLP
-from predict import save_predicted_image, process_in_batches
 from q_model import QModel
 import os
 from tqdm import tqdm
@@ -16,12 +15,23 @@ import pandas as pd
 from datetime import datetime
 
 
-def save_weights(model, epoch, image, method, folder="weights"):
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-    path = os.path.join(folder, f"model_{image}_{method}_{epoch}.pth")
-    torch.save(model.state_dict(), path)
-    print(f"Model weights saved to {path}")
+def process_in_batches(
+    xy_coords,
+    model,
+    batch_size=64,
+):
+
+    all_predictions = []
+    with torch.no_grad():
+        for i in tqdm(range(0, len(xy_coords), batch_size)):
+            batch_coords = xy_coords[i : i + batch_size]
+            # 모델을 사용하여 예측
+            predictions = model(batch_coords)
+            # 결과를 리스트에 저장
+            all_predictions.append(predictions)  # GPU/MPS에서 CPU로 이동
+
+    # 모든 배치를 합쳐서 하나의 텐서로 반환
+    return torch.cat(all_predictions, dim=0)
 
 
 class CustomDataset(Dataset):
@@ -119,7 +129,6 @@ def train_model(
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.title("Training Loss")
-    plt.savefig("loss_graph_{METHOD}.png")  # Save the plot as an image file
     print("start predictions")
 
     # Create (x, y) grid for prediction
@@ -144,8 +153,6 @@ def train_model(
 
 
 # Example usage
-
-
 results_df = []
 
 
@@ -200,16 +207,3 @@ results_df = pd.DataFrame(results_df)
 # Save the DataFrame to a CSV file
 results_df.to_csv("results_psnr.csv", index=False)
 print("Results saved to results_psnr.csv")
-# # Train model
-# train_model(
-#     model,
-#     dataloader,
-#     xy_coords,
-#     colors,
-#     num_epochs=EPOCH,
-#     batch_size=BATCH_SIZE,
-#     lr=LR,
-# )
-
-
-# save_weights(model, epoch=10, image=image_path, method=method)
