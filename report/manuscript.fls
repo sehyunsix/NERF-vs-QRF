@@ -650,18 +650,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob0.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocc.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocf.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc3.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/lucuhcmj.fd
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/lucuhcmj.fd
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/lucuhcmj.fd
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/uhc/uwmj/uwmjo31.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/uhc/uwmj/uwmjo31.vf
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/uhc/wmj/wmjo04.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/uhc/wmj/wmjo04.vf
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/uhc/umj/umjo05.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/uhc/umj/umjo02.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/uhc/umj/umjo03.tfm
 INPUT ./chaps/ch5-Conclusion.tex
 INPUT ./chaps/ch5-Conclusion.tex
 INPUT ./chaps/ch5-Conclusion.tex
@@ -676,6 +664,7 @@ INPUT ./chaps/Appendix.tex
 INPUT ./chaps/Appendix.tex
 INPUT ./chaps/Appendix.tex
 INPUT chaps/Appendix.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
 INPUT ./figs/Not Gates.png
@@ -814,7 +803,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc3.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc3.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc4.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb
@@ -860,4 +848,3 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathrm-bol
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/uhc/umj/umj02.pfb

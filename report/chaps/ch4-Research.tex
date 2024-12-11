@@ -20,8 +20,8 @@
 또한 논문에서는 제대로 논의하고 있지 않은 부분인 MLP의 양자적 구현을 고민하던 중, 우리는 매우 효율적인 Multiperceptron의 양자 알고리즘을 구현하는 데에 성공하였고, 이를 코드로 구현하여 잘 작동함을 확인하였다.
 
 이번 장은 해당 논문에 대한 우리의 심도 깊은 이해와 구현, 그리고 우리가 발전시킨 부분에 대해 서술되어 있다.
-4.1장에서는 \(f(\vec{w}\cdot\vec{x}+b)\)를 양자 알고리즘으로 구현하는 과정을 따라가고, 그 과정을 직접 코드로 구현해 본 과정을 공유한다.
-이후 4.2장에서는 우리의 독창적이고 효율적인 Multiperceptron의 구현 아이디어에 대해 설명한다.
+3.1장에서는 \(f(\vec{w}\cdot\vec{x}+b)\)를 양자 알고리즘으로 구현하는 과정을 따라가고, 그 과정을 직접 코드로 구현해 본 과정을 공유한다.
+이후 3.2장에서는 우리의 독창적이고 효율적인 Multiperceptron의 구현 아이디어에 대해 설명한다.
 
 \section{Imparting Nonlinearity for Quantum Perceptron}
 
@@ -230,9 +230,9 @@ Lemma 4.2.1은, 보유한 각 \(\vec{w}_i\)에 대한 \(\displaystyle {z}_i\) �
 
     이에 따라, \(s\) 레지스터의 \(i\)번째 basis state인 \(\ket{i}\)와, \(q\) 레지스터에서 \(i\)번째 weight vector 및 bias 값에 대한 \(U_z(\vec{x}, \vec{w}_i, b_i)\)의 output state \(\ket{\psi_{z_i}}\)의 텐서곱이 중첩된 state를 만드는 양자 회로를 다음과 같이 설계할 수 있다.
     \[
-        U_{\mathbf z}(\vec{x}, W, \vec{b}) = S_{\mathbf z}(\vec{x}, W, \vec{b}) H_s^{\otimes p} \quad \text{ where } S_{\mathbf z}(\vec{x}, W, \vec{b})= \left(\prod_{k=0}^{N_w-1}C_{s}^{ctrl : k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\right)
+        U_{\mathbf z}(\vec{x}, W, \vec{b}) = S_{\mathbf z}(\vec{x}, W, \vec{b}) H_s^{\otimes p} \quad \text{ where } S_{\mathbf z}(\vec{x}, W, \vec{b})= \left(\prod_{k=0}^{N_w-1}C_{s}^{ctrl : k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)_q\right)
     \]
-    여기에서 \(C_{s}^{ctrl:k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\)는 \(s\) 레지스터의 상태가 \(k\)의 이진 표현과 같은 경우, \(q\) 레지스터에 \(U_{z_k}(\vec{x}, \vec{w}_k, b_k)\) 연산을 작동시키는 Controlled-Gate이다.
+    여기에서 \(C_{s}^{ctrl:k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)_q\)는 \(s\) 레지스터의 상태가 \(k\)의 이진 표현과 같은 경우, \(q\) 레지스터에 \(U_{z_k}(\vec{x}, \vec{w}_k, b_k)\) 연산을 작동시키는 Controlled-Gate이다.
 
     이 회로는 먼저 \(s\) 레지스터의 모든 qubit에 Hadamard 연산을 작동시켜 모든 basis state이 동일한 확률로 중첩된 state \(\displaystyle \sum_{i=0}^{P-1} {1\over {2^{p/2}}}\ket{i}\)를 생성한다. 이렇게 생성된 state의 각 basis state는 \(C_{s}^{ctrl:k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\)에 의해 basis의 이진 표현에 해당하는 $\ket{\psi_k}$와 결부되어, 결과적으로는 다음과 같은 state를 만들게 된다:
     \[
@@ -241,7 +241,7 @@ Lemma 4.2.1은, 보유한 각 \(\vec{w}_i\)에 대한 \(\displaystyle {z}_i\) �
     where \(\ket{\psi_{z_i}}_q = \ket{0}_q \text{ for } i \ge N_w\) \quad $\square$
 \end{pf}
 
-Lemma 4.2.1에 의해, 4.1절에서와 같은 방식으로 중첩된 state \(\ket{\psi_{\mathbf z}}\)를 사용할 수 있다. 이는 Thm 4.1.1에도 동일하게 적용된다. 다음 Thm을 살펴보자.
+Lemma 3.2.1에 의해, 3.1절에서와 같은 방식으로 중첩된 state \(\ket{\psi_{\mathbf z}}\)를 사용할 수 있다. 이는 Thm 3.1.1에도 동일하게 적용된다. 다음 Thm을 살펴보자.
 
 \begin{theorem}
     Let \(z_i := \left( \vec{w}_i \cdot \vec{x} + b_i \right) / \left( N_{in} + 1 \right)\) where \(\vec{x}, \vec{w}_i \in [-1, 1]^{N_{in}}\) and \(b_i \in [-1, 1]\) for \(i = 0, \cdots, N_w - 1\). Let $q, a, \text{and} s$ be quantum registers of $n, d, \text{ and } p$ qubits respectively, with \( N = 2^n \ge N_{in} + 3 \) and \( p = \left\lceil N_{w} \right\rceil\). Then there exist a quantum circuit which transforms the three registers from the initial state \(\ket{0}_s \ket{0}_a \ket{0}_q\) to (p+n+d)-qubit entangled state \(\ket{\psi_{\mathbf z}^d}\) of the form
@@ -266,12 +266,12 @@ Lemma 4.2.1에 의해, 4.1절에서와 같은 방식으로 중첩된 state \(\ke
     \]
 \end{theorem}
 
-Thm 4.2.1이 의미하는 바는, 주어진 input vector \(\vec x\) weight matrix \(W\), bias vector \(\vec b\)에 대해, 모든 \(z_i\)의 정보를 담고 있는 entangled state $\ket{\psi_{\mathbf z}^d}$를 생성하는 Unitary가 존재한다는 것이다. 다음 증명을 살펴보자.
+Thm 3.2.1이 의미하는 바는, 주어진 input vector \(\vec x\) weight matrix \(W\), bias vector \(\vec b\)에 대해, 모든 \(z_i\)의 정보를 담고 있는 entangled state $\ket{\psi_{\mathbf z}^d}$를 생성하는 Unitary가 존재한다는 것이다. 다음 증명을 살펴보자.
 
 \begin{pf}
 % Thm 4.1.1의 증명에 의해, for \(i = 0, \dots, d-1, \quad V_i : \ket{\psi_z^i} \mapsto \ket{\psi_z^{i+1}}\)의 동작을 알 수 있다.
 
-Thm 4.2.1에 명시된 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 경우 $V_0$를 시행하기 전에 \(s\) 레지스터의 모든 qubit에 Hadamard를 가하여, \(s\) 레지스터에는 모든 Computational Basis State가 동일한 확률로 중첩된 state가 저장되어 있고, \(q\) 레지스터의 모든 qubit은 Pauli-X gate를 통해 \(\ket 0\)에서 \(\ket 1\)로 변환한다. 이후 \(V_0, V_1, \cdots, V_{d-1}\)이 실행되는데, $V_m$의 동작은 \(V_m = C_{a_m}S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m}\)으로, 세 개의 step으로 이루어진다.
+Thm 3.2.1에 명시된 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 경우 $V_0$를 시행하기 전에 \(s\) 레지스터의 모든 qubit에 Hadamard를 가하여, \(s\) 레지스터에는 모든 Computational Basis State가 동일한 확률로 중첩된 state가 저장되어 있고, \(q\) 레지스터의 모든 qubit은 Pauli-X gate를 통해 \(\ket 0\)에서 \(\ket 1\)로 변환한다. 이후 \(V_0, V_1, \cdots, V_{d-1}\)이 실행되는데, $V_m$의 동작은 \(V_m = C_{a_m}S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m}\)으로, 세 개의 step으로 이루어진다.
 
 1. \(C_q^nH_{a_m}\) : 즉 q 레지스터의 모든 qubit을 control bit로, \(a_m\) qubit을 target bit로 하는 Controlled-Hadamard 연산을 적용한다.
 
@@ -279,7 +279,7 @@ Thm 4.2.1에 명시된 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 경우 $V_0$�
 
 3. \(C_{a_m}S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q\) : \(a_m\)의 state가 \(\ket 1\)인 경우에 \(q\) 레지스터에 대해 \(S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q\)를 적용한다.
 
-1번째와 2번째 step의 경우 Thm 4.1.2와 동일하다. 3번째 step의 동작을 살펴보면, \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 첫 동작인 \(H_s^{\otimes p}\)에 의해 \(s\) 레지스터에 동일한 확률 \(1 \over {2^{p/2}}\)로 중첩되어 있는 Basis State와 \(S_{\mathbf z}(\vec{x}, W, \vec{b})= \left(\prod_{k=0}^{N_w-1}C_{s}^{ctrl : k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\right)\)의 작동으로, Thm 4.1.2에서의 \(\ket{z}\)를 \({1\over {2^{p/2}}}\sum_{i=0}^{P-1} \ket{z_i}\)로 대체한 결과를 낸다.
+1번째와 2번째 step의 경우 Thm 3.1.2와 동일하다. 3번째 step의 동작을 살펴보면, \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 첫 동작인 \(H_s^{\otimes p}\)에 의해 \(s\) 레지스터에 동일한 확률 \(1 \over {2^{p/2}}\)로 중첩되어 있는 Basis State와 \(S_{\mathbf z}(\vec{x}, W, \vec{b})= \left(\prod_{k=0}^{N_w-1}C_{s}^{ctrl : k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\right)\)의 작동으로, Thm 4.1.2에서의 \(\ket{z}\)를 \({1\over {2^{p/2}}}\sum_{i=0}^{P-1} \ket{z_i}\)로 대체한 결과를 낸다.
 
 따라서 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 결과로, 다음 state가 완성된다.
 \[
@@ -287,61 +287,9 @@ Thm 4.2.1에 명시된 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 경우 $V_0$�
 \]
 \end{pf}
 
-마지막으로, Thm 4.1.2의 $U_d$는 \(s\) 레지스터와 \(q\) 레지스터와 무관하므로, 동일한 작동을 하여 다음 state를 생성한다.
+마지막으로, Thm 3.1.2의 $U_d$는 \(s\) 레지스터와 \(q\) 레지스터와 무관하므로, 동일한 작동을 하여 다음 state를 생성한다.
 \[
     U_d \ket{\psi_{\mathbf z}^d} = \ket{\psi_{f(\mathbf z)}^d}
 \]
 
 결과적으로, 양자 회로 \(X_q^{\otimes n} U_d S_V X_q^{\otimes n} H_s^{\otimes p}\)는 4.1절에서 구현한 quantum perceptron\(\left(\ket{0} \rightarrow \ket{\psi_{ f(z)}^d}\right)\)을 매우 적은 추가 qubit을 사용하여 임의의 neuron 수에 대한 quantum multi-perceptron\(\left(\ket{0} \rightarrow \ket{\psi_{f(\mathbf z)}^d}\right)\)으로 사용할 수 있도록 한다.
-
-
-\begin{theorem}
-    Let $\{f_k, k = 1, \ldots, d\}$ be the family of polynomials in $z$ defined by the following recursive law:
-\[
-f_k(z) = f_{k-1}(z) \cos \vartheta_{k-1} - z^k \sin \vartheta_{k-1}, \quad k = 1, \ldots, d,
-\]
-with $f_0(z) = 1$ and $\vartheta_k \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$ for any $k = 0, \ldots, d-1$.
-
-Then there exists a family $\{U_k, k = 1, \ldots, d\}$ of unitary operators such that
-\[
-\bra{0}_a U_k \ket{z}_a^{\otimes d} = f_k(z).
-\]
-
-These unitary operators are, in turn, defined by the recursive law:
-\[
-U_k = C_{a_k} X_{a_k} \overline{C}_{a_k} R_y(-2 \vartheta_{k-1})_{a_0} U_{k-1}, \quad k = 1, \ldots, d,
-\]
-with $U_0 = \mathbb{1}$.
-
-\end{theorem}
-
-theorem에서 제시된 형태로 정의되어 있는 함수 \(f_k\)에 대하여 이전까지의 과정에 이어 \(f(z)\)값을 얻을 수 있음을 말하고 있다.
-2단계의 회로는 \(U_d\)이다. 1단계 과정의 전체 회로를 \(S_VX_q^{\otimes n}\)로 나타내었기 때문에, 표기의 통일성을 위해 전체 회로 그림에서 \(U_d\) 대신 \(S_U\)라는 표기를 사용한다. 둘은 같은 것을 지칭한다.
-간단한 증명의 흐름은 다음과 같다.
-
-\begin{pf}(sketch)
-
-    이부분 그냥 식조작이라 뭐라써야될질 모르겠음ㅠ 좀더 고민해봄
-\end{pf}
-
-\begin{corollary}
-
-Let $f$ be a real analytic function over a compact interval $I$. If $f_d$ is the top member of the family of polynomials defined in \textbf{Theorem 2}, then the angles $\vartheta_k, k = 0, \ldots, d-1$ can be chosen in such a way that $f_d(z)$ coincides with the $d$-order Taylor expansion of $f(z)$ around $z = 0$, up to a constant factor $C_d$ which depends on $f$ and on the order $d$ as
-\[
-C_d = a_k \prod_{j=k}^{d-1} (\cos \vartheta_j)^{-1},
-\]
-where $a_k = \frac{1}{k!} f^{(k)}(0)$ is the first non-zero coefficient of the expansion and $f^{(k)}$ the $k$-order derivative of $f$.
-
-\end{corollary}
-
-이 corollary는 위의 theorem에서 말하는 형태로 임의의 analytic function의 d차 taylor expansion을 표현할 수 있음을 시사한다.
-이때 analytic function은 테일러 급수가 f로 수렴하는 함수를, 즉 taylor expansion을 통해 \(f(z)\)값을 근사적으로 구할 수 있는 함수를 말한다.
-예를 들어 sigmoid 함수는 analytic이므로, 제시된 방법론에서 Activation function으로 사용할 수 있을 것이다.
-증명에서는 \(\theta_k\)의 값을 결정하는 방법이 서술되어 있다. 우리는 코드를 통해 그 방법이 모든 analytic function에서 유효함을 확인할 수 있었다.
-Theorem과 Corollary를 종합하면, 우리는 Activation function이 analytic일 때, \(f(z)\)값을 taylor expansion을 통해 근사적으로 구할 수 있다는 사실을 알 수 있다.
-
-여기까지가 논문에서 제시한 \(f(\vec{w}\cdot\vec{x}+b)\) 계산의 양자 알고리즘 구현 방법이다.
-우리는 이 방법론에 대한 수학적 증명 과정을 상세히 이해하였고, 그것의 유효성을 각 theorem을 코드로 구현해 봄으로서 다시 한 번 확인하였다. 해당 코드는 이곳에서 확인해 봃 수 있다.
-
-\section{Implementation of Multiperceptron with Superb Efficiency}
-Some possible future works. (maybe 0.5\thru3 pages?)
