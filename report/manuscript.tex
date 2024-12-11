@@ -311,24 +311,24 @@
 \setcounter{tocdepth}{2} % Table of Contents, 목차인 듯
 \tableofcontents
 
-\addtocontents{lof}{\protect\addcontentsline{toc}{chapter}{List of Figures}}
-\listoffigures
+% \addtocontents{lof}{\protect\addcontentsline{toc}{chapter}{List of Figures}}
+% \listoffigures
 
-\addtocontents{lot}{\protect\addcontentsline{toc}{chapter}{List of Tables}}
-\listoftables
+% \addtocontents{lot}{\protect\addcontentsline{toc}{chapter}{List of Tables}}
+% \listoftables
 }
 
 
-\chapter*{List of Acronyms}\addcontentsline{toc}{chapter}{List of Acronyms}
-\noindent\textbf{AF}: Activation Function
-\\
-\noindent\textbf{ML}: Machine Learning
-\\
-\noindent\textbf{NISQ}: Noisy Intermediate-Scale Quantum
-\\
-\noindent\textbf{PQC}: Parameterized Quantum Circuit
-\\
-\noindent\textbf{QML}: Quantum Machine Learning
+% \chapter*{List of Acronyms}\addcontentsline{toc}{chapter}{List of Acronyms}
+% \noindent\textbf{AF}: Activation Function
+% \\
+% \noindent\textbf{ML}: Machine Learning
+% \\
+% \noindent\textbf{NISQ}: Noisy Intermediate-Scale Quantum
+% \\
+% \noindent\textbf{PQC}: Parameterized Quantum Circuit
+% \\
+% \noindent\textbf{QML}: Quantum Machine Learning
 % \\
 % \noindent\textbf{NIR}: Near-InfraRed
 % \\
@@ -347,7 +347,6 @@
 \clearpage
 
 \pagenumbering{arabic}
-\part{Backgrounds}\label{part-bkg}
 
 % ------------ Introduction ------------ %
 \chapter{Introduction}\label{c:intro}
@@ -364,8 +363,6 @@
 % \chapquote{He integrates empirically.}{Albert Einstein, {\footnotesize after saying ``God does not care about our mathematical difficulties.''}}
 \input{chaps/ch3-ResearchFlow} % 3장 tex 파일
 
-% ------------ Part 2 표지 ------------ %
-\part{Research and Results}\label{part-conclusion}
 
 % ------------ Chapter 4 시작 ------------ %
 \chapter{Research}\label{c:researsh}
@@ -412,12 +409,6 @@
 
 %\chapter*{Acknowledgement}\\
 %\twocolumn
-\strangechapter{Ack}{Acknowledgement}\addcontentsline{toc}{chapter}{Acknowledgement}
-\small
-\footnotesize
-\setstretch{1.1}
-\setlength{\parskip}{0.3em}
-\input{chaps/acknowledgement}
 
 
 
