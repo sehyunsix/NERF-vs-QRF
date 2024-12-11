@@ -1,0 +1,923 @@
+PWD /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서
+INPUT /usr/local/texlive/2024/texmf.cnf
+INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.tex
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.log
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mdwtools/footnote.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mdwtools/footnote.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/cjk-ko/kotex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/cjk-ko/kotex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/kotex.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/kotex.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/kotex.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/plain/kotex-plain/kotexutf-core.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/hfontspec.default
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/lucenc.dfu
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/lucenc.dfu
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kotex-utf/lucenc.dfu
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/makecell/makecell.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/makecell/makecell.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/rotating.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/rotating.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/stix.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/stix.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/oberdiek/twoopt.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/oberdiek/twoopt.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/t1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/t1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/t1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.pdf
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/title.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbd5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbcc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbad.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbac.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbbc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbba.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbd5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbd6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbbe.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbad.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbac.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbbd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc8.tfm
+INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmba.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmac.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmad.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmcd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmce.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmae.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb0.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbe.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc0.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb1.tfm
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.toc
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.toc
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.toc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixscr.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixscr.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixscr.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixex.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixex.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixex.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixfrak.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixfrak.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixfrak.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixbb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixbb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixbb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixcal.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixcal.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixcal.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixsf.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixsf.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls1stixsf.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ls2stixtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.toc
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lof
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lof
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lof
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmad.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc8.tfm
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lof
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lot
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lot
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lot
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbe.tfm
+OUTPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.lot
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch-intro.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmce.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmcc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc0.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmae.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmac.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb0.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd0.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmba.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmaf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmcf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmcd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbbc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-italic.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoba.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc0.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoae.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoac.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoce.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobe.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoad.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob6.tfm
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch2-figs.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch3-ResearchFlow.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-italic.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-italic.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob0.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod0.tfm
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/Not Gates.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/bloch_sphere.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/RXRYRZ.png
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmobc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocd.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmoc7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob4.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmob8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmod7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmca.tfm
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/QuantumGateSymbols.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/BellStateCircuit.png
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ts1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ts1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix/ts1stix.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/ts1-stixgeneral.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbba.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix/stix-ts1.enc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbd3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbc1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbd2.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbd1.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbcf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbb5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbad.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjbd5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt-bold.tfm
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_2d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_2d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_2d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_2d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_1d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_1d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_1d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/figs/pqc_1d.png
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch4-Research.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmbf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmocf.tfm
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/ch5-Conclusion.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.bbl
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.bbl
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.bbl
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/chaps/acknowledgement.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathscr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathex.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathrm-bold.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathfrak.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathbbit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathcal.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsf.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmd6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmae.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmb3.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.aux
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /Users/taeberie/Desktop/capstone/NERF-vs-QRF/수학창의연구 결과보고서/manuscript.out
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-BoldItalic.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbac.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbad.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb1.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb3.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbba.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbc.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbd.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbe.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc1.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbcc.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbcf.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd1.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd3.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmaf.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbf.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc3.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc4.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmca.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd4.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd4.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathbb.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathfrak.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathit-bold.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathrm-bold.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb

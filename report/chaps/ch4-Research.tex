@@ -1,37 +1,38 @@
 % \section{Quantum Perceptron with Quantum Activation Function}
 우리는 양자 머신러닝의 큰 진입장벽 중 하나가 비선형성의 구현이라는 것을 이전 장에서 발견했다.
-양자 알고리즘의 각 step, 즉 각 게이트를 통과하는 프로세스 하나하나는 모두 각 게이트에 대응되는 행렬을 벡터에 곱해 주는 작업으로 환원된다. 
-행렬곱은 본질적으로 선형 연산이므로, 결국 양자 알고리즘으로 완전한 비선형성의 구현이 불가능하다는 결론에 이르게 된다.
-인공지능, 그중에서도 MLP(Multi Layer Perceptron)는 행렬 연산의 반복으로 구성되는데, 행렬 연산의 차원을 높이기 위해 각 Layer 사이에 비선형 연산을 추가하는 것이 필수적이라는 사실을 생각하자.
+양자 알고리즘의 각 step, 즉 각 게이트를 통과하는 프로세스 하나하나는 본질적으로 각 게이트에 대응되는 행렬을 벡터에 곱해 주는 작업이다.
+행렬곱은 선형 연산이다. 즉 양자 알고리즘은 선형 연산이다. 결국 양자 알고리즘으로 완전한 비선형성의 구현이 불가능하다는 결론에 이르게 된다. 이것은 우리의 과제에 있어 큰 장벽이다.
+인공지능, 그중에서도 MLP(Multi Layer Perceptron)는 행렬 연산의 반복으로 구성되는데, 행렬 연산의 차원을 높이기 위해 각 Layer 사이에 비선형 연산을 추가하는 것이 필수적이기 때문이다.
 해당 문제의 해결이 선행되기 전까지 MLP를 양자 알고리즘만으로 완전히 구현하는 것은 불가능하다는 것을 어렵지 않게 떠올릴 수 있다.
-그렇기에 고전 알고리즘과 양자 알고리즘을 적절히 섞어 사용하는 Hybrid Algorithm이라는 시도가 있다. 하지만 양자 알고리즘만으로 머신 러닝의 과정을 모두 구현하겠다는 시도는 분명 학술적으로 그 가치가 충분하다.
+그렇기에 고전 알고리즘과 양자 알고리즘을 적절히 섞어 사용하는 Hybrid Algorithm이라는 대안이 존재하나, 양자 알고리즘만으로 머신 러닝의 과정을 모두 구현하겠다는 시도는 분명 학술적으로 그 가치가 충분하다.
 
-우리는 상기한 문제의 해결 방법을 제시한 논문을 발견하였다.
+우리는 상기한 비선형성 구현 문제의 해결 방법 하나를 제시한 논문을 발견하였다.
 해당 논문에는 단층 퍼셉트론의 연산 프로세스를 양자 회로로 구현하는 방법이 제시되어 있다.
-단층 퍼셉트론은 크게 \(N_{in} \times 1\) 크기의 input vector \(\vec{x}\), 
-\(\vec{x}\)의 각 성분과 곱해지게 될 가중치 값이 저장되어 있는 \(N_{in} \times 1\) 크기의 weight vector \(\vec{w}\), 
+단층 퍼셉트론은 크게 \(N_{in} \times 1\) 크기의 input vector \(\vec{x}\),
+\(\vec{x}\)의 각 성분과 곱해지게 될 가중치 값이 저장되어 있는 \(N_{in} \times 1\) 크기의 weight vector \(\vec{w}\),
 스칼라 값인 bias \(b\), 그리고 비선형성을 위한 활성화 함수(Activation Function, AF) \(f\)로 구성되어,
 \(\vec{x}\)가 input으로 주어지면 \(f(\vec{w}\cdot\vec{x}+b)\)의 값을 내놓는다.
 해당 논문은 \(\vec{w}\cdot\vec{x}+b\)의 계산뿐만 아니라, \(f(\vec{w}\cdot\vec{x}+b)\)의 계산 또한 양자 알고리즘으로 구현한다.
+\(f\) 함수 자체는 사용할 수 없으나, 양자 회로를 잘 구성하여 \(f(\vec{w}\cdot\vec{x}+b)\)의 값을 근사적으로 구하는 방법론을 제시한 것이다.
 
-우리는 해당 논문을 이후 연구의 중심 축으로 결정하였다.
-우리는 해당 논문을 이해하고, 수학적 과정을 코드로 구현하여 시각적으로 확인해 보았다.
-또한 논문에서는 제대로 논의하고 있지 않은 부분인 MLP의 양자적 구현을 위해 고민하던 중, 우리는 매우 효율적인 Multiperceptron의 양자 알고리즘을 구현하는 데에 성공하였고, 이를 코드로 구현하여 잘 작동함을 확인하였다.
+우리는 해당 논문을 이번 연구의 중심 축으로 결정하였다.
+우리는 해당 논문을 이해하고, 수학적 과정을 코드로 구현하여 직접 확인해 보았다.
+또한 논문에서는 제대로 논의하고 있지 않은 부분인 MLP의 양자적 구현을 고민하던 중, 우리는 매우 효율적인 Multiperceptron의 양자 알고리즘을 구현하는 데에 성공하였고, 이를 코드로 구현하여 잘 작동함을 확인하였다.
 
 이번 장은 해당 논문에 대한 우리의 심도 깊은 이해와 구현, 그리고 우리가 발전시킨 부분에 대해 서술되어 있다.
 4.1장에서는 \(f(\vec{w}\cdot\vec{x}+b)\)를 양자 알고리즘으로 구현하는 과정을 따라가고, 그 과정을 직접 코드로 구현해 본 과정을 공유한다.
-이후 4.2장에서는 우리의 독창적이고 효율적인 Multiperceptron의 구현 과정을 설명한다.
+이후 4.2장에서는 우리의 독창적이고 효율적인 Multiperceptron의 구현 아이디어에 대해 설명한다.
 
-\section{Impartion Nonlinearity for Quantum Perceptron}
+\section{Imparting Nonlinearity for Quantum Perceptron}
 
 \subsection{Summarization of the Notations}
 
-이번 Section은 앞으로의 내용을 내용을 잘 이해하기 위해, 기호들이나 용어의 의미를 정리하기 위한 장이다.
+이번 Section은 앞으로의 내용을 잘 이해하기 위해 기호들이나 용어의 의미를 미리 정리하고 가기 위한 장이다.
 
-앞으로 qubit의 개수를 표기하는 영어 소문자에 대해, 대문자 표기는 그 qubit에 대응되는 Hilbert Space의 차원을 나타낸다.
+앞으로 qubit의 개수를 표기하는 영어 소문자에 대해, 대문자 표기는 그 qubit에 대응되는 힐베르트 공간의 차원을 나타낸다.
 즉 qubit 개수가 n인 경우, N = \(2^n\)이다.
 
-임의의 1개 qubit과 대응되는 2차원 Hilbert Space \(\mathcal{H}\)에 대하여, register q의 n개의 qubit과 대응되는 \(2^n\)차원 힐베르트 공간을 \(\mathcal{H}_q^{\otimes n} \equiv \mathcal{H}_{q_{n-1}} \otimes \mathcal{H}_{q_{n-2}} \otimes \dots \otimes \mathcal{H}_{q_{0}}\) 라고 한다.
+임의의 1개 qubit과 대응되는 2차원 힐베르트 공간 \(\mathcal{H}\)에 대하여, register q의 n개의 qubit과 대응되는 \(2^n\)차원 힐베르트 공간을 \(\mathcal{H}_q^{\otimes n} \equiv \mathcal{H}_{q_{n-1}} \otimes \mathcal{H}_{q_{n-2}} \otimes \dots \otimes \mathcal{H}_{q_{0}}\) 라고 한다.
 이때 register는 qubit이 저장되어 있는 공간의 이름을 말한다. 간단하게 이해하면 qubit의 집합이라고 생각하면 된다.
 \(\mathcal{H}\)의 computational basis가 \(\{ \ket{0}, \ket{1} \}\)임을 일전에 이야기했다. 그렇기에 \(\mathcal{H}_q^{\otimes n}\)의 computational basis는 \(\{ \ket{s_{n-1}s_{n-2}\dots s_0} : s_k \in \{0,1\}, k = 0,1,\dots , n-1\}\)의 이진수 형태로 나타내어지고, 각 원소는 이를 십진수 형태로 변환한 \(\{ \ket{i}, i \in \{0,1,\dots,2^n-1\} \} \)의 형태로 나타낼 수도 있다.
 예컨대, \(\ket{N-1} \equiv \ket{2^n-1} \equiv \ket{111\dots 1} \equiv \ket{1}^{\otimes n}\)가 된다.
@@ -54,10 +55,25 @@ n개의 qubit으로 구성된 register q, d개의 qubit으로 구성된 register
 단일 퍼셉트론의 구현을 위해 n+d개의 qubit이 필요하다. n개의 qubit은 q register에, d개의 qubit은 a register에 들어 있다. input vector \(\vec{x}\)의 크기는 \(N_{in}\)으로 쓴다.
 우선은 각 input값을 scaling하여 각 성분을 -1과 1 사이의 값으로 고정시키는 것으로 시작한다.
 즉, \(\vec{w} \in [-1,1]^{N_{in}}, \vec{x} \in [-1,1]^{N_{in}}, b \in [-1,1]\)이 주어졌을 때, \(\vec{w}\cdot\vec{x}+b\)의 값을 계산하는 양자 회로의 구성 과정을 따라가 보겠다.
+이 장과 그 다음 장은 본질적으로 우리의 논문 탐독 과정을 따라가기 위한 것이기에, 논문의 주요 Theorem을 직접 인용하고, 그 의미와 증명의 흐름을 간단하게 서술하는 것으로 구성하였다. 논문 원문에는 증명 전체가 서술되어 있으므로,
+자세한 이해를 원한다면 Reference를 참고할 수 있다.
+
+%\begin{lemma}
+%    \(\vec{x}, \vec{w}, b\) 가 주어졌을 때, \(\displaystyle \bra{N-1}U_z(\vec{x},\vec{w},b)\ket{0} = \frac{\vec{x}\cdot \vec{w}+b}{N_{in}+1} \equiv z\) 를 만족하는 Unitary transformation \(U_z(\vec{x},\vec{w},b)\) 의 역할을 하는 양자 회로를 만들 수 있다.
+%\end{lemma}
 
 \begin{lemma}
-    \(\vec{x}, \vec{w}, b\) 가 주어졌을 때, \(\displaystyle \bra{N-1}U_z(\vec{x},\vec{w},b)\ket{0} = \frac{\vec{x}\cdot \vec{w}+b}{N_{in}+1} \equiv z\) 를 만족하는 Unitary transformation \(U_z(\vec{x},\vec{w},b)\) 의 역할을 하는 양자 회로를 만들 수 있다.
+
+    Given two vectors $\vec{x}, \vec{w} \in [-1, 1]^{N_{\text{in}}}$ and a number $b \in [-1, 1]$, and given a register of $n$ qubits such that $N = 2^n \geq N_{\text{in}} + 3$, then there exists a quantum circuit realizing a unitary transformation $U_z(\vec{x}, \vec{w}, b)$ such that
+\[
+\langle N - 1 | U_z(\vec{x}, \vec{w}, b) | 0 \rangle = \frac{\vec{w} \cdot \vec{x} + b}{N_{\text{in}} + 1} \equiv z
+\]
+where $\ket{0} \equiv \ket{0}^{\otimes n}$ and $\ket{N-1} \equiv \ket{1}^{\otimes n}$.
+
 \end{lemma}
+
+우선, \(\vec{w}\cdot \vec{x} + b\)의 구현을 위한 양자 회로의 구성 요소 중 필수적인, \(U_z(\vec{x},\vec{w},b)\) 부분의 기능을 구현하기 위한 Lemma가 제시된다.
+대략적인 증명의 흐름은 다음과 같다.
 
 \begin{pf}(sketch)
 
@@ -76,36 +92,64 @@ Lemma에서 \(\ket{0}, \ket{N-1}\)은 각각 \(\ket{0}^{\otimes n}, \ket{1}^{\ot
 이때 \(\bra{\psi_{w,b}}\ket{\psi_x} = \bra{\psi_{w,b}}U_{w,b}^{\dag} U_{w,b}\ket{\psi_x} = \bra{N-1}U_{w,b}U_x\ket{0}^{\otimes n}\)이 성립하므로, Lemma에서 말하는 \(U_z(\vec{x},\vec{w},b)\)가 \(U_{w,b}U_x = X^{\otimes n}\mathcal{U}^\dag (\vec{v}_{w,b})\mathcal{U}(\vec{v}_x)\)임을 확인할 수 있고, 이것으로 증명이 완료된다.
 \end{pf}
 
+우리가 원하는 양자 회로의 주요 구성 요소 중 하나가 완성되었으므로, 이제 전체 기능을 담당하는 부분을 만들 차례이다. 그것이 가능하다는 것을 다음 Theorem이 말하고 있다.
+
 \begin{theorem}
-    \(\vec{x}, \vec{w},b,z, N\) 에 대하여, 초기에 \(\ket{0}, \ket{0}_q\)로 초기화되어 있는 두 state vector를 (n+d) qubit으로 구성된\(\ket{\psi_z^d}_q = \ket{\psi_z^d}_\perp + \frac{1}{2^{d/2}}\ket{z}_a^{\otimes d}\ket{N-1}_q \in \mathcal{H}_a^{\otimes d} \otimes \mathcal{H}_q^{\otimes n} \)로 변환하는 양자 회로를 구성할 수 있다.
-    이때 \(\ket{\psi_z^d}_q\)는 \(\ket{N-1} \bra{N-1}_q\ket{\psi_z^d}_\perp = 0, \ket{z} \equiv \ket{0}+z\ket{1}\)를 만족한다.
-    우리가 원하는 양자 회로는 \(S_VX_q^{\otimes n}\)으로, \(V_m = C_{a_m}U_z(\vec{x},\vec{w},b)_qC_{a_m}X_q^{\otimes n}C_q^nH_{a_m}, S_V=V_{d-1}\dots V_1V_0\)을 각각 의미한다.
+
+Let $z$ be the real value in the interval $[-1, 1]$ assumed by $\frac{\vec{w} \cdot \vec{x} + b}{N_{\text{in}} + 1}$, where $\vec{x}, \vec{w} \in [-1, 1]^{N_{\text{in}}}$ and $b \in [-1, 1]$. Let $q$ and $a$ be two registers of $n$ and $d$ qubits respectively, with $N = 2^n \geq N_{\text{in}} + 3$. Then there exists a quantum circuit which transforms the two registers from the initial state $\ket{0}_a \ket{0}_q$ to a $(n + d)$-qubit entangled state $\ket{\psi_z^d}$ of the form
+\[
+\ket{\psi_z^d} = \ket{\psi_z^d}_\perp + \frac{1}{2^{d/2}} \ket{z}_a^{\otimes d} \ket{N - 1}_q
+\]
+where
+\[
+\braket{N - 1 | \psi_z^d}_q = 0
+\]
+and
+\[
+\ket{z} \equiv \ket{0} + z \ket{1}.
+\]
+
+The circuit is expressed by $S_V X^{\otimes n}_q$ (Fig. 3a) where $X$ is the quantum NOT gate and
+\[
+S_V = V_{d-1} \cdots V_0
+\]
+with
+\[
+V_m = C_a^m U_z(\vec{x}, \vec{w}, b)_q C_a^m X_q^{\otimes n} C_q^n H_a^m, \quad m = 0, 1, \ldots, d - 1.
+\]
 \end{theorem}
+
+이 theorem의 존재 가치는 두 register에 동시에 영향을 끼치는 어떠한 회로를 가지고 우리가 원하는 state \(\ket{\psi_z^d}\)를 얻어낼 수 있음을 보이는 것이다.
+theorem에서 나타나는 \(\ket{\psi_z^m}_\perp\)의 경우
+\(\ket{\psi_z^m} \in \mathcal{H}_{a_{m-1}} \otimes \mathcal{H}_{a_{m-2}} \otimes \dots \otimes \mathcal{H}_{a_{0}} \otimes \mathcal{H}_{a}^{\otimes n}\)에 대하여
+\(\ket{N-1}\bra{N-1}_q\ket{\psi_z^m}_\perp = 0\)을 만족하도록 \(\ket{\psi_z^m}\)을 \(\ket{\psi_z^m}_\perp + \ket{\psi_z^m}_{||}\)로 분리하는 것으로 얻어진다.
+이떄 \(\ket{N-1}\bra{N-1}_q\)은 projection 변환으로, Gram-Schmidt Process에 의해 \(\ket{\psi_z^m}_\perp\)의 존재성이 증명되어 있다.
+증명의 대략적인 흐름은 다음과 같다.
 
 \begin{pf}(sketch)
 
-    이 theorem의 존재 가치는 두 register에 동시에 영향을 끼치는 어떠한 회로를 가지고 우리가 원하는 state \(\ket{\psi_z^d}\)를 얻어낼 수 있음을 보이는 것이다.
-    \(\ket{\psi_z^m} \in \mathcal{H}_{a_{m-1}} \otimes \mathcal{H}_{a_{m-2}} \otimes \dots \otimes \mathcal{H}_{a_{0}} \otimes \mathcal{H}_{a}^{\otimes n}\)이라 하자.
-    projection 변환 \(\ket{N-1}\bra{N-1}_q\)에 대하여 \(\ket{N-1}\bra{N-1}_q\ket{\psi_z^m}_\perp = 0\)을 만족하도록 \(\ket{\psi_z^m}\)을 \(\ket{\psi_z^m}_\perp + \ket{\psi_z^m}_{||}\)로 분리할 수 있다.
     \(V_m = C_{a_m}U_z(\vec{x},\vec{w},b)_qC_{a_m}X_q^{\otimes n}C_q^nH_{a_m}\)으로 잡을 수 있다. 여기서 \(a_m\)에 의해 작동 여부가 결정되는 \(U_z(\vec{x},\vec{w},b)_q\)는 위의 Lemma에서 결정된 그것이다.
     이제, \(\ket{\psi_z^m}_{||} = \frac{1}{2^{d/2}}\ket{z}_a^{\otimes d}\ket{N-1}_q\)라는 사실을 생각하고, \(V_m\)을 state \(\ket{0}_{a_m}\ket{\psi_z^m} = \ket{0}_{a_m}\ket{\psi_z^m}_\perp + \frac{1}{\sqrt(2)}(\ket{0}_{a_m}+\ket{1}_{a_m})\ket{\psi_z^m}_{||}\)에 적용하여
     \(\ket{\psi_z^{m+1}}\)을 얻게 된다. 이제, 이 과정을 각 qubit에 적용하는 것을 반복하는 연산 \(S_V = V_{d-1}\dots V_1V_0\)을 state \(\ket{0}_a^{\otimes d} \ket{N-1}_q\)에 적용하면, 결과물로 \(\ket{\psi_z^d}\)가 나온다.
 
 \end{pf}
 
+마지막으로 위의 Theorem에서 얻은 state \(\ket{\psi_z^d}\)를 measure하지 않고도 z의 값을 사용할 수 있음을 보여야 한다.
+그것을 위해 아래의 Corollary가 제시된다. 그 내용과 간단한 증명의 흐름은 아래와 같다.
 
 \begin{corollary}
-    \(\ket{\psi_z^d}\)에는 \(z^k, (k = 0,1,\dots,d)\) 의 값들이 probability amplitude로 저장되어 있다.
+    The state $\ket{\psi_z^d}$ stores as probability amplitudes all the powers $z^k$, for $k = 0, 1, \ldots, d$, up to a trivial factor. Indeed equation in Theorem above implies
+\[
+q \bra{N - 1}_a \bra{2^k - 1} \ket{\psi_z^d} = 2^{-d/2} z^k, \quad k = 0, 1, \ldots, d
+\]
 \end{corollary}
 
 \begin{pf}(sketch)
-    이상의 Corollary는 위의 Theorem에서 얻은 state \(\ket{\psi_z^d}\)를 measure하지 않고도 z의 값을 사용할 수 있음을 시사한다.
     \(\ket{\psi_z^m}_\perp + \ket{\psi_z^m}_{||}\)라는 사실을 활용하면
     Theorem 1의 식 \(\ket{\psi_z^d}_q = \ket{\psi_z^d}_\perp + \frac{1}{2^{d/2}}\ket{z}_a^{\otimes d}\ket{N-1}_q\)에서 \(_q\bra{N-1}_a\bra{2^k-1}\ket{\psi_z^d} = 2^{-d/2}z^k\) 임을 유도할 수 있다.
 \end{pf}
 
-이상으로 첫 번째 단계에 대한 구현 및 증명이 완료되었다. 정리하자면, 논문에서는 \(\ket{\psi_z^d}\)를 얻을 수 있는 양자 회로 \(S_VX_q^{\otimes n}\)의 구조와 그 존재성, 유효성을 수학적으로 증명하였다.
-이때 \(\ket{\psi_z^d}\)에는 우리가 원하는 값인 z가 측정의 과정을 거치지 않고도, 즉 양자 회로를 종료할 필요 없이 다음 단계에서 그 값을 활용할 수 있는 형태로 저장되어 있다.
+이상으로 첫 번째 단계에 대한 구현과 그 유효성에 대한 증명이 완료되었다.
 
 \subsection{Implementation of Activation function}
 
@@ -114,7 +158,7 @@ Lemma에서 \(\ket{0}, \ket{N-1}\)은 각각 \(\ket{0}^{\otimes n}, \ket{1}^{\ot
 우선은 양자 회로로 쉽게 구현할 수 있는 형태의 함수를 결정하고,
 어떠한 형태의 함수 f에 대하여, z를 input으로 하면 f(z)의 값을 내놓는 양자 회로를 제시하는 것이다.
 그리고 임의의 d차 테일러 전개가 존재하는 함수(analytic 함수)에 대하여, 그 함수의 d차 테일러 전개 \(f_d\)를 일전에 결정한 형태로 작성할 수 있음을 보인다.
-a register의 차원 수와 그 양자 회로가 내놓는 f의 taylor expansion의 차수가 동일하다는 사실에 주목하자.
+a register의 qubit 수와 그 양자 회로가 내놓는 f의 taylor expansion의 차수가 동일하다는 사실에 주목하자.
 이 과정을 통해 양자 회로로 임의의 analytic 함수의 d차 taylor expansion \(f_d\)에 대하여, \(f_d(z)\)의 값을 양자 회로를 통해 계산할 수 있음을 보이는 방식이다.
 각 과정은 이하의 theroem과 corollary로 선언되고, 그 유효성이 증명되어 있다.
 
@@ -124,9 +168,9 @@ a register의 차원 수와 그 양자 회로가 내놓는 f의 taylor expansion
 \end{theorem}
 
 \begin{pf}(sketch)
-    
+
     2단계의 회로는 \(U_d\)이다. 1단계 과정의 전체 회로를 \(S_VX_q^{\otimes n}\)로 나타내었기 때문에, 표기의 통일성을 위해 전체 회로 그림에서 \(U_d\) 대신 \(S_U\)라는 표기를 사용한다. 둘은 같은 것을 지칭한다.
-    
+
 
 \end{pf}
 
@@ -142,7 +186,7 @@ f의 구현을 위해 \(\theta_k\)를 계산하고, 이를 양자 회로에 제�
 
 지금까지 살펴본 Quantum Perceptron을 제안한 문헌에서는, Quantum Perceptron의 구현이 "임의의 layer 당 neuron 수"와 "임의의 layer 수"에 대한 Quantum-MLP의 구현 가능을 의미한다고 주장한다. 그러나, 이것이 당연한 것은 아니다. 먼저 하나의 layer에 여러 perceptron이 존재하는 경우, 현재까지 구현된 회로를 perceptron의 개수만큼 복사하여 사용하는 것 외에는 특별히 떠오르는 방안이 없다. 심지어 이 방법은 perceptron의 개수가 증가함에 따라 과하게 qubit이 늘어난다는 단점이 있다. 또한, multi-perceptron의 구현 방법이 명확하지 않으므로 layer가 반복될 때의 양자적인 표현도 당연하지 않다.
 
-따라서, 비선형성을 양자적으로 표현한 Quantum Perceptron을 실제로 사용하기 위해서는, 효율적인 multi-perceptron의 구현을 꾀하는 것이 필수적으로 요구된다. 이에 하나의 layer 당 $n$개의 perceptron을 사용하는 multi-percepton을 구현하기 위해 추가로 $\lceil {\log_2(n)} \rceil$만큼의 qubit을 필요로 하는 획기적인 방법을 고안하였고, 이를 소개한다. 
+따라서, 비선형성을 양자적으로 표현한 Quantum Perceptron을 실제로 사용하기 위해서는, 효율적인 multi-perceptron의 구현을 꾀하는 것이 필수적으로 요구된다. 이에 하나의 layer 당 $n$개의 perceptron을 사용하는 multi-percepton을 구현하기 위해 추가로 $\lceil {\log_2(n)} \rceil$만큼의 qubit을 필요로 하는 획기적인 방법을 고안하였고, 이를 소개한다.
 % \subsection{Idea}
 
 핵심 아이디어는, 추가 qubit을 사용해서 여러 weight($\mathbf{w}_1, \mathbf{w}_2, \cdots$)에 대한 state \( \ket{\psi}_{f_d(z_1)}, \ket{\psi}_{f_d(z_2)}, \cdots \)가 중첩된 state를 생성하는 것이다.
@@ -156,12 +200,12 @@ f의 구현을 위해 \(\theta_k\)를 계산하고, 이를 양자 회로에 제�
 % \]
 Given Input vector \( \vec{x} \in [-1, 1]^{N_{in}} \), weight matrix \( W:= \begin{pmatrix}
     \vec{w}_0 \\ \vec{w}_1 \\ \vdots \\ \vec{w}_{N_w - 1}
-\end{pmatrix} \) , bias vector \( \vec{b} \in [-1, 1]^{N_w} \), and given q-registers s, q with p, n qubit respectively, such that \( n = \left\lceil \log_2(N_{in} + 3) \right\rceil, p = \left\lceil \log_2(N_w) \right\rceil \), then, there exists a quantum circuit \( U_{\mathbf z}(\vec{x}, W, \vec{b}) \) such that 
-% \begin{gather*} 
+\end{pmatrix} \) , bias vector \( \vec{b} \in [-1, 1]^{N_w} \), and given q-registers s, q with p, n qubit respectively, such that \( n = \left\lceil \log_2(N_{in} + 3) \right\rceil, p = \left\lceil \log_2(N_w) \right\rceil \), then, there exists a quantum circuit \( U_{\mathbf z}(\vec{x}, W, \vec{b}) \) such that
+% \begin{gather*}
 %     \vspace{-1.0em} % 두 수식 간 간격 조정 (값을 조정 가능)
 %     \text{Given Input vector } \vec{x} \in [-1, 1]^{N_{in}} \text{, weight matrix } W:= \begin{pmatrix}
 %         \vec{w}_0 \\ \vec{w}_1 \\ \vdots \\ \vec{w}_{N_w - 1}
-%     \end{pmatrix}\text{, bias vector } \vec{b} \in [-1, 1]^{N_w,} 
+%     \end{pmatrix}\text{, bias vector } \vec{b} \in [-1, 1]^{N_w,}
 %     \\ \vspace{-0.5em}
 %     \text{and given q-registers s, q with p, n qubit respectively, such that } n = \left\lceil \log_2(N_{in} + 3) \right\rceil, p = \left\lceil \log_2(N_w) \right\rceil ,
 %     \\ \vspace{-0.5em}
@@ -179,7 +223,7 @@ Given Input vector \( \vec{x} \in [-1, 1]^{N_{in}} \), weight matrix \( W:= \beg
 
 Lemma 4.2.1은, 보유한 각 \(\vec{w}_i\)에 대한 \(\displaystyle {z}_i\) 값 정보를 담는 모든 \(\ket{\psi_{z_i}}\) state가 동일한 확률 \(\displaystyle {1 \over {2^{p/2}}}\)로 중첩되어 있는 state \(\ket{\psi_{\mathbf z}}\)를 만드는 Unitary가 존재함을 의미한다. 증명은 다음과 같다.
 
-\begin{pf} 
+\begin{pf}
     Lemma 4.1.1에 의해, 주어진 weight vector $\vec{w} \in \mathbb{R}^{N_{in}}$와 bias 값 b, \(n = \left\lceil \log_2{N_{in}} + 3 \right\rceil\)개의 qubit에 대해 \(\displaystyle \bra{N-1}U_z(\vec{x},\vec{w},b)\ket{0} = \frac{\vec{x}\cdot \vec{w}+b}{N_{in}+1} \equiv z\)를 만족하는 Unitary transformation \(U_{\mathbf z}(\vec{x},\vec{w},b)\)가 존재한다. 따라서, $n$개의 qubit을 갖는 $q$ register에서 하나의 weight vector와 bias b에 대해 동일한 작업이 가능하다.
 
     $s$ 레지스터는 weight의 개수 \(N_w\)에 대해, \(p = \left\lceil \log_2(N_w) \right\rceil\)만큼의 qubit을 보유하며, 즉 basis state로 \(\ket{0}, \cdots, \ket{P-1}\)를 가진다.
@@ -192,7 +236,7 @@ Lemma 4.2.1은, 보유한 각 \(\vec{w}_i\)에 대한 \(\displaystyle {z}_i\) �
 
     이 회로는 먼저 \(s\) 레지스터의 모든 qubit에 Hadamard 연산을 작동시켜 모든 basis state이 동일한 확률로 중첩된 state \(\displaystyle \sum_{i=0}^{P-1} {1\over {2^{p/2}}}\ket{i}\)를 생성한다. 이렇게 생성된 state의 각 basis state는 \(C_{s}^{ctrl:k}U_{z_k}(\vec{x}, \vec{w}_k, b_k)\)에 의해 basis의 이진 표현에 해당하는 $\ket{\psi_k}$와 결부되어, 결과적으로는 다음과 같은 state를 만들게 된다:
     \[
-        \ket{\psi_{\mathbf{z}}} := \sum_{i=0}^{P-1} {1\over {2^{p/2}}} \ket{\psi_{z_i}}_q \ket{i}_s 
+        \ket{\psi_{\mathbf{z}}} := \sum_{i=0}^{P-1} {1\over {2^{p/2}}} \ket{\psi_{z_i}}_q \ket{i}_s
     \]
     where \(\ket{\psi_{z_i}}_q = \ket{0}_q \text{ for } i \ge N_w\) \quad $\square$
 \end{pf}
@@ -200,7 +244,7 @@ Lemma 4.2.1은, 보유한 각 \(\vec{w}_i\)에 대한 \(\displaystyle {z}_i\) �
 Lemma 4.2.1에 의해, 4.1절에서와 같은 방식으로 중첩된 state \(\ket{\psi_{\mathbf z}}\)를 사용할 수 있다. 이는 Thm 4.1.1에도 동일하게 적용된다. 다음 Thm을 살펴보자.
 
 \begin{theorem}
-    Let \(z_i := \left( \vec{w}_i \cdot \vec{x} + b_i \right) / \left( N_{in} + 1 \right)\) where \(\vec{x}, \vec{w}_i \in [-1, 1]^{N_{in}}\) and \(b_i \in [-1, 1]\) for \(i = 0, \cdots, N_w - 1\). Let $q, a, \text{and} s$ be quantum registers of $n, d, \text{ and } p$ qubits respectively, with \( N = 2^n \ge N_{in} + 3 \) and \( p = \left\lceil N_{w} \right\rceil\). Then there exist a quantum circuit which transforms the three registers from the initial state \(\ket{0}_s \ket{0}_a \ket{0}_q\) to (p+n+d)-qubit entangled state \(\ket{\psi_{\mathbf z}^d}\) of the form 
+    Let \(z_i := \left( \vec{w}_i \cdot \vec{x} + b_i \right) / \left( N_{in} + 1 \right)\) where \(\vec{x}, \vec{w}_i \in [-1, 1]^{N_{in}}\) and \(b_i \in [-1, 1]\) for \(i = 0, \cdots, N_w - 1\). Let $q, a, \text{and} s$ be quantum registers of $n, d, \text{ and } p$ qubits respectively, with \( N = 2^n \ge N_{in} + 3 \) and \( p = \left\lceil N_{w} \right\rceil\). Then there exist a quantum circuit which transforms the three registers from the initial state \(\ket{0}_s \ket{0}_a \ket{0}_q\) to (p+n+d)-qubit entangled state \(\ket{\psi_{\mathbf z}^d}\) of the form
     \[
         \ket{\psi_{\mathbf z}^d} = \ket{\psi_{\mathbf z}^d}_{\perp} + {1 \over {2^{(d + p) / 2}}}\sum_{i=0}^{N_w - 1}\left( \ket{i}_{s} \ket{z_i}_{a}^{\otimes d} \ket{N-1}_q \right)
     \]
@@ -211,21 +255,21 @@ Lemma 4.2.1에 의해, 4.1절에서와 같은 방식으로 중첩된 state \(\ke
     and
     \[
         \ket{z_i} \equiv \ket{0} + z_i\ket{1}
-    \]  
-    The circuit is expressed by $S_V X_q^{\otimes n} H_s^{\otimes p}$ where X is Pauli-X, H is Hadamard gate and 
+    \]
+    The circuit is expressed by $S_V X_q^{\otimes n} H_s^{\otimes p}$ where X is Pauli-X, H is Hadamard gate and
     \[
         S_V = V_{d-1} \cdots V_1 V_0
     \]
     with
     \[
         V_m = C_{a_m}S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m} \quad \text{ for } m = 0, 1, \dots, d - 1
-    \]  
+    \]
 \end{theorem}
 
 Thm 4.2.1이 의미하는 바는, 주어진 input vector \(\vec x\) weight matrix \(W\), bias vector \(\vec b\)에 대해, 모든 \(z_i\)의 정보를 담고 있는 entangled state $\ket{\psi_{\mathbf z}^d}$를 생성하는 Unitary가 존재한다는 것이다. 다음 증명을 살펴보자.
 
 \begin{pf}
-% Thm 4.1.1의 증명에 의해, for \(i = 0, \dots, d-1, \quad V_i : \ket{\psi_z^i} \mapsto \ket{\psi_z^{i+1}}\)의 동작을 알 수 있다. 
+% Thm 4.1.1의 증명에 의해, for \(i = 0, \dots, d-1, \quad V_i : \ket{\psi_z^i} \mapsto \ket{\psi_z^{i+1}}\)의 동작을 알 수 있다.
 
 Thm 4.2.1에 명시된 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 경우 $V_0$를 시행하기 전에 \(s\) 레지스터의 모든 qubit에 Hadamard를 가하여, \(s\) 레지스터에는 모든 Computational Basis State가 동일한 확률로 중첩된 state가 저장되어 있고, \(q\) 레지스터의 모든 qubit은 Pauli-X gate를 통해 \(\ket 0\)에서 \(\ket 1\)로 변환한다. 이후 \(V_0, V_1, \cdots, V_{d-1}\)이 실행되는데, $V_m$의 동작은 \(V_m = C_{a_m}S_{\mathbf{z}}(\vec{x}, W, \vec{b})_q C_{a_m}X^{\otimes n}_q C_q^nH_{a_m}\)으로, 세 개의 step으로 이루어진다.
 
@@ -249,3 +293,55 @@ Thm 4.2.1에 명시된 \(S_V X_q^{\otimes n} H_s^{\otimes p}\)의 경우 $V_0$�
 \]
 
 결과적으로, 양자 회로 \(X_q^{\otimes n} U_d S_V X_q^{\otimes n} H_s^{\otimes p}\)는 4.1절에서 구현한 quantum perceptron\(\left(\ket{0} \rightarrow \ket{\psi_{ f(z)}^d}\right)\)을 매우 적은 추가 qubit을 사용하여 임의의 neuron 수에 대한 quantum multi-perceptron\(\left(\ket{0} \rightarrow \ket{\psi_{f(\mathbf z)}^d}\right)\)으로 사용할 수 있도록 한다.
+
+
+\begin{theorem}
+    Let $\{f_k, k = 1, \ldots, d\}$ be the family of polynomials in $z$ defined by the following recursive law:
+\[
+f_k(z) = f_{k-1}(z) \cos \vartheta_{k-1} - z^k \sin \vartheta_{k-1}, \quad k = 1, \ldots, d,
+\]
+with $f_0(z) = 1$ and $\vartheta_k \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$ for any $k = 0, \ldots, d-1$.
+
+Then there exists a family $\{U_k, k = 1, \ldots, d\}$ of unitary operators such that
+\[
+\bra{0}_a U_k \ket{z}_a^{\otimes d} = f_k(z).
+\]
+
+These unitary operators are, in turn, defined by the recursive law:
+\[
+U_k = C_{a_k} X_{a_k} \overline{C}_{a_k} R_y(-2 \vartheta_{k-1})_{a_0} U_{k-1}, \quad k = 1, \ldots, d,
+\]
+with $U_0 = \mathbb{1}$.
+
+\end{theorem}
+
+theorem에서 제시된 형태로 정의되어 있는 함수 \(f_k\)에 대하여 이전까지의 과정에 이어 \(f(z)\)값을 얻을 수 있음을 말하고 있다.
+2단계의 회로는 \(U_d\)이다. 1단계 과정의 전체 회로를 \(S_VX_q^{\otimes n}\)로 나타내었기 때문에, 표기의 통일성을 위해 전체 회로 그림에서 \(U_d\) 대신 \(S_U\)라는 표기를 사용한다. 둘은 같은 것을 지칭한다.
+간단한 증명의 흐름은 다음과 같다.
+
+\begin{pf}(sketch)
+
+    이부분 그냥 식조작이라 뭐라써야될질 모르겠음ㅠ 좀더 고민해봄
+\end{pf}
+
+\begin{corollary}
+
+Let $f$ be a real analytic function over a compact interval $I$. If $f_d$ is the top member of the family of polynomials defined in \textbf{Theorem 2}, then the angles $\vartheta_k, k = 0, \ldots, d-1$ can be chosen in such a way that $f_d(z)$ coincides with the $d$-order Taylor expansion of $f(z)$ around $z = 0$, up to a constant factor $C_d$ which depends on $f$ and on the order $d$ as
+\[
+C_d = a_k \prod_{j=k}^{d-1} (\cos \vartheta_j)^{-1},
+\]
+where $a_k = \frac{1}{k!} f^{(k)}(0)$ is the first non-zero coefficient of the expansion and $f^{(k)}$ the $k$-order derivative of $f$.
+
+\end{corollary}
+
+이 corollary는 위의 theorem에서 말하는 형태로 임의의 analytic function의 d차 taylor expansion을 표현할 수 있음을 시사한다.
+이때 analytic function은 테일러 급수가 f로 수렴하는 함수를, 즉 taylor expansion을 통해 \(f(z)\)값을 근사적으로 구할 수 있는 함수를 말한다.
+예를 들어 sigmoid 함수는 analytic이므로, 제시된 방법론에서 Activation function으로 사용할 수 있을 것이다.
+증명에서는 \(\theta_k\)의 값을 결정하는 방법이 서술되어 있다. 우리는 코드를 통해 그 방법이 모든 analytic function에서 유효함을 확인할 수 있었다.
+Theorem과 Corollary를 종합하면, 우리는 Activation function이 analytic일 때, \(f(z)\)값을 taylor expansion을 통해 근사적으로 구할 수 있다는 사실을 알 수 있다.
+
+여기까지가 논문에서 제시한 \(f(\vec{w}\cdot\vec{x}+b)\) 계산의 양자 알고리즘 구현 방법이다.
+우리는 이 방법론에 대한 수학적 증명 과정을 상세히 이해하였고, 그것의 유효성을 각 theorem을 코드로 구현해 봄으로서 다시 한 번 확인하였다. 해당 코드는 이곳에서 확인해 봃 수 있다.
+
+\section{Implementation of Multiperceptron with Superb Efficiency}
+Some possible future works. (maybe 0.5\thru3 pages?)
